@@ -44,6 +44,7 @@ class hardware{
 
     public function get_table_header_hardware (){
         return "<tr>
+                <td></td>
                 <td><a href='#' onclick='sort_hardware_by(`ID`,event)'>ID</a></td>
                 <td><a href='#' onclick='sort_hardware_by(`name`,event)'>Имя</a></td>
                 <td><a href='#' onclick='sort_hardware_by(`os`,event)'>Система</a></td>

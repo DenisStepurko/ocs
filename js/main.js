@@ -95,10 +95,12 @@ function openGallery(event,src){
 }
 
 $(document).ready(function(){
+
     /*Get user info*/
     $.post("inc/ajax.php",{method:"get_user_info"},function(data){
         data = JSON.parse(data);
         $("#name_user_header").html(data["login"]);
+        $("#all_hardware").trigger("click");
     });
     /*Get user info*/
 
@@ -151,6 +153,7 @@ $(document).ready(function(){
             $("#table_body").html(data['table_content']);
             $("#table_search").html(data['show_add_hardware']);
         });
+        $("#all_hardwareLI").addClass("active");
     });
 
 });
