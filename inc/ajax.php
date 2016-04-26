@@ -26,7 +26,8 @@ switch ($_POST['method']){
         $hardware_content = $hardware->get_all_hardware();
         $hardware_search = $hardware->show_search_bar_hardware();
         $get_table_header_hardware = $hardware->get_table_header_hardware();
-        $result = array("searchbar" => $hardware_search, "table_header" => $get_table_header_hardware, "table_content" => $hardware_content);
+        $show_add_hardware = $hardware->show_add_hardware();
+        $result = array("searchbar" => $hardware_search, "table_header" => $get_table_header_hardware, "table_content" => $hardware_content, "show_add_hardware" => $show_add_hardware);
         echo json_encode($result);
         break;
     case 'get_hardware_edit':
@@ -41,7 +42,16 @@ switch ($_POST['method']){
         $hardware = $hardware->rmv_hardware($_POST['id']);
         break;
     case 'sort_hardware_by':
-        $hardware = q;
+        $hardware = $hardware->sort_hardware_by($_POST['by']);
+        echo json_encode($hardware);
+        break;
+    case 'search_hardware':
+        $hardware = $hardware->search_hardware($_POST['where'],$_POST['what']);
+        echo json_encode($hardware);
+        break;
+    case 'add_hardware':
+        $hardware = $hardware->add_hardware($_POST['name'],$_POST['system'],$_POST['worker'],$_POST['ip'],$_POST['group']);
+        echo json_encode($hardware);
         break;
 }
 

@@ -11,7 +11,7 @@ var edit_hardware = function (id,event) {
 var sort_hardware_by = function(by){
     event.preventDefault();
     $.post("inc/ajax.php",{method:"sort_hardware_by",by:by}, function(data){
-
+        $("#table_body").html(JSON.parse(data));
     });
 }
 var update_hardware = function (){
@@ -33,6 +33,47 @@ var rmv_hardware = function(id){
         $("#all_hardware").trigger("click");
     });
 }
+var search_hardware = function(){
+    event.preventDefault();
+    var what = $("#hardware_search").val();
+    var where = $("#hardware_search_select").val();
+    $.post("inc/ajax.php",{method: "search_hardware",where:where,what:what}, function (data){
+        $("#table_body").html(JSON.parse(data));
+    });
+}
+var add_hardware = function() {
+    event.preventDefault();
+    var name = $("#add_hardware_name").val();
+    var os = $("#add_hardware_system").val();
+    var fio = $("#add_hardware_fio").val();
+    var ip = $("#add_hardware_ip").val();
+    var group = $("#add_hardware_worker").val();
+
+        var checked_name = check_input("add_hardware_name");
+        var checked_os = check_input("add_hardware_system");
+        var checked_fio = check_input("add_hardware_fio");
+        var checked_ip = check_input("add_hardware_ip");
+        var checked_group = check_input("add_hardware_worker");
+
+    if(checked_name == true && checked_os == true && checked_fio == true && checked_ip == true && checked_group == true ){
+        $.post("inc/ajax.php",{method:"add_hardware",name:name,system:os,worker:fio,ip:ip,group:group},function(data){
+            $("#table_body").html(JSON.parse(data));
+        });
+    }
+
+}
+var check_input = function (input_id){
+    var input_length = $("#"+input_id).val().replace(/\s+/,'').length;
+    if(input_length == 0){
+        $("#"+input_id).css('border','1px solid red');
+        return false;
+    }
+    else {
+        $("#"+input_id).css('border','');
+        return true;
+    }
+}
+
 $(document).ready(function(){
     /*Get user info*/
     $.post("inc/ajax.php",{method:"get_user_info"},function(data){
@@ -41,17 +82,6 @@ $(document).ready(function(){
     });
     /*Get user info*/
 
-    var check_input = function (input_id){
-        var input_length = $("#"+input_id).val().replace(/\s+/,'').length;
-        if(input_length == 0){
-            $("#"+input_id).css('border','1px solid red');
-            return false;
-        }
-        else {
-            $("#"+input_id).css('border','');
-            return true;
-        }
-    }
     function setcookie(name, value, expires, path, domain, secure) {
         // Send a cookie
         //
@@ -91,7 +121,12 @@ $(document).ready(function(){
         setcookie("user",-1);
         window.location.reload();
     });
-    
+
+    $('.close_btn').click(function () {
+        event.preventDefault();
+        $('.modal').hide(300);
+    });
+
     $("#all_hardware").click(function () {
         event.preventDefault();
         $.post("inc/ajax.php",{method:"get_table_header_hardware"},function(data){
@@ -99,12 +134,8 @@ $(document).ready(function(){
             $("#search_bar").html(data['searchbar']);
             $("#table_header").html(data['table_header']);
             $("#table_body").html(data['table_content']);
+            $("#table_search").html(data['show_add_hardware']);
         });
-    });
-
-    $('.close_btn').click(function () {
-        event.preventDefault();
-        $('.modal').hide(300);
     });
 
 });

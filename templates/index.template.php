@@ -23,6 +23,7 @@
         <table class="table table-hover table-condensed">
             <thead id="table_header"></thead>
             <tbody id="table_body"></tbody>
+            <tbody id="table_search"></tbody>
         </table>
     </center>
 </div>
