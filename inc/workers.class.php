@@ -29,7 +29,12 @@ class worker {
     }
 
     public function return_select_with_workers($id = null){
-        $result = '';
+        if($id == 0){
+            $result = '<option selected value="0"></option>';
+        }
+        else {
+            $result = '<option value="0"></option>';
+        }
         foreach ($this->workers as $worker){
             if(!is_null($id) && $worker['ID'] == $id){
                 $result .= '<option selected value="'.$worker['ID'].'">'.$worker['fio'].'</option>';

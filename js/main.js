@@ -12,7 +12,7 @@ var edit_hardware = function (id,event) {
         $(".modal").show(300);
     });
 }
-var sort_hardware_by = function(by,event){
+var sort_hardware_by = function (by,event){
     event.preventDefault();
     $.post("inc/ajax.php",{method:"sort_hardware_by",by:by}, function(data){
         $("#table_body").html(JSON.parse(data));
@@ -31,13 +31,13 @@ var update_hardware = function (event){
         $("#all_hardware").trigger("click");
     });
 };
-var rmv_hardware = function(id,event){
+var rmv_hardware = function (id,event){
     event.preventDefault();
     $.post("inc/ajax.php",{method: "rmv_hardware",id:id}, function (data){
         $("#all_hardware").trigger("click");
     });
 }
-var search_hardware = function(event){
+var search_hardware = function (event){
     event.preventDefault();
     var what = $("#hardware_search").val();
     var where = $("#hardware_search_select").val();
@@ -49,7 +49,7 @@ var search_hardware = function(event){
         });
     }
 }
-var add_hardware = function(event) {
+var add_hardware = function (event) {
     event.preventDefault();
     var name = $("#add_hardware_name").val();
     var os = $("#add_hardware_system").val();
@@ -66,6 +66,7 @@ var add_hardware = function(event) {
     if(checked_name == true && checked_os == true && checked_fio == true && checked_ip == true && checked_group == true ){
         $.post("inc/ajax.php",{method:"add_hardware",name:name,system:os,worker:fio,ip:ip,group:group},function(data){
             $("#table_body").html(JSON.parse(data));
+            $('.modal').hide(300);
         });
     }
 
@@ -87,11 +88,21 @@ var generate_qr_hardware = function (id,event){
         $("#table_body").html(JSON.parse(data));
     });
 }
+var add_hardware_modal = function (event){
+    event.preventDefault();
+    $.post("inc/ajax.php",{method:"show_add_hardware_modal"},function(data){
+        $(".content_modal").html(data);
+        $(".modal").show(300);
+    });
+}
 function openGallery(event,src){
     event.preventDefault();
     $.fancybox.open({
         href: src
     });
+}
+function clear_active() {
+    $("#myTab").find("li").removeClass("active");
 }
 
 $(document).ready(function(){
@@ -153,7 +164,21 @@ $(document).ready(function(){
             $("#table_body").html(data['table_content']);
             $("#table_search").html(data['show_add_hardware']);
         });
+        clear_active();
         $("#all_hardwareLI").addClass("active");
+    });
+
+    $("#motherboard").click(function (event) {
+        event.preventDefault();
+        $.post("inc/ajax.php",{method:"get_table_header_mb"},function(data){
+            data = JSON.parse(data);
+            $("#search_bar").html(data['searchbar']);
+            $("#table_header").html(data['table_header']);
+            $("#table_body").html(data['table_content']);
+            $("#table_search").html(data['show_add_hardware']);
+        });
+        clear_active();
+        $("#motherboardLI").addClass("active");
     });
 
 });

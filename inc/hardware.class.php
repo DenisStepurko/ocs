@@ -38,6 +38,7 @@ class hardware{
                     </tr>
                 ");
             }
+            array_push($result,"<tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>");
             return $result;
         }
     }
@@ -50,7 +51,8 @@ class hardware{
                 <td><a href='#' onclick='sort_hardware_by(`os`,event)'>Система</a></td>
                 <td><a href='#' onclick='sort_hardware_by(`worker`,event)'>ФИО</a></td>
                 <td><a href='#' onclick='sort_hardware_by(`ip`,event)'>IP</a></td>
-                <td><a href='#' onclick='sort_hardware_by(`group`,event)'>Группа</a></td>
+                <td><!--a href='#' onclick='sort_hardware_by(`group`,event)'-->Группа<!--/a--></td>
+                <td><a href='#' onclick='add_hardware_modal(event)'>Добавить</a> </td>
             </tr>
         ";
     }
@@ -76,7 +78,7 @@ class hardware{
                 if($hardware['ID'] == $id){
                     return '
                             <div class="col-md-12">
-                                <h3>Edit Modal</h3>
+                                <h3>Edit Hardware</h3>
                                     <label for="name">Имя </label><input type="text" id="name" value="'.$hardware['name'].'">
                                     <label for="system">Система</label><input type="text" id="system" value="'.$hardware['os'].'">
                                     <label for="fio">ФИО</label><select type="text" id="fio">'.$this->worker->return_select_with_workers($hardware['worker']).'</select>
@@ -91,17 +93,17 @@ class hardware{
         }
     }
 
-    public function show_add_hardware(){
+    public function show_add_hardware_in_modal(){
         return "
-        <tr>
-            <td></td>
-            <td><input type='text' id='add_hardware_name'></td>
-            <td><input type='text' id='add_hardware_system'></td>
-            <td><select id='add_hardware_fio'>".$this->worker->return_select_with_workers()."</select></td>
-            <td><input type='text' id='add_hardware_ip'</td>
-            <td><select id='add_hardware_worker'>".$this->groups->return_select_with_groups()."</select></td>
-            <td><input type='button' value='Добавить' onclick='add_hardware(event)'</td>
-        </tr>
+        <div class='col-md-12'>
+            <h3>Add Hardware</h3>
+            <label for='add_hardware_name'>Имя</label><input type='text' id='add_hardware_name'>
+            <label for='add_hardware_system'>Система</label><input type='text' id='add_hardware_system'>
+            <label for='add_hardware_fio'>ФИО</label><select id='add_hardware_fio'>".$this->worker->return_select_with_workers()."</select>
+            <label for='add_hardware_ip'>IP</label><input type='text' id='add_hardware_ip'>
+            <label for='add_hardware_worker'>Группа</label><select id='add_hardware_worker'>".$this->groups->return_select_with_groups()."</select>
+            <input type='button' value='Добавить' onclick='add_hardware(event)'>
+        </div>
         ";
     }
 
@@ -125,7 +127,7 @@ class hardware{
     }
 
     public function sort_hardware_by($by){
-        $this->db->orderBy($by);
+        $this->db->orderBy($by,"ASC");
         $hardware = $this->get_all_hardware();
         return $hardware;
     }

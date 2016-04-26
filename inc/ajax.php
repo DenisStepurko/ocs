@@ -10,9 +10,11 @@ include_once('../inc/authorization.class.php');
 include_once('../inc/hardware.class.php');
 include_once('../inc/workers.class.php');
 include_once('../inc/groups.class.php');
+include_once('../inc/motherboards.class.php');
 include_once('../inc/phpqrcode/qrlib.php');
 $authorization = new Authorization();
 $hardware = new hardware();
+$mb = new motherboards();
 
 switch ($_POST['method']){
     case 'login':
@@ -27,8 +29,7 @@ switch ($_POST['method']){
         $hardware_content = $hardware->get_all_hardware();
         $hardware_search = $hardware->show_search_bar_hardware();
         $get_table_header_hardware = $hardware->get_table_header_hardware();
-        $show_add_hardware = $hardware->show_add_hardware();
-        $result = array("searchbar" => $hardware_search, "table_header" => $get_table_header_hardware, "table_content" => $hardware_content, "show_add_hardware" => $show_add_hardware);
+        $result = array("searchbar" => $hardware_search, "table_header" => $get_table_header_hardware, "table_content" => $hardware_content);
         echo json_encode($result);
         break;
     case 'get_hardware_edit':
@@ -57,6 +58,15 @@ switch ($_POST['method']){
     case 'generate_qr_hardware':
         $hardware = $hardware->generate_qr_hardware($_POST['id']);
         echo json_encode($hardware);
+        break;
+    case 'show_add_hardware_modal':
+        $show_add_hardware = $hardware->show_add_hardware_in_modal();
+        echo $show_add_hardware;
+        break;
+    case 'get_table_header_mb':
+        $get_table_header_mb = $mb->get_table_headers_mb();
+        $result = array(/*"searchbar" => $hardware_search, */"table_header" => $get_table_header_mb/*, "table_content" => $hardware_content*/);
+        echo json_encode($result);
         break;
 }
 
