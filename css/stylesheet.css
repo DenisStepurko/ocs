@@ -177,7 +177,7 @@ a:focus {
 
 .close_btn {
 	right: 15px;
-	position: absolute;
+	
 	top: 10px;
 }
 
@@ -194,4 +194,20 @@ a:focus {
 .modal .content_modal input[type="button"] {
 	float: right;
 	margin-bottom: 20px;
+}
+
+input {
+	height: 30px !important;
+}
+
+input[type="button"] {
+	margin-bottom: 10px;
+}
+
+.close_modal {
+	width: 20px;
+	height: 20px;
+	top: 10px;
+	right: 15px;
+	position: absolute;
 }

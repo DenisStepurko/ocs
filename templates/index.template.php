@@ -29,7 +29,7 @@
 </div>
 <div class="modal" style="display: none">
     <div class="close_modal">
-        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <button type="button" class="close close_modal" onclick="close_modal(event)" data-dismiss="alert" aria-label="Close">
             <span aria-hidden="true" class="close_btn">&times;</span>
         </button>
     </div>

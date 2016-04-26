@@ -1,6 +1,10 @@
 /**
  * Created by Денис Степурко on 19.04.2016.
  */
+var close_modal = function (event){
+    event.preventDefault();
+    $('.modal').hide(300);
+}
 var edit_hardware = function (id,event) {
     event.preventDefault();
     $.post("inc/ajax.php",{method:"get_hardware_edit",id:id},function(data){
@@ -8,13 +12,13 @@ var edit_hardware = function (id,event) {
         $(".modal").show(300);
     });
 }
-var sort_hardware_by = function(by){
+var sort_hardware_by = function(by,event){
     event.preventDefault();
     $.post("inc/ajax.php",{method:"sort_hardware_by",by:by}, function(data){
         $("#table_body").html(JSON.parse(data));
     });
 }
-var update_hardware = function (){
+var update_hardware = function (event){
     event.preventDefault();
     var name = $("#name").val();
     var system = $("#system").val();
@@ -27,13 +31,13 @@ var update_hardware = function (){
         $("#all_hardware").trigger("click");
     });
 };
-var rmv_hardware = function(id){
+var rmv_hardware = function(id,event){
     event.preventDefault();
     $.post("inc/ajax.php",{method: "rmv_hardware",id:id}, function (data){
         $("#all_hardware").trigger("click");
     });
 }
-var search_hardware = function(){
+var search_hardware = function(event){
     event.preventDefault();
     var what = $("#hardware_search").val();
     var where = $("#hardware_search_select").val();
@@ -41,7 +45,7 @@ var search_hardware = function(){
         $("#table_body").html(JSON.parse(data));
     });
 }
-var add_hardware = function() {
+var add_hardware = function(event) {
     event.preventDefault();
     var name = $("#add_hardware_name").val();
     var os = $("#add_hardware_system").val();
@@ -116,18 +120,13 @@ $(document).ready(function(){
         }
     });
 
-    $("#exit_button").click(function (){
+    $("#exit_button").click(function (event){
         event.preventDefault();
         setcookie("user",-1);
         window.location.reload();
     });
 
-    $('.close_btn').click(function () {
-        event.preventDefault();
-        $('.modal').hide(300);
-    });
-
-    $("#all_hardware").click(function () {
+    $("#all_hardware").click(function (event) {
         event.preventDefault();
         $.post("inc/ajax.php",{method:"get_table_header_hardware"},function(data){
             data = JSON.parse(data);

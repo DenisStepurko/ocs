@@ -32,7 +32,7 @@ class hardware{
                         <td>".$hardware['ip']."</td>
                         <td>".$group."</td>
                         <td><a href='#' onclick='edit_hardware(".$hardware['ID'].",event)' class='edit_index'><img src='images/edit.gif'></a></td>
-                        <td><a href='#' onclick='rmv_hardware(".$hardware['ID'].")'  class='rmv_index'><img src='images/del.gif'></a></td>
+                        <td><a href='#' onclick='rmv_hardware(".$hardware['ID'].",event)'  class='rmv_index'><img src='images/del.gif'></a></td>
                     </tr>
                 ");
             }
@@ -42,12 +42,12 @@ class hardware{
 
     public function get_table_header_hardware (){
         return "<tr>
-                <td><a href='#' onclick='sort_hardware_by(`ID`)'>ID</a></td>
-                <td><a href='#' onclick='sort_hardware_by(`name`)'>Имя</a></td>
-                <td><a href='#' onclick='sort_hardware_by(`os`)'>Система</a></td>
-                <td><a href='#' onclick='sort_hardware_by(`worker`)'>ФИО</a></td>
-                <td><a href='#' onclick='sort_hardware_by(`ip`)'>IP</a></td>
-                <td><a href='#' onclick='sort_hardware_by(`group`)'>Группа</a></td>
+                <td><a href='#' onclick='sort_hardware_by(`ID`,event)'>ID</a></td>
+                <td><a href='#' onclick='sort_hardware_by(`name`,event)'>Имя</a></td>
+                <td><a href='#' onclick='sort_hardware_by(`os`,event)'>Система</a></td>
+                <td><a href='#' onclick='sort_hardware_by(`worker`,event)'>ФИО</a></td>
+                <td><a href='#' onclick='sort_hardware_by(`ip`,event)'>IP</a></td>
+                <td><a href='#' onclick='sort_hardware_by(`group`,event)'>Группа</a></td>
             </tr>
         ";
     }
@@ -62,7 +62,7 @@ class hardware{
                 <option value='workers'>ФИО</option>
                 <option value='ip'>IP</option>
             </select>
-            <input type='button' id='hardware_search_button' onclick='search_hardware()' value='Поиск'>
+            <input type='button' id='hardware_search_button' onclick='search_hardware(event)' value='Поиск'>
         ";
     }
 
@@ -80,7 +80,7 @@ class hardware{
                                     <label for="ip">IP</label><input type="text" id="ip" value="'.$hardware['ip'].'">
                                     <label for="group">Группа</label><select type="text" id="group">'.$this->groups->return_select_with_groups($hardware['group']).'</select>
                                     <input type="hidden" id="hardware_id_update" value="'.$hardware['ID'].'">
-                                <input type="button" value="Сохранить" onclick="update_hardware()" id="update_hardware">
+                                <input type="button" value="Сохранить" onclick="update_hardware(event)" id="update_hardware">
                             </div>
                     ';
                 }
@@ -97,7 +97,7 @@ class hardware{
             <td><select id='add_hardware_fio'>".$this->worker->return_select_with_workers()."</select></td>
             <td><input type='text' id='add_hardware_ip'</td>
             <td><select id='add_hardware_worker'>".$this->groups->return_select_with_groups()."</select></td>
-            <td><input type='button' value='Добавить' onclick='add_hardware()'</td>
+            <td><input type='button' value='Добавить' onclick='add_hardware(event)'</td>
         </tr>
         ";
     }
