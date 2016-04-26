@@ -10,6 +10,7 @@ include_once('../inc/authorization.class.php');
 include_once('../inc/hardware.class.php');
 include_once('../inc/workers.class.php');
 include_once('../inc/groups.class.php');
+include_once('../inc/phpqrcode/qrlib.php');
 $authorization = new Authorization();
 $hardware = new hardware();
 
@@ -51,6 +52,10 @@ switch ($_POST['method']){
         break;
     case 'add_hardware':
         $hardware = $hardware->add_hardware($_POST['name'],$_POST['system'],$_POST['worker'],$_POST['ip'],$_POST['group']);
+        echo json_encode($hardware);
+        break;
+    case 'generate_qr_hardware':
+        $hardware = $hardware->generate_qr_hardware($_POST['id']);
         echo json_encode($hardware);
         break;
 }

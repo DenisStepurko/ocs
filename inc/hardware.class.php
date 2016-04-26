@@ -25,14 +25,16 @@ class hardware{
                 $worker = $this->worker->return_worker_fio($hardware['worker']);
                 $group = $this->groups->return_group_name($hardware['group']);
                 array_push($result,"<tr>
+                        <td><img class='qr_preview' onclick='openGallery(event,`".$hardware['qr']."`)' src='".$hardware['qr']."'></td>
                         <td>".$hardware['ID']."</td>
                         <td>".$hardware['name']."</td>
                         <td>".$hardware['os']."</td>
                         <td>".$worker."</td>
                         <td>".$hardware['ip']."</td>
                         <td>".$group."</td>
-                        <td><a href='#' onclick='edit_hardware(".$hardware['ID'].",event)' class='edit_index'><img src='images/edit.gif'></a></td>
-                        <td><a href='#' onclick='rmv_hardware(".$hardware['ID'].",event)'  class='rmv_index'><img src='images/del.gif'></a></td>
+                        <td><a href='#' onclick='edit_hardware(".$hardware['ID'].",event)' class='edit_index'><img src='images/edit.gif'></a>
+                        <a href='#' onclick='rmv_hardware(".$hardware['ID'].",event)'  class='rmv_index'><img src='images/del.gif'></a>
+                        <a href='#' onclick='generate_qr_hardware(".$hardware['ID'].",event)' class='qr_index'><img src='images/qr.png'></a></td>
                     </tr>
                 ");
             }
@@ -116,7 +118,7 @@ class hardware{
     }
 
     public function search_hardware ($where,$what){
-        $this->db->where($where,$what);
+        $this->db->where($where,$what,'LIKE');
         $hardware = $this->get_all_hardware();
         return $hardware;
     }
@@ -129,9 +131,21 @@ class hardware{
 
     public function add_hardware($name,$os,$worker,$ip,$group){
         $data = array("name" => $name,"os" => $os, "worker" => $worker, "ip" => $ip, "group" =>$group);
-        $this->db->insert('hardware',$data);
+        $id = $this->db->insert('hardware',$data);
+        $this->generate_qr_hardware($id);
         $hardware = $this->get_all_hardware();
         return $hardware;
+    }
+
+    public function generate_qr_hardware($id){
+        $PNG_TEMP_DIR = $_SERVER['DOCUMENT_ROOT'].'/inventory/qr/hardware/';
+        $filename = $PNG_TEMP_DIR.'HARDWARE_'.$id.'.jpg';
+        QRcode::png('http://it-dimension.ath.cx:11180/inventory/index.php?view=mobileinfo&id='.$id, $filename, 'L', 4, 2);
+        $this->db->where('ID',$id);
+        $data = array('qr' => 'http://192.168.5.144/inventory/qr/hardware/HARDWARE_'.$id.'.jpg');
+        $this->db->update('hardware',$data,1);
+        $result = $this->get_all_hardware();
+        return $result;
     }
 }
 

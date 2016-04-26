@@ -41,9 +41,13 @@ var search_hardware = function(event){
     event.preventDefault();
     var what = $("#hardware_search").val();
     var where = $("#hardware_search_select").val();
-    $.post("inc/ajax.php",{method: "search_hardware",where:where,what:what}, function (data){
-        $("#table_body").html(JSON.parse(data));
-    });
+    var checked_what = check_input("hardware_search");
+    var checked_where = check_input("hardware_search_select");
+    if(checked_what == true && checked_where == true){
+        $.post("inc/ajax.php",{method: "search_hardware",where:where,what:what}, function (data){
+            $("#table_body").html(JSON.parse(data));
+        });
+    }
 }
 var add_hardware = function(event) {
     event.preventDefault();
@@ -76,6 +80,18 @@ var check_input = function (input_id){
         $("#"+input_id).css('border','');
         return true;
     }
+}
+var generate_qr_hardware = function (id,event){
+    event.preventDefault();
+    $.post("inc/ajax.php",{method:"generate_qr_hardware",id:id},function(data){
+        $("#table_body").html(JSON.parse(data));
+    });
+}
+function openGallery(event,src){
+    event.preventDefault();
+    $.fancybox.open({
+        href: src
+    });
 }
 
 $(document).ready(function(){

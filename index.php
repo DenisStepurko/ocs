@@ -3,6 +3,8 @@
     <script type="text/javascript" src="js/jquery.js"></script>
     <script type="text/javascript" src="js/main.js"></script>
     <!--<script type="text/javascript" src="js/bootstrap.min.js"></script>-->
+    <script type="text/javascript" src="js/jquery.fancybox.js"></script>
+    <link href="css/jquery.fancybox.css" rel="stylesheet" type="text/css">
     <link href="css/bootstrap.css" rel="stylesheet" type="text/css" />
     <link href="css/bootstrap-responsive.css" rel="stylesheet" type="text/css" />
     <link href="css/stylesheet.css" rel="stylesheet" type="text/css" />
