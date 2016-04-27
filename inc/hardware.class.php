@@ -150,6 +150,31 @@ class hardware{
         $result = $this->get_all_hardware();
         return $result;
     }
+
+    public function get_some_info($what,$id){
+        $this->db->where('ID',$id);
+        $hardware = $this->db->getValue('hardware',$what);
+        return $hardware;
+    }
+
+    public function return_all_hardware_in_select($id = null){
+        if($id == 0){
+            $result = '<option selected value="0"></option>';
+        }
+        else {
+            $result = '<option value="0"></option>';
+        }
+        $hardwares = $this->db->get('hardware');
+        foreach ($hardwares as $hardware){
+            if(!is_null($id) && $hardware['ID'] == $id){
+                $result .= '<option selected value="'.$hardware['ID'].'">'.$hardware['name'].'</option>';
+            }
+            else {
+                $result .= '<option value="'.$hardware['ID'].'">'.$hardware['name'].'</option>';
+            }
+        }
+        return $result;
+    }
 }
 
 ?>

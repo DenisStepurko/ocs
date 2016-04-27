@@ -185,10 +185,9 @@ a:focus {
 	padding: 20px;
 }
 
-.modal .content_modal label, .modal .content_modal input[type="text"], .modal .content_modal select{
+.modal .content_modal label, .modal .content_modal input[type="text"], .modal .content_modal select,.modal .content_modal .col-md-12 div{
 	width: 50%;
 	float: left;
-	margin-bottom: 15px;
 }
 
 .modal .content_modal input[type="button"] {
