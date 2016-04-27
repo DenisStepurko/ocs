@@ -34,6 +34,20 @@ var show_add_motherboard_modal = function (event){
         $(".modal").show(300);
     });
 }
+var show_add_cpu_modal = function (event){
+    event.preventDefault();
+    $.post("inc/ajax.php",{method:"show_add_cpu_modal"},function(data){
+        $(".content_modal").html(data);
+        $(".modal").show(300);
+    });
+}
+var edit_cpu = function (id,event) {
+    event.preventDefault();
+    $.post("inc/ajax.php",{method:"edit_cpu",id:id},function(data){
+        $(".content_modal").html(JSON.parse(data));
+        $(".modal").show(300);
+    });
+}
 /*modal*/
 
 /*modal processing*/
@@ -93,6 +107,27 @@ var add_motherboard = function (event){
         });
     }
 }
+var add_cpu = function (event){
+    event.preventDefault();
+    var hardware = $("#cpu_add_hardware").val();
+    var vendor = $("#cpu_add_vendor").val();
+    var model = $("#cpu_add_model").val();
+    var type = $("#cpu_add_type").val();
+    var cores = $("#cpu_add_count_cores").val();
+
+    var checked_hardware = check_input("cpu_add_hardware");
+    var checked_vendor = check_input("cpu_add_vendor");
+    var checked_model = check_input("cpu_add_model");
+    var checked_socket = check_input("cpu_add_type");
+    var checked_slots = check_input("cpu_add_count_cores");
+
+    if(checked_hardware == true && checked_vendor == true && checked_model == true && checked_socket == true && checked_slots == true){
+        $.post("inc/ajax.php",{method:"add_cpu",hardware:hardware,vendor:vendor,model:model,type:type,cores:cores}, function(data){
+            $("#table_body").html(JSON.parse(data));
+            $('.modal').hide(300);
+        });
+    }
+}
 /*add*/
 
 /*update*/
@@ -147,6 +182,29 @@ var update_motherboard = function (event) {
         });
     }
 }
+var update_cpu = function (event) {
+    event.preventDefault();
+    var hardware = $("#cpu_edit_hardware").val();
+    var vendor = $("#cpu_edit_vendor").val();
+    var model = $("#cpu_edit_model").val();
+    var type = $("#cpu_edit_type").val();
+    var cores = $("#cpu_edit_core_number").val();
+    var id = $("#cpu_id").val();
+
+    var checked_hardware = check_input("cpu_edit_hardware");
+    var checked_vendor = check_input("cpu_edit_vendor");
+    var checked_model = check_input("cpu_edit_model");
+    var checked_type = check_input("cpu_edit_type");
+    var checked_cores = check_input("cpu_edit_core_number");
+    var checked_id = check_input("cpu_id");
+
+    if(checked_hardware == true && checked_vendor == true && checked_type == true && checked_model == true && checked_cores == true && checked_id == true){
+        $.post("inc/ajax.php",{method: "update_cpu", id:id,hardware:hardware,vendor:vendor,model:model,type:type,cores:cores}, function (data) {
+            $("#table_body").html(JSON.parse(data));
+            $(".modal").hide(300);
+        });
+    }
+}
 /*update*/
 
 /*rmv*/
@@ -159,6 +217,12 @@ var rmv_hardware = function (id,event){
 var rmv_motherboard = function (id,event){
     event.preventDefault();
     $.post("inc/ajax.php",{method: "rmv_motherboard",id:id}, function (data){
+        $("#table_body").html(JSON.parse(data));
+    });
+}
+var rmv_cpu = function (id,event){
+    event.preventDefault();
+    $.post("inc/ajax.php",{method: "rmv_cpu",id:id}, function (data){
         $("#table_body").html(JSON.parse(data));
     });
 }
@@ -175,6 +239,12 @@ var sort_hardware_by = function (by,event){
 var sort_motherboard_by = function (by,event){
     event.preventDefault();
     $.post("inc/ajax.php",{method:"sort_motherboard_by",by:by}, function(data){
+        $("#table_body").html(JSON.parse(data));
+    });
+}
+var sort_cpu_by = function (by,event){
+    event.preventDefault();
+    $.post("inc/ajax.php",{method:"sort_cpu_by",by:by}, function(data){
         $("#table_body").html(JSON.parse(data));
     });
 }
@@ -206,6 +276,20 @@ var search_motherboard = function (event){
     }
     else {
         $("#motherboard").trigger("click");
+    }
+}
+var search_cpu = function (event){
+    event.preventDefault();
+    var what = $("#cpu_search").val();
+    var where = $("#cpu_search_select").val();
+    var checked_what = check_input("cpu_search");
+    if(checked_what == true){
+        $.post("inc/ajax.php",{method: "search_cpu",where:where,what:what}, function (data){
+            $("#table_body").html(JSON.parse(data));
+        });
+    }
+    else {
+        $("#cpu").trigger("click");
     }
 }
 /*search*/
@@ -298,7 +382,6 @@ $(document).ready(function(){
             $("#search_bar").html(data['searchbar']);
             $("#table_header").html(data['table_header']);
             $("#table_body").html(data['table_content']);
-            $("#table_search").html(data['show_add_hardware']);
         });
         clear_active();
         $("#all_hardwareLI").addClass("active");
@@ -310,10 +393,20 @@ $(document).ready(function(){
             $("#search_bar").html(data['searchbar']);
             $("#table_header").html(data['table_header']);
             $("#table_body").html(data['table_content']);
-            $("#table_search").html(data['show_add_hardware']);
         });
         clear_active();
         $("#motherboardLI").addClass("active");
+    });
+    $("#cpu").click(function (event) {
+        event.preventDefault();
+        $.post("inc/ajax.php",{method:"get_table_header_cpu"},function(data){
+            data = JSON.parse(data);
+            $("#search_bar").html(data['searchbar']);
+            $("#table_header").html(data['table_header']);
+            $("#table_body").html(data['table_content']);
+        });
+        clear_active();
+        $("#cpuLI").addClass("active");
     });
     /*processing tabs*/
 

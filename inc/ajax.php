@@ -11,10 +11,12 @@ include_once('../inc/hardware.class.php');
 include_once('../inc/workers.class.php');
 include_once('../inc/groups.class.php');
 include_once('../inc/motherboards.class.php');
+include_once('../inc/cpu.class.php');
 include_once('../inc/phpqrcode/qrlib.php');
 $authorization = new Authorization();
 $hardware = new hardware();
 $mb = new motherboards();
+$cpu = new cpu();
 
 switch ($_POST['method']){
     /*auth*/
@@ -43,6 +45,13 @@ switch ($_POST['method']){
         $result = array("searchbar" => $get_motherboard_search, "table_header" => $get_table_header_mb, "table_content" => $get_content_table);
         echo json_encode($result);
         break;
+    case 'get_table_header_cpu':
+        $get_table_header_cpu = $cpu->get_table_header();
+        $get_table_content_cpu = $cpu->get_all_cpu();
+        $get_cpu_search = $cpu->get_searchbar_cpu();
+        $result = array("searchbar" => $get_cpu_search, "table_header" => $get_table_header_cpu, "table_content" => $get_table_content_cpu);
+        echo json_encode($result);
+        break;
     /*get table values*/
 
     /*update*/
@@ -52,6 +61,10 @@ switch ($_POST['method']){
         break;
     case 'update_motherboard':
         $result = $mb->update_motherboard($_POST['id'],$_POST['hardware'],$_POST['vendor'],$_POST['serial_number'],$_POST['model'],$_POST['socket'],$_POST['slots'],$_POST['form_factor'],$_POST['internal_video']);
+        echo json_encode($result);
+        break;
+    case 'update_cpu':
+        $result = $cpu->update_cpu($_POST['id'],$_POST['hardware'],$_POST['vendor'],$_POST['model'],$_POST['type'],$_POST['cores']);
         echo json_encode($result);
         break;
     /*update*/
@@ -67,16 +80,24 @@ switch ($_POST['method']){
         $result = $mb->show_edit_motherboards_in_modal($_POST['id']);
         echo json_encode($result);
         break;
+    case 'edit_cpu':
+        $result = $cpu->show_edit_cpu_in_modal($_POST['id']);
+        echo json_encode($result);
+        break;
     /*edit*/
 
     /*add*/
+    case 'show_add_hardware_modal':
+        $show_add_hardware = $hardware->show_add_hardware_in_modal();
+        echo $show_add_hardware;
+        break;
     case 'show_add_motherboard_modal':
         $result = $mb->show_add_motherboard_modal();
         echo $result;
         break;
-    case 'show_add_hardware_modal':
-        $show_add_hardware = $hardware->show_add_hardware_in_modal();
-        echo $show_add_hardware;
+    case 'show_add_cpu_modal':
+        $result = $cpu->show_add_cpu_modal();
+        echo $result;
         break;
     /*add*/
 
@@ -89,6 +110,10 @@ switch ($_POST['method']){
         break;
     case 'add_motherboard':
         $result = $mb->add_motherboard($_POST['hardware'],$_POST['vendor'],$_POST['serial_number'],$_POST['model'],$_POST['socket'],$_POST['memory_slots'],$_POST['internal_video'],$_POST['form_factor']);
+        echo json_encode($result);
+        break;
+    case 'add_cpu':
+        $result = $cpu->add_cpu($_POST['hardware'],$_POST['vendor'],$_POST['model'],$_POST['type'],$_POST['cores']);
         echo json_encode($result);
         break;
     /*add*/
@@ -105,6 +130,10 @@ switch ($_POST['method']){
         $result = $mb->rmv_motherboard($_POST['id']);
         echo json_encode($result);
         break;
+    case 'rmv_cpu':
+        $result = $cpu->rmv_cpu($_POST['id']);
+        echo json_encode($result);
+        break;
     /*rmv*/
 
     /*sort*/
@@ -114,6 +143,10 @@ switch ($_POST['method']){
         break;
     case 'sort_motherboard_by':
         $hardware = $mb->sort_motherboards_by($_POST['by']);
+        echo json_encode($hardware);
+        break;
+    case 'sort_cpu_by':
+        $hardware = $cpu->sort_cpu_by($_POST['by']);
         echo json_encode($hardware);
         break;
     /*sort*/
@@ -126,6 +159,10 @@ switch ($_POST['method']){
     case 'search_motherboard':
         $hardware = $mb->search_motherboard($_POST['where'],$_POST['what']);
         echo json_encode($hardware);
+        break;
+    case 'search_cpu':
+        $cpus = $cpu->search_cpu($_POST['where'],$_POST['what']);
+        echo json_encode($cpus);
         break;
     /*search*/
 
