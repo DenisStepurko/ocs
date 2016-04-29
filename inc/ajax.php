@@ -12,11 +12,13 @@ include_once('../inc/workers.class.php');
 include_once('../inc/groups.class.php');
 include_once('../inc/motherboards.class.php');
 include_once('../inc/cpu.class.php');
+include_once('../inc/ram.class.php');
 include_once('../inc/phpqrcode/qrlib.php');
 $authorization = new Authorization();
 $hardware = new hardware();
 $mb = new motherboards();
 $cpu = new cpu();
+$ram = new ram();
 
 switch ($_POST['method']){
     /*auth*/
@@ -52,6 +54,13 @@ switch ($_POST['method']){
         $result = array("searchbar" => $get_cpu_search, "table_header" => $get_table_header_cpu, "table_content" => $get_table_content_cpu);
         echo json_encode($result);
         break;
+    case 'get_table_header_ram':
+        $get_table_header_ram = $ram->get_table_headers_ram();
+        $get_table_content_ram = $ram->get_all_ram();
+        $get_ram_search = $ram->get_searchbar_ram();
+        $result = array("searchbar" => $get_ram_search, "table_header" => $get_table_header_ram, "table_content" => $get_table_content_ram);
+        echo json_encode($result);
+        break;
     /*get table values*/
 
     /*update*/
@@ -65,6 +74,10 @@ switch ($_POST['method']){
         break;
     case 'update_cpu':
         $result = $cpu->update_cpu($_POST['id'],$_POST['hardware'],$_POST['vendor'],$_POST['model'],$_POST['type'],$_POST['cores']);
+        echo json_encode($result);
+        break;
+    case 'update_ram':
+        $result = $ram->update_ram($_POST['id'],$_POST['hardware'],$_POST['serial_number'],$_POST['interface'],$_POST['type'],$_POST['speed'],$_POST['size']);
         echo json_encode($result);
         break;
     /*update*/
@@ -84,6 +97,10 @@ switch ($_POST['method']){
         $result = $cpu->show_edit_cpu_in_modal($_POST['id']);
         echo json_encode($result);
         break;
+    case 'edit_ram':
+        $result = $ram->show_edit_ram_in_modal($_POST['id']);
+        echo json_encode($result);
+        break;
     /*edit*/
 
     /*add*/
@@ -97,6 +114,10 @@ switch ($_POST['method']){
         break;
     case 'show_add_cpu_modal':
         $result = $cpu->show_add_cpu_modal();
+        echo $result;
+        break;
+    case 'show_add_ram_modal':
+        $result = $ram->show_add_ram_modal();
         echo $result;
         break;
     /*add*/
@@ -114,6 +135,10 @@ switch ($_POST['method']){
         break;
     case 'add_cpu':
         $result = $cpu->add_cpu($_POST['hardware'],$_POST['vendor'],$_POST['model'],$_POST['type'],$_POST['cores']);
+        echo json_encode($result);
+        break;
+    case 'add_ram':
+        $result = $ram->add_ram($_POST['hardware'],$_POST['serail_number'],$_POST['interface'],$_POST['type'],$_POST['speed'],$_POST['size']);
         echo json_encode($result);
         break;
     /*add*/
@@ -134,6 +159,10 @@ switch ($_POST['method']){
         $result = $cpu->rmv_cpu($_POST['id']);
         echo json_encode($result);
         break;
+    case 'rmv_ram':
+        $result = $ram->rmv_ram($_POST['id']);
+        echo json_encode($result);
+        break;
     /*rmv*/
 
     /*sort*/
@@ -147,6 +176,10 @@ switch ($_POST['method']){
         break;
     case 'sort_cpu_by':
         $hardware = $cpu->sort_cpu_by($_POST['by']);
+        echo json_encode($hardware);
+        break;
+    case 'sort_ram_by':
+        $hardware = $ram->sort_ram_by($_POST['by']);
         echo json_encode($hardware);
         break;
     /*sort*/
@@ -163,6 +196,10 @@ switch ($_POST['method']){
     case 'search_cpu':
         $cpus = $cpu->search_cpu($_POST['where'],$_POST['what']);
         echo json_encode($cpus);
+        break;
+    case 'search_ram':
+        $rams = $ram->search_ram($_POST['where'],$_POST['what']);
+        echo json_encode($rams);
         break;
     /*search*/
 

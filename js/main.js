@@ -48,6 +48,20 @@ var edit_cpu = function (id,event) {
         $(".modal").show(300);
     });
 }
+var show_add_ram_modal = function (event) {
+    event.preventDefault();
+    $.post("inc/ajax.php",{method:"show_add_ram_modal"},function(data){
+        $(".content_modal").html(data);
+        $(".modal").show(300);
+    });
+}
+var edit_ram = function (id,event) {
+    event.preventDefault();
+    $.post("inc/ajax.php",{method:"edit_ram",id:id},function(data){
+        $(".content_modal").html(JSON.parse(data));
+        $(".modal").show(300);
+    });
+}
 /*modal*/
 
 /*modal processing*/
@@ -123,6 +137,29 @@ var add_cpu = function (event){
 
     if(checked_hardware == true && checked_vendor == true && checked_model == true && checked_socket == true && checked_slots == true){
         $.post("inc/ajax.php",{method:"add_cpu",hardware:hardware,vendor:vendor,model:model,type:type,cores:cores}, function(data){
+            $("#table_body").html(JSON.parse(data));
+            $('.modal').hide(300);
+        });
+    }
+}
+var add_ram = function (event){
+    event.preventDefault();
+    var hardware = $("#ram_add_hardware").val();
+    var serail_number = $("#ram_add_serial_number").val();
+    var interface = $("#ram_add_interface").val();
+    var type = $("#ram_add_type").val();
+    var speed = $("#ram_add_speed").val();
+    var size = $("#ram_add_size").val();
+
+    var checked_hardware = check_input("ram_add_hardware");
+    var checked_serial_number = check_input("ram_add_serial_number");
+    var checked_interface = check_input("ram_add_interface");
+    var checked_type = check_input("ram_add_type");
+    var checked_speed = check_input("ram_add_speed");
+    var checked_size = check_input("ram_add_size");
+
+    if(checked_hardware == true && checked_serial_number == true && checked_interface == true && checked_type == true && checked_speed == true && checked_size == true){
+        $.post("inc/ajax.php",{method:"add_ram",hardware:hardware,serail_number:serail_number,interface:interface,type:type,speed:speed,size:size}, function(data){
             $("#table_body").html(JSON.parse(data));
             $('.modal').hide(300);
         });
@@ -205,6 +242,31 @@ var update_cpu = function (event) {
         });
     }
 }
+var update_ram = function (event) {
+    event.preventDefault();
+    var hardware = $("#ram_edit_hardware").val();
+    var serial_number = $("#ram_edit_serial_number").val();
+    var interface = $("#ram_edit_interface").val();
+    var type = $("#ram_edit_type").val();
+    var speed = $("#ram_edit_speed").val();
+    var size = $("#ram_edit_size").val();
+    var id = $("#ram_id").val();
+
+    var checked_hardware = check_input("ram_edit_hardware");
+    var checked_serial_number = check_input("ram_edit_serial_number");
+    var checked_interface = check_input("ram_edit_interface");
+    var checked_type = check_input("ram_edit_type");
+    var checked_speed = check_input("ram_edit_speed");
+    var checked_size = check_input("ram_edit_size");
+    var checked_id = check_input("ram_id");
+
+    if(checked_hardware == true && checked_serial_number == true && checked_interface == true && checked_type == true && checked_speed == true && checked_size == true && checked_id == true){
+        $.post("inc/ajax.php",{method: "update_ram", id:id,hardware:hardware,serial_number:serial_number,interface:interface,type:type,speed:speed,size:size}, function (data) {
+            $("#table_body").html(JSON.parse(data));
+            $(".modal").hide(300);
+        });
+    }
+}
 /*update*/
 
 /*rmv*/
@@ -223,6 +285,12 @@ var rmv_motherboard = function (id,event){
 var rmv_cpu = function (id,event){
     event.preventDefault();
     $.post("inc/ajax.php",{method: "rmv_cpu",id:id}, function (data){
+        $("#table_body").html(JSON.parse(data));
+    });
+}
+var rmv_ram = function (id,event){
+    event.preventDefault();
+    $.post("inc/ajax.php",{method: "rmv_ram",id:id}, function (data){
         $("#table_body").html(JSON.parse(data));
     });
 }
@@ -245,6 +313,12 @@ var sort_motherboard_by = function (by,event){
 var sort_cpu_by = function (by,event){
     event.preventDefault();
     $.post("inc/ajax.php",{method:"sort_cpu_by",by:by}, function(data){
+        $("#table_body").html(JSON.parse(data));
+    });
+}
+var sort_ram_by = function (by,event){
+    event.preventDefault();
+    $.post("inc/ajax.php",{method:"sort_ram_by",by:by}, function(data){
         $("#table_body").html(JSON.parse(data));
     });
 }
@@ -285,6 +359,20 @@ var search_cpu = function (event){
     var checked_what = check_input("cpu_search");
     if(checked_what == true){
         $.post("inc/ajax.php",{method: "search_cpu",where:where,what:what}, function (data){
+            $("#table_body").html(JSON.parse(data));
+        });
+    }
+    else {
+        $("#cpu").trigger("click");
+    }
+}
+var search_ram = function (event){
+    event.preventDefault();
+    var what = $("#ram_search").val();
+    var where = $("#ram_search_select").val();
+    var checked_what = check_input("ram_search");
+    if(checked_what == true){
+        $.post("inc/ajax.php",{method: "search_ram",where:where,what:what}, function (data){
             $("#table_body").html(JSON.parse(data));
         });
     }
@@ -407,6 +495,17 @@ $(document).ready(function(){
         });
         clear_active();
         $("#cpuLI").addClass("active");
+    });
+    $("#ram").click(function (event) {
+        event.preventDefault();
+        $.post("inc/ajax.php",{method:"get_table_header_ram"},function(data){
+            data = JSON.parse(data);
+            $("#search_bar").html(data['searchbar']);
+            $("#table_header").html(data['table_header']);
+            $("#table_body").html(data['table_content']);
+        });
+        clear_active();
+        $("#ramLI").addClass("active");
     });
     /*processing tabs*/
 
