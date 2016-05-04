@@ -104,6 +104,34 @@ var edit_network = function (id,event) {
         $(".modal").show(300);
     });
 }
+var show_add_power_supply_modal = function (event) {
+    event.preventDefault();
+    $.post("inc/ajax.php",{method:"show_add_power_supply_modal"},function(data){
+        $(".content_modal").html(data);
+        $(".modal").show(300);
+    });
+}
+var edit_power_supply = function (id,event) {
+    event.preventDefault();
+    $.post("inc/ajax.php",{method:"edit_power_supply",id:id},function(data){
+        $(".content_modal").html(JSON.parse(data));
+        $(".modal").show(300);
+    });
+}
+var show_add_monitor_modal = function (event) {
+    event.preventDefault();
+    $.post("inc/ajax.php",{method:"show_add_monitor_modal"},function(data){
+        $(".content_modal").html(data);
+        $(".modal").show(300);
+    });
+}
+var edit_monitor = function (id,event) {
+    event.preventDefault();
+    $.post("inc/ajax.php",{method:"edit_monitor",id:id},function(data){
+        $(".content_modal").html(JSON.parse(data));
+        $(".modal").show(300);
+    });
+}
 /*modal*/
 
 /*modal processing*/
@@ -290,6 +318,65 @@ var add_network = function (event){
             vendor: vendor,
             mac_address: mac_address,
             type: type
+        }, function (data) {
+            $("#table_body").html(JSON.parse(data));
+            $('.modal').hide(300);
+        });
+    }
+}
+var add_power_supply = function (event){
+    event.preventDefault();
+    var hardware = $("#power_supply_add_hardware").val();
+    var vendor = $("#power_supply_add_vendor").val();
+    var interfaces = $("#power_supply_add_interfaces").val();
+    var power = $("#power_supply_add_power").val();
+
+    var checked_hardware = check_input("power_supply_add_hardware");
+    var checked_vendor = check_input("power_supply_add_vendor");
+    var checked_interfaces = check_input("power_supply_add_interfaces");
+    var checked_power = check_input("power_supply_add_power");
+
+    if(checked_hardware == true && checked_vendor == true && checked_interfaces == true && checked_power == true) {
+        $.post("inc/ajax.php", {
+            method: "add_power_supply",
+            hardware: hardware,
+            vendor: vendor,
+            interfaces: interfaces,
+            power: power
+        }, function (data) {
+            $("#table_body").html(JSON.parse(data));
+            $('.modal').hide(300);
+        });
+    }
+}
+var add_monitor = function (event){
+    event.preventDefault();
+    var hardware = $("#monitor_add_hardware").val();
+    var vendor = $("#monitor_add_vendor").val();
+    var size = $("#monitor_add_size").val();
+
+    var checkboxes = $("input:checkbox:checked");
+    var interfaces ='';
+    for(var i = 0; i < 4;i++){
+        if(typeof $(checkboxes[i]).val() == "undefined" && !$(checkboxes[i]).val()){
+
+        } else {
+            interfaces += $(checkboxes[i]).val();
+            interfaces += ',';
+        }
+    }
+
+    var checked_hardware = check_input("monitor_add_hardware");
+    var checked_vendor = check_input("monitor_add_vendor");
+    var checked_size = check_input("monitor_add_interfaces");
+
+    if(checked_hardware == true && checked_vendor == true && checked_size == true) {
+        $.post("inc/ajax.php", {
+            method: "add_monitor",
+            hardware: hardware,
+            vendor: vendor,
+            size: size,
+            interfaces: interfaces
         }, function (data) {
             $("#table_body").html(JSON.parse(data));
             $('.modal').hide(300);
@@ -491,6 +578,71 @@ var update_network = function (event) {
         });
     }
 }
+var update_power_supply = function (event) {
+    event.preventDefault();
+    var hardware = $("#power_supply_edit_hardware").val();
+    var vendor = $("#power_supply_edit_vendor").val();
+    var interfaces = $("#power_supply_edit_interfaces").val();
+    var power = $("#power_supply_edit_power").val();
+    var id = $("#power_supply_id").val();
+
+    var checked_hardware = check_input("power_supply_edit_hardware");
+    var checked_vendor = check_input("power_supply_edit_vendor");
+    var checked_interfaces = check_input("power_supply_edit_interfaces");
+    var checked_power = check_input("power_supply_edit_power");
+    var checked_id = check_input("power_supply_id");
+
+    if(checked_hardware == true && checked_vendor == true && checked_interfaces == true && checked_power == true && checked_id == true){
+        $.post("inc/ajax.php",{
+            method: "update_power_supply",
+            id:id,
+            hardware:hardware,
+            vendor:vendor,
+            interfaces:interfaces,
+            power:power
+        }, function (data) {
+            $("#table_body").html(JSON.parse(data));
+            $(".modal").hide(300);
+        });
+    }
+}
+var update_monitor = function (event) {
+    event.preventDefault();
+    var hardware = $("#monitor_edit_hardware").val();
+    var vendor = $("#monitor_edit_vendor").val();
+    var size = $("#monitor_edit_size").val();
+    var id = $("#monitor_id").val();
+
+    var checkboxes = $("input:checkbox:checked");
+    var interfaces ='';
+    for(var i = 0; i < 4;i++){
+        if(typeof $(checkboxes[i]).val() == "undefined" && !$(checkboxes[i]).val()){
+
+        } else {
+            interfaces += $(checkboxes[i]).val();
+            interfaces += ',';
+        }
+    }
+
+    var checked_hardware = check_input("monitor_edit_hardware");
+    var checked_vendor = check_input("monitor_edit_vendor");
+    var checked_power = check_input("monitor_edit_size");
+    var checked_id = check_input("monitor_id");
+
+    if(checked_hardware == true && checked_vendor == true && checked_power == true && checked_id == true){
+        $.post("inc/ajax.php",{
+            method: "update_monitor",
+            id:id,
+            hardware:hardware,
+            vendor:vendor,
+            size:size,
+            interfaces:interfaces
+        }, function (data) {
+            $("#table_body").html(JSON.parse(data));
+            $(".modal").hide(300);
+        });
+    }
+}
 /*update*/
 
 /*rmv*/
@@ -533,6 +685,18 @@ var rmv_hdd = function (id,event){
 var rmv_network = function (id,event){
     event.preventDefault();
     $.post("inc/ajax.php",{method: "rmv_network",id:id}, function (data){
+        $("#table_body").html(JSON.parse(data));
+    });
+}
+var rmv_power_supply = function (id,event){
+    event.preventDefault();
+    $.post("inc/ajax.php",{method: "rmv_power_supply",id:id}, function (data){
+        $("#table_body").html(JSON.parse(data));
+    });
+}
+var rmv_monitor = function (id,event){
+    event.preventDefault();
+    $.post("inc/ajax.php",{method: "rmv_monitor",id:id}, function (data){
         $("#table_body").html(JSON.parse(data));
     });
 }
@@ -579,6 +743,18 @@ var sort_hdd_by = function (by,event){
 var sort_network_by = function (by,event){
     event.preventDefault();
     $.post("inc/ajax.php",{method:"sort_network_by",by:by}, function(data){
+        $("#table_body").html(JSON.parse(data));
+    });
+}
+var sort_power_supply_by = function (by,event){
+    event.preventDefault();
+    $.post("inc/ajax.php",{method:"sort_power_supply_by",by:by}, function(data){
+        $("#table_body").html(JSON.parse(data));
+    });
+}
+var sort_monitor_by = function (by,event){
+    event.preventDefault();
+    $.post("inc/ajax.php",{method:"sort_monitor_by",by:by}, function(data){
         $("#table_body").html(JSON.parse(data));
     });
 }
@@ -680,6 +856,34 @@ var search_network = function (event){
     }
     else {
         $("#gpu").trigger("click");
+    }
+}
+var search_power_supply = function (event){
+    event.preventDefault();
+    var what = $("#power_supply_search").val();
+    var where = $("#power_supply_search_select").val();
+    var checked_what = check_input("power_supply_search");
+    if(checked_what == true){
+        $.post("inc/ajax.php",{method: "search_power_supply",where:where,what:what}, function (data){
+            $("#table_body").html(JSON.parse(data));
+        });
+    }
+    else {
+        $("#power_supply").trigger("click");
+    }
+}
+var search_monitor = function (event){
+    event.preventDefault();
+    var what = $("#monitor_search").val();
+    var where = $("#monitor_search_select").val();
+    var checked_what = check_input("monitor_search");
+    if(checked_what == true){
+        $.post("inc/ajax.php",{method: "search_monitor",where:where,what:what}, function (data){
+            $("#table_body").html(JSON.parse(data));
+        });
+    }
+    else {
+        $("#power_supply").trigger("click");
     }
 }
 /*search*/
@@ -841,6 +1045,28 @@ $(document).ready(function(){
         });
         clear_active();
         $("#networkLI").addClass("active");
+    });
+    $("#power_supply").click(function (event) {
+        event.preventDefault();
+        $.post("inc/ajax.php",{method:"get_table_header_power_supply"},function(data){
+            data = JSON.parse(data);
+            $("#search_bar").html(data['searchbar']);
+            $("#table_header").html(data['table_header']);
+            $("#table_body").html(data['table_content']);
+        });
+        clear_active();
+        $("#power_supplyLI").addClass("active");
+    });
+    $("#monitor").click(function (event) {
+        event.preventDefault();
+        $.post("inc/ajax.php",{method:"get_table_header_monitor"},function(data){
+            data = JSON.parse(data);
+            $("#search_bar").html(data['searchbar']);
+            $("#table_header").html(data['table_header']);
+            $("#table_body").html(data['table_content']);
+        });
+        clear_active();
+        $("#monitorLI").addClass("active");
     });
     /*processing tabs*/
 

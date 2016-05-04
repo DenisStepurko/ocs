@@ -16,6 +16,8 @@ include_once('../inc/ram.class.php');
 include_once('../inc/gpu.class.php');
 include_once('../inc/hdd.class.php');
 include_once('../inc/network.class.php');
+include_once('../inc/power_supply.class.php');
+include_once('../inc/monitors.class.php');
 include_once('../inc/phpqrcode/qrlib.php');
 $authorization = new Authorization();
 $hardware = new hardware();
@@ -25,6 +27,8 @@ $ram = new ram();
 $gpu = new gpu();
 $hdd = new hdd();
 $network = new network();
+$power_supply = new power_supply();
+$monitor = new monitor();
 
 switch ($_POST['method']){
     /*auth*/
@@ -88,6 +92,20 @@ switch ($_POST['method']){
         $result = array("searchbar" => $get_network_search, "table_header" => $get_table_header_network, "table_content" => $get_table_content_network);
         echo json_encode($result);
         break;
+    case 'get_table_header_power_supply':
+        $get_table_header_network = $power_supply->get_table_headers_power_supply();
+        $get_table_content_power_supply = $power_supply->get_all_power_supply();
+        $get_power_supply_search = $power_supply->get_searchbar_power_supply();
+        $result = array("searchbar" => $get_power_supply_search, "table_header" => $get_table_header_network, "table_content" => $get_table_content_power_supply);
+        echo json_encode($result);
+        break;
+    case 'get_table_header_monitor':
+        $get_table_header_monitor = $monitor->get_table_headers_monitor();
+        $get_table_content_monitor = $monitor->get_all_monitor();
+        $get_monitor_search = $monitor->get_searchbar_monitor();
+        $result = array("searchbar" => $get_monitor_search, "table_header" => $get_table_header_monitor, "table_content" => $get_table_content_monitor);
+        echo json_encode($result);
+        break;
     /*get table values*/
 
     /*update*/
@@ -117,6 +135,14 @@ switch ($_POST['method']){
         break;
     case 'update_network':
         $result = $network->update_network($_POST['id'],$_POST['hardware'],$_POST['vendor'],$_POST['mac_address'],$_POST['type']);
+        echo json_encode($result);
+        break;
+    case 'update_power_supply':
+        $result = $power_supply->update_power_supply($_POST['id'],$_POST['hardware'],$_POST['vendor'],$_POST['interfaces'],$_POST['power']);
+        echo json_encode($result);
+        break;
+    case 'update_monitor':
+        $result = $monitor->update_monitor($_POST['id'],$_POST['hardware'],$_POST['vendor'],$_POST['size'],$_POST['interfaces']);
         echo json_encode($result);
         break;
     /*update*/
@@ -152,6 +178,14 @@ switch ($_POST['method']){
         $result = $network->show_edit_network_in_modal($_POST['id']);
         echo json_encode($result);
         break;
+    case 'edit_power_supply':
+        $result = $power_supply->show_edit_power_supply_in_modal($_POST['id']);
+        echo json_encode($result);
+        break;
+    case 'edit_monitor':
+        $result = $monitor->show_edit_monitor_in_modal($_POST['id']);
+        echo json_encode($result);
+        break;
     /*edit*/
 
     /*add*/
@@ -181,6 +215,14 @@ switch ($_POST['method']){
         break;
     case 'show_add_network_modal':
         $result = $network->show_add_network_modal();
+        echo $result;
+        break;
+    case 'show_add_power_supply_modal':
+        $result = $power_supply->show_add_power_supply_modal();
+        echo $result;
+        break;
+    case 'show_add_monitor_modal':
+        $result = $monitor->show_add_monitor_modal();
         echo $result;
         break;
     /*add*/
@@ -214,6 +256,14 @@ switch ($_POST['method']){
         break;
     case 'add_network':
         $result = $network->add_network($_POST['hardware'],$_POST['vendor'],$_POST['mac_address'],$_POST['type']);
+        echo json_encode($result);
+        break;
+    case 'add_power_supply':
+        $result = $power_supply->add_power_supply($_POST['hardware'],$_POST['vendor'],$_POST['interfaces'],$_POST['power']);
+        echo json_encode($result);
+        break;
+    case 'add_monitor':
+        $result = $monitor->add_monitor($_POST['hardware'],$_POST['vendor'],$_POST['size'],$_POST['interfaces']);
         echo json_encode($result);
         break;
     /*add*/
@@ -250,6 +300,14 @@ switch ($_POST['method']){
         $result = $network->rmv_network($_POST['id']);
         echo json_encode($result);
         break;
+    case 'rmv_power_supply':
+        $result = $power_supply->rmv_power_supply($_POST['id']);
+        echo json_encode($result);
+        break;
+    case 'rmv_monitor':
+        $result = $monitor->rmv_monitor($_POST['id']);
+        echo json_encode($result);
+        break;
     /*rmv*/
 
     /*sort*/
@@ -281,6 +339,14 @@ switch ($_POST['method']){
         $hardware = $network->sort_network_by($_POST['by']);
         echo json_encode($hardware);
         break;
+    case 'sort_power_supply_by':
+        $hardware = $power_supply->sort_power_supply_by($_POST['by']);
+        echo json_encode($hardware);
+        break;
+    case 'sort_monitor_by':
+        $hardware = $monitor->sort_monitor_by($_POST['by']);
+        echo json_encode($hardware);
+        break;
     /*sort*/
 
     /*search*/
@@ -308,8 +374,12 @@ switch ($_POST['method']){
         $hdds = $hdd->search_hdd($_POST['where'],$_POST['what']);
         echo json_encode($hdds);
         break;
-    case 'search_network':
-        $result = $network->search_network($_POST['where'],$_POST['what']);
+    case 'search_power_supply':
+        $result = $power_supply->search_power_supply($_POST['where'],$_POST['what']);
+        echo json_encode($result);
+        break;
+    case 'search_monitor':
+        $result = $monitor->search_monitor($_POST['where'],$_POST['what']);
         echo json_encode($result);
         break;
     /*search*/
