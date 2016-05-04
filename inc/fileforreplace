@@ -1,0 +1,29 @@
+event.preventDefault();
+    var model = $("#network_device_update_model").val();
+    var port_number = $("#network_device_edit_port_number").val();
+    var serial_number = $("#network_device_edit_serial_number").val();
+    var type = $("#network_device_edit_type").val();
+    var mac_address = $("#network_device_edit_mac_editress").val();
+    var status = $("#network_device_edit_status").val();
+
+    var checked_model = check_input("network_device_edit_model");
+    var checked_port_number = check_input("network_device_edit_port_number");
+    var checked_serial_number = check_input("network_device_edit_serial_number");
+    var checked_type = check_input("network_device_edit_type");
+    var checked_mac_editress = check_input("network_device_edit_mac_editress");
+    var checked_status = check_input("network_device_edit_status");
+
+    if(checked_model == true && checked_port_number == true && checked_serial_number == true && checked_type == true && checked_mac_editress == true && checked_status == true) {
+        $.post("inc/ajax.php", {
+            method: "edit_peripheral",
+            model: model,
+            port_number: port_number,
+            serial_number: serial_number,
+            type: type,
+            mac_address: mac_address,
+            status: status
+        }, function (data) {
+            $("#table_body").html(JSON.parse(data));
+            $('.modal').hide(300);
+        });
+    }

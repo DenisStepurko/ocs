@@ -146,6 +146,20 @@ var edit_peripheral = function (id,event) {
         $(".modal").show(300);
     });
 }
+var show_add_network_device_modal = function (event) {
+    event.preventDefault();
+    $.post("inc/ajax.php",{method:"show_add_network_device_modal"},function(data){
+        $(".content_modal").html(data);
+        $(".modal").show(300);
+    });
+}
+var edit_network_device = function (id,event) {
+    event.preventDefault();
+    $.post("inc/ajax.php",{method:"edit_network_device",id:id},function(data){
+        $(".content_modal").html(JSON.parse(data));
+        $(".modal").show(300);
+    });
+}
 /*modal*/
 
 /*modal processing*/
@@ -415,6 +429,37 @@ var add_peripheral = function (event){
             serial_number: serial_number,
             type: type,
             description: description,
+            status: status
+        }, function (data) {
+            $("#table_body").html(JSON.parse(data));
+            $('.modal').hide(300);
+        });
+    }
+}
+var add_network_device = function (event){
+    event.preventDefault();
+    var model = $("#network_device_add_model").val();
+    var port_number = $("#network_device_add_port_number").val();
+    var serial_number = $("#network_device_add_serial_number").val();
+    var type = $("#network_device_add_type").val();
+    var mac_address = $("#network_device_add_mac_address").val();
+    var status = $("#network_device_add_status").val();
+
+    var checked_model = check_input("network_device_add_model");
+    var checked_port_number = check_input("network_device_add_port_number");
+    var checked_serial_number = check_input("network_device_add_serial_number");
+    var checked_type = check_input("network_device_add_type");
+    var checked_mac_address = check_input("network_device_add_mac_address");
+    var checked_status = check_input("network_device_add_status");
+
+    if(checked_model == true && checked_port_number == true && checked_serial_number == true && checked_type == true && checked_mac_address == true && checked_status == true) {
+        $.post("inc/ajax.php", {
+            method: "add_network_device",
+            model: model,
+            port_number: port_number,
+            serial_number: serial_number,
+            type: type,
+            mac_address: mac_address,
             status: status
         }, function (data) {
             $("#table_body").html(JSON.parse(data));
@@ -708,6 +753,39 @@ var update_peripheral = function (event) {
         });
     }
 }
+var update_network_device = function (event){
+    event.preventDefault();
+    var model = $("#network_device_edit_model").val();
+    var port_number = $("#network_device_edit_port_number").val();
+    var serial_number = $("#network_device_edit_serial_number").val();
+    var type = $("#network_device_edit_type").val();
+    var mac_address = $("#network_device_edit_mac_address").val();
+    var status = $("#network_device_edit_status").val();
+    var id = $("#network_device_id").val();
+
+    var checked_model = check_input("network_device_edit_model");
+    var checked_port_number = check_input("network_device_edit_port_number");
+    var checked_serial_number = check_input("network_device_edit_serial_number");
+    var checked_type = check_input("network_device_edit_type");
+    var checked_mac_address = check_input("network_device_edit_mac_address");
+    var checked_status = check_input("network_device_edit_status");
+
+    if(checked_model == true && checked_port_number == true && checked_serial_number == true && checked_type == true && checked_mac_address == true && checked_status == true) {
+        $.post("inc/ajax.php", {
+            method: "update_network_device",
+            id: id,
+            model: model,
+            port_number: port_number,
+            serial_number: serial_number,
+            type: type,
+            mac_address: mac_address,
+            status: status
+        }, function (data) {
+            $("#table_body").html(JSON.parse(data));
+            $('.modal').hide(300);
+        });
+    }
+}
 /*update*/
 
 /*rmv*/
@@ -768,6 +846,12 @@ var rmv_monitor = function (id,event){
 var rmv_peripheral = function (id,event){
     event.preventDefault();
     $.post("inc/ajax.php",{method: "rmv_peripheral",id:id}, function (data){
+        $("#table_body").html(JSON.parse(data));
+    });
+}
+var rmv_network_device = function (id,event){
+    event.preventDefault();
+    $.post("inc/ajax.php",{method: "rmv_network_device",id:id}, function (data){
         $("#table_body").html(JSON.parse(data));
     });
 }
@@ -832,6 +916,12 @@ var sort_monitor_by = function (by,event){
 var sort_peripheral_by = function (by,event){
     event.preventDefault();
     $.post("inc/ajax.php",{method:"sort_peripheral_by",by:by}, function(data){
+        $("#table_body").html(JSON.parse(data));
+    });
+}
+var sort_network_device_by = function (by,event){
+    event.preventDefault();
+    $.post("inc/ajax.php",{method:"sort_network_device_by",by:by}, function(data){
         $("#table_body").html(JSON.parse(data));
     });
 }
@@ -970,6 +1060,20 @@ var search_peripheral = function (event){
     var checked_what = check_input("peripheral_search");
     if(checked_what == true){
         $.post("inc/ajax.php",{method: "search_peripheral",where:where,what:what}, function (data){
+            $("#table_body").html(JSON.parse(data));
+        });
+    }
+    else {
+        $("#power_supply").trigger("click");
+    }
+}
+var search_network_device = function (event){
+    event.preventDefault();
+    var what = $("#network_device_search").val();
+    var where = $("#network_device_search_select").val();
+    var checked_what = check_input("network_device_search");
+    if(checked_what == true){
+        $.post("inc/ajax.php",{method: "search_network_device",where:where,what:what}, function (data){
             $("#table_body").html(JSON.parse(data));
         });
     }
@@ -1169,6 +1273,17 @@ $(document).ready(function(){
         });
         clear_active();
         $("#peripheralLI").addClass("active");
+    });
+    $("#network_device").click(function (event) {
+        event.preventDefault();
+        $.post("inc/ajax.php",{method:"get_table_network_device"},function(data){
+            data = JSON.parse(data);
+            $("#search_bar").html(data['searchbar']);
+            $("#table_header").html(data['table_header']);
+            $("#table_body").html(data['table_content']);
+        });
+        clear_active();
+        $("#network_deviceLI").addClass("active");
     });
     /*processing tabs*/
 

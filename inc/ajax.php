@@ -19,6 +19,7 @@ include_once('../inc/network.class.php');
 include_once('../inc/power_supply.class.php');
 include_once('../inc/monitors.class.php');
 include_once('../inc/peripheral.class.php');
+include_once('../inc/network_device.class.php');
 include_once('../inc/phpqrcode/qrlib.php');
 $authorization = new Authorization();
 $hardware = new hardware();
@@ -31,6 +32,7 @@ $network = new network();
 $power_supply = new power_supply();
 $monitor = new monitor();
 $peripheral = new peripheral();
+$network_device = new network_device();
 
 switch ($_POST['method']){
     /*auth*/
@@ -115,6 +117,13 @@ switch ($_POST['method']){
         $result = array("searchbar" => $get_peripheral_search, "table_header" => $get_table_header_peripheral, "table_content" => $get_table_content_peripheral);
         echo json_encode($result);
         break;
+    case 'get_table_network_device':
+        $get_table_header_network_device = $network_device->get_table_headers_network_device();
+        $get_table_content_network_device = $network_device->get_all_network_device();
+        $get_network_device_search = $network_device->get_searchbar_network_device();
+        $result = array("searchbar" => $get_network_device_search, "table_header" => $get_table_header_network_device, "table_content" => $get_table_content_network_device);
+        echo json_encode($result);
+        break;
     /*get table values*/
 
     /*update*/
@@ -156,6 +165,10 @@ switch ($_POST['method']){
         break;
     case 'update_peripheral':
         $result = $peripheral->update_peripheral($_POST['id'],$_POST['serial_number'],$_POST['type'],$_POST['description'],$_POST['status']);
+        echo json_encode($result);
+        break;
+    case 'update_network_device':
+        $result = $network_device->update_network_device($_POST['id'],$_POST['model'],$_POST['port_number'],$_POST['serial_number'],$_POST['type'],$_POST['mac_address'],$_POST['status']);
         echo json_encode($result);
         break;
     /*update*/
@@ -203,6 +216,10 @@ switch ($_POST['method']){
         $result = $peripheral->show_edit_peripheral_in_modal($_POST['id']);
         echo json_encode($result);
         break;
+    case 'edit_network_device':
+        $result = $network_device->show_edit_network_device_in_modal($_POST['id']);
+        echo json_encode($result);
+        break;
     /*edit*/
 
     /*add*/
@@ -244,6 +261,10 @@ switch ($_POST['method']){
         break;
     case 'show_add_peripheral_modal':
         $result = $peripheral->show_add_peripheral_modal();
+        echo $result;
+        break;
+    case 'show_add_network_device_modal':
+        $result = $network_device->show_add_network_device_modal();
         echo $result;
         break;
     /*add*/
@@ -289,6 +310,10 @@ switch ($_POST['method']){
         break;
     case 'add_peripheral':
         $result = $peripheral->add_peripheral($_POST['serial_number'],$_POST['type'],$_POST['description'],$_POST['status']);
+        echo json_encode($result);
+        break;
+    case 'add_network_device':
+        $result = $network_device->add_network_device($_POST['model'],$_POST['port_number'],$_POST['serial_number'],$_POST['type'],$_POST['mac_address'],$_POST['status']);
         echo json_encode($result);
         break;
     /*add*/
@@ -337,6 +362,10 @@ switch ($_POST['method']){
         $result = $peripheral->rmv_peripheral($_POST['id']);
         echo json_encode($result);
         break;
+    case 'rmv_network_device':
+        $result = $network_device->rmv_network_device($_POST['id']);
+        echo json_encode($result);
+        break;
     /*rmv*/
 
     /*sort*/
@@ -380,6 +409,10 @@ switch ($_POST['method']){
         $hardware = $peripheral->sort_peripheral_by($_POST['by']);
         echo json_encode($hardware);
         break;
+    case 'sort_network_device_by':
+        $hardware = $network_device->sort_network_device_by($_POST['by']);
+        echo json_encode($hardware);
+        break;
     /*sort*/
 
     /*search*/
@@ -417,6 +450,10 @@ switch ($_POST['method']){
         break;
     case 'search_peripheral':
         $result = $peripheral->search_peripheral($_POST['where'],$_POST['what']);
+        echo json_encode($result);
+        break;
+    case 'search_network_device':
+        $result = $network_device->search_network_device($_POST['where'],$_POST['what']);
         echo json_encode($result);
         break;
     /*search*/
