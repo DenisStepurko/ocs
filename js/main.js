@@ -76,6 +76,34 @@ var edit_gpu = function (id,event) {
         $(".modal").show(300);
     });
 }
+var show_add_hdd_modal = function (event) {
+    event.preventDefault();
+    $.post("inc/ajax.php",{method:"show_add_hdd_modal"},function(data){
+        $(".content_modal").html(data);
+        $(".modal").show(300);
+    });
+}
+var edit_hdd = function (id,event) {
+    event.preventDefault();
+    $.post("inc/ajax.php",{method:"edit_hdd",id:id},function(data){
+        $(".content_modal").html(JSON.parse(data));
+        $(".modal").show(300);
+    });
+}
+var show_add_network_modal = function (event) {
+    event.preventDefault();
+    $.post("inc/ajax.php",{method:"show_add_network_modal"},function(data){
+        $(".content_modal").html(data);
+        $(".modal").show(300);
+    });
+}
+var edit_network = function (id,event) {
+    event.preventDefault();
+    $.post("inc/ajax.php",{method:"edit_network",id:id},function(data){
+        $(".content_modal").html(JSON.parse(data));
+        $(".modal").show(300);
+    });
+}
 /*modal*/
 
 /*modal processing*/
@@ -206,6 +234,62 @@ var add_gpu = function (event){
             vendor: vendor,
             size: size,
             interfaces: interfaces
+        }, function (data) {
+            $("#table_body").html(JSON.parse(data));
+            $('.modal').hide(300);
+        });
+    }
+}
+var add_hdd = function (event){
+    event.preventDefault();
+    var hardware = $("#hdd_add_hardware").val();
+    var vendor = $("#hdd_add_vendor").val();
+    var model = $("#hdd_add_model").val();
+    var serial_number = $("#hdd_add_serial_number").val();
+    var size = $("#hdd_add_size").val();
+    var type = $("#hdd_add_type").val();
+
+    var checked_hardware = check_input("hdd_add_hardware");
+    var checked_vendor = check_input("hdd_add_vendor");
+    var checked_model = check_input("hdd_add_model");
+    var checked_serial_number = check_input("hdd_add_serial_number");
+    var checked_size = check_input("hdd_add_size");
+    var checked_type = check_input("hdd_add_type");
+
+    if(checked_hardware == true && checked_vendor == true && checked_model == true && checked_serial_number == true && checked_size == true && checked_type == true) {
+        $.post("inc/ajax.php", {
+            method: "add_hdd",
+            hardware: hardware,
+            vendor: vendor,
+            model: model,
+            serial_number: serial_number,
+            size: size,
+            type: type
+        }, function (data) {
+            $("#table_body").html(JSON.parse(data));
+            $('.modal').hide(300);
+        });
+    }
+}
+var add_network = function (event){
+    event.preventDefault();
+    var hardware = $("#network_add_hardware").val();
+    var vendor = $("#network_add_vendor").val();
+    var mac_address = $("#network_add_mac_address").val();
+    var type = $("#network_add_type").val();
+
+    var checked_hardware = check_input("network_add_hardware");
+    var checked_vendor = check_input("network_add_vendor");
+    var checked_mac_address = check_input("network_add_mac_address");
+    var checked_type = check_input("network_add_type");
+
+    if(checked_hardware == true && checked_vendor == true && checked_mac_address == true && checked_type == true) {
+        $.post("inc/ajax.php", {
+            method: "add_network",
+            hardware: hardware,
+            vendor: vendor,
+            mac_address: mac_address,
+            type: type
         }, function (data) {
             $("#table_body").html(JSON.parse(data));
             $('.modal').hide(300);
@@ -345,6 +429,68 @@ var update_gpu = function (event) {
         });
     }
 }
+var update_hdd = function (event) {
+    event.preventDefault();
+    var hardware = $("#hdd_edit_hardware").val();
+    var vendor = $("#hdd_edit_vendor").val();
+    var model = $("#hdd_edit_model").val();
+    var serial_number = $("#hdd_edit_serial_number").val();
+    var size = $("#hdd_edit_size").val();
+    var type = $("#hdd_edit_type").val();
+    var id = $("#hdd_id").val();
+
+    var checked_hardware = check_input("hdd_edit_hardware");
+    var checked_vendor = check_input("hdd_edit_vendor");
+    var checked_model = check_input("hdd_edit_model");
+    var checked_serial_number = check_input("hdd_edit_serial_number");
+    var checked_size = check_input("hdd_edit_size");
+    var checked_type = check_input("hdd_edit_type");
+    var checked_id = check_input("hdd_id");
+
+    if(checked_hardware == true && checked_vendor == true && checked_model == true && checked_serial_number == true && checked_size == true && checked_type == true && checked_id == true){
+        $.post("inc/ajax.php",{
+            method: "update_hdd",
+            id:id,
+            hardware:hardware,
+            vendor:vendor,
+            model:model,
+            serial_number:serial_number,
+            size:size,
+            type:type
+        }, function (data) {
+            $("#table_body").html(JSON.parse(data));
+            $(".modal").hide(300);
+        });
+    }
+}
+var update_network = function (event) {
+    event.preventDefault();
+    var hardware = $("#network_edit_hardware").val();
+    var vendor = $("#network_edit_vendor").val();
+    var mac_address = $("#network_edit_mac_address").val();
+    var type = $("#network_edit_type").val();
+    var id = $("#network_id").val();
+
+    var checked_hardware = check_input("network_edit_hardware");
+    var checked_vendor = check_input("network_edit_vendor");
+    var checked_mac_address = check_input("network_edit_mac_address");
+    var checked_type = check_input("network_edit_type");
+    var checked_id = check_input("network_id");
+
+    if(checked_hardware == true && checked_vendor == true && checked_mac_address == true && checked_type == true && checked_id == true){
+        $.post("inc/ajax.php",{
+            method: "update_network",
+            id:id,
+            hardware:hardware,
+            vendor:vendor,
+            mac_address:mac_address,
+            type:type
+        }, function (data) {
+            $("#table_body").html(JSON.parse(data));
+            $(".modal").hide(300);
+        });
+    }
+}
 /*update*/
 
 /*rmv*/
@@ -375,6 +521,18 @@ var rmv_ram = function (id,event){
 var rmv_gpu = function (id,event){
     event.preventDefault();
     $.post("inc/ajax.php",{method: "rmv_gpu",id:id}, function (data){
+        $("#table_body").html(JSON.parse(data));
+    });
+}
+var rmv_hdd = function (id,event){
+    event.preventDefault();
+    $.post("inc/ajax.php",{method: "rmv_hdd",id:id}, function (data){
+        $("#table_body").html(JSON.parse(data));
+    });
+}
+var rmv_network = function (id,event){
+    event.preventDefault();
+    $.post("inc/ajax.php",{method: "rmv_network",id:id}, function (data){
         $("#table_body").html(JSON.parse(data));
     });
 }
@@ -409,6 +567,18 @@ var sort_ram_by = function (by,event){
 var sort_gpu_by = function (by,event){
     event.preventDefault();
     $.post("inc/ajax.php",{method:"sort_gpu_by",by:by}, function(data){
+        $("#table_body").html(JSON.parse(data));
+    });
+}
+var sort_hdd_by = function (by,event){
+    event.preventDefault();
+    $.post("inc/ajax.php",{method:"sort_hdd_by",by:by}, function(data){
+        $("#table_body").html(JSON.parse(data));
+    });
+}
+var sort_network_by = function (by,event){
+    event.preventDefault();
+    $.post("inc/ajax.php",{method:"sort_network_by",by:by}, function(data){
         $("#table_body").html(JSON.parse(data));
     });
 }
@@ -477,6 +647,34 @@ var search_gpu = function (event){
     var checked_what = check_input("gpu_search");
     if(checked_what == true){
         $.post("inc/ajax.php",{method: "search_gpu",where:where,what:what}, function (data){
+            $("#table_body").html(JSON.parse(data));
+        });
+    }
+    else {
+        $("#gpu").trigger("click");
+    }
+}
+var search_hdd = function (event){
+    event.preventDefault();
+    var what = $("#hdd_search").val();
+    var where = $("#hdd_search_select").val();
+    var checked_what = check_input("hdd_search");
+    if(checked_what == true){
+        $.post("inc/ajax.php",{method: "search_hdd",where:where,what:what}, function (data){
+            $("#table_body").html(JSON.parse(data));
+        });
+    }
+    else {
+        $("#gpu").trigger("click");
+    }
+}
+var search_network = function (event){
+    event.preventDefault();
+    var what = $("#network_search").val();
+    var where = $("#network_search_select").val();
+    var checked_what = check_input("network_search");
+    if(checked_what == true){
+        $.post("inc/ajax.php",{method: "search_network",where:where,what:what}, function (data){
             $("#table_body").html(JSON.parse(data));
         });
     }
@@ -621,6 +819,28 @@ $(document).ready(function(){
         });
         clear_active();
         $("#gpuLI").addClass("active");
+    });
+    $("#hdd").click(function (event) {
+        event.preventDefault();
+        $.post("inc/ajax.php",{method:"get_table_header_hdd"},function(data){
+            data = JSON.parse(data);
+            $("#search_bar").html(data['searchbar']);
+            $("#table_header").html(data['table_header']);
+            $("#table_body").html(data['table_content']);
+        });
+        clear_active();
+        $("#hddLI").addClass("active");
+    });
+    $("#network").click(function (event) {
+        event.preventDefault();
+        $.post("inc/ajax.php",{method:"get_table_header_network"},function(data){
+            data = JSON.parse(data);
+            $("#search_bar").html(data['searchbar']);
+            $("#table_header").html(data['table_header']);
+            $("#table_body").html(data['table_content']);
+        });
+        clear_active();
+        $("#networkLI").addClass("active");
     });
     /*processing tabs*/
 

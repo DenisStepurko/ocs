@@ -14,6 +14,8 @@ include_once('../inc/motherboards.class.php');
 include_once('../inc/cpu.class.php');
 include_once('../inc/ram.class.php');
 include_once('../inc/gpu.class.php');
+include_once('../inc/hdd.class.php');
+include_once('../inc/network.class.php');
 include_once('../inc/phpqrcode/qrlib.php');
 $authorization = new Authorization();
 $hardware = new hardware();
@@ -21,6 +23,8 @@ $mb = new motherboards();
 $cpu = new cpu();
 $ram = new ram();
 $gpu = new gpu();
+$hdd = new hdd();
+$network = new network();
 
 switch ($_POST['method']){
     /*auth*/
@@ -70,6 +74,20 @@ switch ($_POST['method']){
         $result = array("searchbar" => $get_gpu_search, "table_header" => $get_table_header_gpu, "table_content" => $get_table_content_gpu);
         echo json_encode($result);
         break;
+    case 'get_table_header_hdd':
+        $get_table_header_hdd = $hdd->get_table_headers_hdd();
+        $get_table_content_hdd = $hdd->get_all_hdd();
+        $get_hdd_search = $hdd->get_searchbar_hdd();
+        $result = array("searchbar" => $get_hdd_search, "table_header" => $get_table_header_hdd, "table_content" => $get_table_content_hdd);
+        echo json_encode($result);
+        break;
+    case 'get_table_header_network':
+        $get_table_header_network = $network->get_table_headers_network();
+        $get_table_content_network = $network->get_all_network();
+        $get_network_search = $network->get_searchbar_network();
+        $result = array("searchbar" => $get_network_search, "table_header" => $get_table_header_network, "table_content" => $get_table_content_network);
+        echo json_encode($result);
+        break;
     /*get table values*/
 
     /*update*/
@@ -91,6 +109,14 @@ switch ($_POST['method']){
         break;
     case 'update_gpu':
         $result = $gpu->update_gpu($_POST['id'],$_POST['hardware'],$_POST['vendor'],$_POST['size'],$_POST['interfaces']);
+        echo json_encode($result);
+        break;
+    case 'update_hdd':
+        $result = $hdd->update_hdd($_POST['id'],$_POST['hardware'],$_POST['vendor'],$_POST['model'],$_POST['serial_number'],$_POST['size'],$_POST['type']);
+        echo json_encode($result);
+        break;
+    case 'update_network':
+        $result = $network->update_network($_POST['id'],$_POST['hardware'],$_POST['vendor'],$_POST['mac_address'],$_POST['type']);
         echo json_encode($result);
         break;
     /*update*/
@@ -118,6 +144,14 @@ switch ($_POST['method']){
         $result = $gpu->show_edit_gpu_in_modal($_POST['id']);
         echo json_encode($result);
         break;
+    case 'edit_hdd':
+        $result = $hdd->show_edit_hdd_in_modal($_POST['id']);
+        echo json_encode($result);
+        break;
+    case 'edit_network':
+        $result = $network->show_edit_network_in_modal($_POST['id']);
+        echo json_encode($result);
+        break;
     /*edit*/
 
     /*add*/
@@ -139,6 +173,14 @@ switch ($_POST['method']){
         break;
     case 'show_add_gpu_modal':
         $result = $gpu->show_add_gpu_modal();
+        echo $result;
+        break;
+    case 'show_add_hdd_modal':
+        $result = $hdd->show_add_hdd_modal();
+        echo $result;
+        break;
+    case 'show_add_network_modal':
+        $result = $network->show_add_network_modal();
         echo $result;
         break;
     /*add*/
@@ -164,6 +206,14 @@ switch ($_POST['method']){
         break;
     case 'add_gpu':
         $result = $gpu->add_gpu($_POST['hardware'],$_POST['vendor'],$_POST['size'],$_POST['interfaces']);
+        echo json_encode($result);
+        break;
+    case 'add_hdd':
+        $result = $hdd->add_hdd($_POST['hardware'],$_POST['vendor'],$_POST['model'],$_POST['serial_number'],$_POST['size'],$_POST['type']);
+        echo json_encode($result);
+        break;
+    case 'add_network':
+        $result = $network->add_network($_POST['hardware'],$_POST['vendor'],$_POST['mac_address'],$_POST['type']);
         echo json_encode($result);
         break;
     /*add*/
@@ -192,6 +242,14 @@ switch ($_POST['method']){
         $result = $gpu->rmv_gpu($_POST['id']);
         echo json_encode($result);
         break;
+    case 'rmv_hdd':
+        $result = $hdd->rmv_hdd($_POST['id']);
+        echo json_encode($result);
+        break;
+    case 'rmv_network':
+        $result = $network->rmv_network($_POST['id']);
+        echo json_encode($result);
+        break;
     /*rmv*/
 
     /*sort*/
@@ -213,6 +271,14 @@ switch ($_POST['method']){
         break;
     case 'sort_gpu_by':
         $hardware = $gpu->sort_gpu_by($_POST['by']);
+        echo json_encode($hardware);
+        break;
+    case 'sort_hdd_by':
+        $hardware = $hdd->sort_hdd_by($_POST['by']);
+        echo json_encode($hardware);
+        break;
+    case 'sort_network_by':
+        $hardware = $network->sort_network_by($_POST['by']);
         echo json_encode($hardware);
         break;
     /*sort*/
@@ -237,6 +303,14 @@ switch ($_POST['method']){
     case 'search_gpu':
         $gpus = $gpu->search_gpu($_POST['where'],$_POST['what']);
         echo json_encode($gpus);
+        break;
+    case 'search_hdd':
+        $hdds = $hdd->search_hdd($_POST['where'],$_POST['what']);
+        echo json_encode($hdds);
+        break;
+    case 'search_network':
+        $result = $network->search_network($_POST['where'],$_POST['what']);
+        echo json_encode($result);
         break;
     /*search*/
 
