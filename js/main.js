@@ -62,6 +62,20 @@ var edit_ram = function (id,event) {
         $(".modal").show(300);
     });
 }
+var show_add_gpu_modal = function (event) {
+    event.preventDefault();
+    $.post("inc/ajax.php",{method:"show_add_gpu_modal"},function(data){
+        $(".content_modal").html(data);
+        $(".modal").show(300);
+    });
+}
+var edit_gpu = function (id,event) {
+    event.preventDefault();
+    $.post("inc/ajax.php",{method:"edit_gpu",id:id},function(data){
+        $(".content_modal").html(JSON.parse(data));
+        $(".modal").show(300);
+    });
+}
 /*modal*/
 
 /*modal processing*/
@@ -160,6 +174,39 @@ var add_ram = function (event){
 
     if(checked_hardware == true && checked_serial_number == true && checked_interface == true && checked_type == true && checked_speed == true && checked_size == true){
         $.post("inc/ajax.php",{method:"add_ram",hardware:hardware,serail_number:serail_number,interface:interface,type:type,speed:speed,size:size}, function(data){
+            $("#table_body").html(JSON.parse(data));
+            $('.modal').hide(300);
+        });
+    }
+}
+var add_gpu = function (event){
+    event.preventDefault();
+    var checkboxes = $("input:checkbox:checked");
+    var interfaces ='';
+    for(var i = 0; i < 4;i++){
+        if(typeof $(checkboxes[i]).val() == "undefined" && !$(checkboxes[i]).val()){
+
+        } else {
+            interfaces += $(checkboxes[i]).val();
+            interfaces += ',';
+        }
+    }
+    var hardware = $("#gpu_add_hardware").val();
+    var vendor = $("#gpu_add_vendor").val();
+    var size = $("#gpu_add_size").val();
+
+    var checked_hardware = check_input("gpu_add_hardware");
+    var checked_vendor = check_input("gpu_add_vendor");
+    var checked_size = check_input("gpu_add_size");
+
+    if(checked_hardware == true && checked_vendor == true && checked_size == true) {
+        $.post("inc/ajax.php", {
+            method: "add_gpu",
+            hardware: hardware,
+            vendor: vendor,
+            size: size,
+            interfaces: interfaces
+        }, function (data) {
             $("#table_body").html(JSON.parse(data));
             $('.modal').hide(300);
         });
@@ -267,6 +314,37 @@ var update_ram = function (event) {
         });
     }
 }
+var update_gpu = function (event) {
+    event.preventDefault();
+    var hardware = $("#gpu_edit_hardware").val();
+    var vendor = $("#gpu_edit_vendor").val();
+    var size = $("#gpu_edit_size").val();
+    var id = $("#gpu_id").val();
+
+    var checkboxes = $("input:checkbox:checked");
+    var interfaces ='';
+    for(var i = 0; i < 4;i++){
+        if(typeof $(checkboxes[i]).val() == "undefined" && !$(checkboxes[i]).val()){
+
+        } else {
+            interfaces += $(checkboxes[i]).val();
+            interfaces += ',';
+        }
+    }
+
+
+    var checked_hardware = check_input("gpu_edit_hardware");
+    var checked_vendor = check_input("gpu_edit_vendor");
+    var checked_size = check_input("gpu_edit_size");
+    var checked_id = check_input("gpu_id");
+
+    if(checked_hardware == true && checked_vendor == true && checked_size == true && checked_id == true){
+        $.post("inc/ajax.php",{method: "update_gpu", id:id,hardware:hardware,vendor:vendor,size:size,interfaces:interfaces}, function (data) {
+            $("#table_body").html(JSON.parse(data));
+            $(".modal").hide(300);
+        });
+    }
+}
 /*update*/
 
 /*rmv*/
@@ -291,6 +369,12 @@ var rmv_cpu = function (id,event){
 var rmv_ram = function (id,event){
     event.preventDefault();
     $.post("inc/ajax.php",{method: "rmv_ram",id:id}, function (data){
+        $("#table_body").html(JSON.parse(data));
+    });
+}
+var rmv_gpu = function (id,event){
+    event.preventDefault();
+    $.post("inc/ajax.php",{method: "rmv_gpu",id:id}, function (data){
         $("#table_body").html(JSON.parse(data));
     });
 }
@@ -319,6 +403,12 @@ var sort_cpu_by = function (by,event){
 var sort_ram_by = function (by,event){
     event.preventDefault();
     $.post("inc/ajax.php",{method:"sort_ram_by",by:by}, function(data){
+        $("#table_body").html(JSON.parse(data));
+    });
+}
+var sort_gpu_by = function (by,event){
+    event.preventDefault();
+    $.post("inc/ajax.php",{method:"sort_gpu_by",by:by}, function(data){
         $("#table_body").html(JSON.parse(data));
     });
 }
@@ -378,6 +468,20 @@ var search_ram = function (event){
     }
     else {
         $("#cpu").trigger("click");
+    }
+}
+var search_gpu = function (event){
+    event.preventDefault();
+    var what = $("#gpu_search").val();
+    var where = $("#gpu_search_select").val();
+    var checked_what = check_input("gpu_search");
+    if(checked_what == true){
+        $.post("inc/ajax.php",{method: "search_gpu",where:where,what:what}, function (data){
+            $("#table_body").html(JSON.parse(data));
+        });
+    }
+    else {
+        $("#gpu").trigger("click");
     }
 }
 /*search*/
@@ -506,6 +610,17 @@ $(document).ready(function(){
         });
         clear_active();
         $("#ramLI").addClass("active");
+    });
+    $("#gpu").click(function (event) {
+        event.preventDefault();
+        $.post("inc/ajax.php",{method:"get_table_header_gpu"},function(data){
+            data = JSON.parse(data);
+            $("#search_bar").html(data['searchbar']);
+            $("#table_header").html(data['table_header']);
+            $("#table_body").html(data['table_content']);
+        });
+        clear_active();
+        $("#gpuLI").addClass("active");
     });
     /*processing tabs*/
 
