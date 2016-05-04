@@ -18,6 +18,7 @@ include_once('../inc/hdd.class.php');
 include_once('../inc/network.class.php');
 include_once('../inc/power_supply.class.php');
 include_once('../inc/monitors.class.php');
+include_once('../inc/peripheral.class.php');
 include_once('../inc/phpqrcode/qrlib.php');
 $authorization = new Authorization();
 $hardware = new hardware();
@@ -29,6 +30,7 @@ $hdd = new hdd();
 $network = new network();
 $power_supply = new power_supply();
 $monitor = new monitor();
+$peripheral = new peripheral();
 
 switch ($_POST['method']){
     /*auth*/
@@ -106,6 +108,13 @@ switch ($_POST['method']){
         $result = array("searchbar" => $get_monitor_search, "table_header" => $get_table_header_monitor, "table_content" => $get_table_content_monitor);
         echo json_encode($result);
         break;
+    case 'get_table_peripheral':
+        $get_table_header_peripheral = $peripheral->get_table_headers_peripheral();
+        $get_table_content_peripheral = $peripheral->get_all_peripheral();
+        $get_peripheral_search = $peripheral->get_searchbar_peripheral();
+        $result = array("searchbar" => $get_peripheral_search, "table_header" => $get_table_header_peripheral, "table_content" => $get_table_content_peripheral);
+        echo json_encode($result);
+        break;
     /*get table values*/
 
     /*update*/
@@ -143,6 +152,10 @@ switch ($_POST['method']){
         break;
     case 'update_monitor':
         $result = $monitor->update_monitor($_POST['id'],$_POST['hardware'],$_POST['vendor'],$_POST['size'],$_POST['interfaces']);
+        echo json_encode($result);
+        break;
+    case 'update_peripheral':
+        $result = $peripheral->update_peripheral($_POST['id'],$_POST['serial_number'],$_POST['type'],$_POST['description'],$_POST['status']);
         echo json_encode($result);
         break;
     /*update*/
@@ -186,6 +199,10 @@ switch ($_POST['method']){
         $result = $monitor->show_edit_monitor_in_modal($_POST['id']);
         echo json_encode($result);
         break;
+    case 'edit_peripheral':
+        $result = $peripheral->show_edit_peripheral_in_modal($_POST['id']);
+        echo json_encode($result);
+        break;
     /*edit*/
 
     /*add*/
@@ -223,6 +240,10 @@ switch ($_POST['method']){
         break;
     case 'show_add_monitor_modal':
         $result = $monitor->show_add_monitor_modal();
+        echo $result;
+        break;
+    case 'show_add_peripheral_modal':
+        $result = $peripheral->show_add_peripheral_modal();
         echo $result;
         break;
     /*add*/
@@ -264,6 +285,10 @@ switch ($_POST['method']){
         break;
     case 'add_monitor':
         $result = $monitor->add_monitor($_POST['hardware'],$_POST['vendor'],$_POST['size'],$_POST['interfaces']);
+        echo json_encode($result);
+        break;
+    case 'add_peripheral':
+        $result = $peripheral->add_peripheral($_POST['serial_number'],$_POST['type'],$_POST['description'],$_POST['status']);
         echo json_encode($result);
         break;
     /*add*/
@@ -308,6 +333,10 @@ switch ($_POST['method']){
         $result = $monitor->rmv_monitor($_POST['id']);
         echo json_encode($result);
         break;
+    case 'rmv_peripheral':
+        $result = $peripheral->rmv_peripheral($_POST['id']);
+        echo json_encode($result);
+        break;
     /*rmv*/
 
     /*sort*/
@@ -347,6 +376,10 @@ switch ($_POST['method']){
         $hardware = $monitor->sort_monitor_by($_POST['by']);
         echo json_encode($hardware);
         break;
+    case 'sort_peripheral_by':
+        $hardware = $peripheral->sort_peripheral_by($_POST['by']);
+        echo json_encode($hardware);
+        break;
     /*sort*/
 
     /*search*/
@@ -380,6 +413,10 @@ switch ($_POST['method']){
         break;
     case 'search_monitor':
         $result = $monitor->search_monitor($_POST['where'],$_POST['what']);
+        echo json_encode($result);
+        break;
+    case 'search_peripheral':
+        $result = $peripheral->search_peripheral($_POST['where'],$_POST['what']);
         echo json_encode($result);
         break;
     /*search*/
