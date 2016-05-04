@@ -20,6 +20,7 @@ include_once('../inc/power_supply.class.php');
 include_once('../inc/monitors.class.php');
 include_once('../inc/peripheral.class.php');
 include_once('../inc/network_device.class.php');
+include_once('../inc/mobile_device.class.php');
 include_once('../inc/phpqrcode/qrlib.php');
 $authorization = new Authorization();
 $hardware = new hardware();
@@ -33,6 +34,7 @@ $power_supply = new power_supply();
 $monitor = new monitor();
 $peripheral = new peripheral();
 $network_device = new network_device();
+$mobile_device = new mobile_device();
 
 switch ($_POST['method']){
     /*auth*/
@@ -124,6 +126,13 @@ switch ($_POST['method']){
         $result = array("searchbar" => $get_network_device_search, "table_header" => $get_table_header_network_device, "table_content" => $get_table_content_network_device);
         echo json_encode($result);
         break;
+    case 'get_table_mobile_device':
+        $get_table_header_mobile_device = $mobile_device->get_table_headers_mobile_device();
+        $get_table_content_mobile_device = $mobile_device->get_all_mobile_device();
+        $get_mobile_device_search = $mobile_device->get_searchbar_mobile_device();
+        $result = array("searchbar" => $get_mobile_device_search, "table_header" => $get_table_header_mobile_device, "table_content" => $get_table_content_mobile_device);
+        echo json_encode($result);
+        break;
     /*get table values*/
 
     /*update*/
@@ -169,6 +178,10 @@ switch ($_POST['method']){
         break;
     case 'update_network_device':
         $result = $network_device->update_network_device($_POST['id'],$_POST['model'],$_POST['port_number'],$_POST['serial_number'],$_POST['type'],$_POST['mac_address'],$_POST['status']);
+        echo json_encode($result);
+        break;
+    case 'update_mobile_device':
+        $result = $mobile_device->update_mobile_device($_POST['id'],$_POST['model'],$_POST['imei'],$_POST['serial_number'],$_POST['platform'],$_POST['status']);
         echo json_encode($result);
         break;
     /*update*/
@@ -220,6 +233,10 @@ switch ($_POST['method']){
         $result = $network_device->show_edit_network_device_in_modal($_POST['id']);
         echo json_encode($result);
         break;
+    case 'edit_mobile_device':
+        $result = $mobile_device->show_edit_mobile_device_in_modal($_POST['id']);
+        echo json_encode($result);
+        break;
     /*edit*/
 
     /*add*/
@@ -265,6 +282,10 @@ switch ($_POST['method']){
         break;
     case 'show_add_network_device_modal':
         $result = $network_device->show_add_network_device_modal();
+        echo $result;
+        break;
+    case 'show_add_mobile_device_modal':
+        $result = $mobile_device->show_add_mobile_device_modal();
         echo $result;
         break;
     /*add*/
@@ -314,6 +335,10 @@ switch ($_POST['method']){
         break;
     case 'add_network_device':
         $result = $network_device->add_network_device($_POST['model'],$_POST['port_number'],$_POST['serial_number'],$_POST['type'],$_POST['mac_address'],$_POST['status']);
+        echo json_encode($result);
+        break;
+    case 'add_mobile_device':
+        $result = $mobile_device->add_mobile_device($_POST['model'],$_POST['imei'],$_POST['serial_number'],$_POST['platform'],$_POST['status']);
         echo json_encode($result);
         break;
     /*add*/
@@ -366,6 +391,10 @@ switch ($_POST['method']){
         $result = $network_device->rmv_network_device($_POST['id']);
         echo json_encode($result);
         break;
+    case 'rmv_mobile_device':
+        $result = $mobile_device->rmv_mobile_device($_POST['id']);
+        echo json_encode($result);
+        break;
     /*rmv*/
 
     /*sort*/
@@ -413,6 +442,10 @@ switch ($_POST['method']){
         $hardware = $network_device->sort_network_device_by($_POST['by']);
         echo json_encode($hardware);
         break;
+    case 'sort_mobile_device_by':
+        $hardware = $mobile_device->sort_mobile_device_by($_POST['by']);
+        echo json_encode($hardware);
+        break;
     /*sort*/
 
     /*search*/
@@ -454,6 +487,10 @@ switch ($_POST['method']){
         break;
     case 'search_network_device':
         $result = $network_device->search_network_device($_POST['where'],$_POST['what']);
+        echo json_encode($result);
+        break;
+    case 'search_mobile_device':
+        $result = $mobile_device->search_mobile_device($_POST['where'],$_POST['what']);
         echo json_encode($result);
         break;
     /*search*/

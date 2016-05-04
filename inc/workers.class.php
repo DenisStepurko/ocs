@@ -13,7 +13,6 @@ class worker {
 
     public function __construct() {
         $this->db = new MysqliDb();
-        $this->workers = $this->db->get('workers');
     }
 
     public function get_worker_info(){
@@ -21,6 +20,7 @@ class worker {
     }
 
     public function return_worker_fio($id){
+        $this->workers = $this->db->get('workers');
         foreach ($this->workers as $worker){
             if($worker['ID'] == $id){
                 return $worker['fio'];
@@ -29,6 +29,7 @@ class worker {
     }
 
     public function return_select_with_workers($id = null){
+        $this->workers = $this->db->get('workers');
         if($id == 0){
             $result = '<option selected value="0"></option>';
         }
