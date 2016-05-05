@@ -44,7 +44,7 @@ class cpu {
                     <a href='#' onclick='rmv_cpu(".$cpu['ID'].",event)'  class='rmv_index'><img src='images/del.gif'></a></td>
                 </tr>");
             }
-            array_push($result,"<tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>");
+            array_push($result,"<tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>");
             return $result;
         }
     }

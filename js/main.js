@@ -174,6 +174,48 @@ var edit_mobile_device = function (id,event) {
         $(".modal").show(300);
     });
 }
+var show_add_worker_modal = function (event) {
+    event.preventDefault();
+    $.post("inc/ajax.php",{method:"show_add_worker_modal"},function(data){
+        $(".content_modal").html(data);
+        $(".modal").show(300);
+    });
+}
+var edit_worker = function (id,event) {
+    event.preventDefault();
+    $.post("inc/ajax.php",{method:"edit_worker",id:id},function(data){
+        $(".content_modal").html(JSON.parse(data));
+        $(".modal").show(300);
+    });
+}
+var show_add_users_modal = function (event) {
+    event.preventDefault();
+    $.post("inc/ajax.php",{method:"show_add_users_modal"},function(data){
+        $(".content_modal").html(data);
+        $(".modal").show(300);
+    });
+}
+var edit_users = function (id,event) {
+    event.preventDefault();
+    $.post("inc/ajax.php",{method:"edit_users",id:id},function(data){
+        $(".content_modal").html(JSON.parse(data));
+        $(".modal").show(300);
+    });
+}
+var show_add_groups_modal = function (event) {
+    event.preventDefault();
+    $.post("inc/ajax.php",{method:"show_add_groups_modal"},function(data){
+        $(".content_modal").html(data);
+        $(".modal").show(300);
+    });
+}
+var edit_groups = function (id,event) {
+    event.preventDefault();
+    $.post("inc/ajax.php",{method:"edit_groups",id:id},function(data){
+        $(".content_modal").html(JSON.parse(data));
+        $(".modal").show(300);
+    });
+}
 /*modal*/
 
 /*modal processing*/
@@ -503,6 +545,52 @@ var add_mobile_device = function (event){
             serial_number: serial_number,
             platform: platform,
             status: status
+        }, function (data) {
+            $("#table_body").html(JSON.parse(data));
+            $('.modal').hide(300);
+        });
+    }
+}
+var add_worker = function (event){
+    event.preventDefault();
+    var fio = $("#worker_add_fio").val();
+    var birthday = $("#worker_add_birthday").val();
+    $.post("inc/ajax.php", {
+        method: "add_worker",
+        fio: fio,
+        birthday: birthday
+    }, function (data) {
+        $("#table_body").html(JSON.parse(data));
+        $('.modal').hide(300);
+    });
+}
+var add_users = function (event){
+    event.preventDefault();
+    var login = $("#users_add_login").val();
+    var password = $("#users_add_password").val();
+    var email = $("#users_add_email").val();
+    var admin = $("#users_add_admin").val();
+    $.post("inc/ajax.php", {
+        method: "add_users",
+        login: login,
+        password: password,
+        email: email,
+        admin: admin
+    }, function (data) {
+        $("#table_body").html(JSON.parse(data));
+        $('.modal').hide(300);
+    });
+}
+var add_groups = function (event){
+    event.preventDefault();
+
+    var checked_name = check_input("groups_add_name");
+    var name = $("#groups_add_name").val();
+
+    if(checked_name == true){
+        $.post("inc/ajax.php", {
+            method: "add_groups",
+            name: name,
         }, function (data) {
             $("#table_body").html(JSON.parse(data));
             $('.modal').hide(300);
@@ -858,6 +946,58 @@ var update_mobile_device = function (event){
         });
     }
 }
+var update_worker = function (event){
+    event.preventDefault();
+    var fio = $("#worker_edit_fio").val();
+    var birthday = $("#worker_edit_birthday").val();
+    var id = $("#worker_id").val();
+
+    $.post("inc/ajax.php", {
+        method: "update_worker",
+        id: id,
+        fio: fio,
+        birthday: birthday
+    }, function (data) {
+        $("#table_body").html(JSON.parse(data));
+        $('.modal').hide(300);
+    });
+}
+var update_users = function (event){
+    event.preventDefault();
+    var login = $("#users_edit_login").val();
+    var password = $("#users_edit_password").val();
+    var email = $("#users_edit_email").val();
+    var admin = $("#users_edit_admin").val();
+    var id = $("#users_id").val();
+
+    $.post("inc/ajax.php", {
+        method: "update_users",
+        id: id,
+        login: login,
+        password: password,
+        email: email,
+        admin: admin
+    }, function (data) {
+        $("#table_body").html(JSON.parse(data));
+        $('.modal').hide(300);
+    });
+}
+var update_groups = function (event){
+    event.preventDefault();
+    var name = $("#groups_edit_name").val();
+    var id = $("#groups_id").val();
+    var checked_name = check_input("groups_edit_name");
+    if(checked_name == true) {
+        $.post("inc/ajax.php", {
+            method: "update_groups",
+            id: id,
+            name: name,
+        }, function (data) {
+            $("#table_body").html(JSON.parse(data));
+            $('.modal').hide(300);
+        });
+    }
+}
 /*update*/
 
 /*rmv*/
@@ -930,6 +1070,24 @@ var rmv_network_device = function (id,event){
 var rmv_mobile_device = function (id,event){
     event.preventDefault();
     $.post("inc/ajax.php",{method: "rmv_mobile_device",id:id}, function (data){
+        $("#table_body").html(JSON.parse(data));
+    });
+}
+var rmv_worker = function (id,event){
+    event.preventDefault();
+    $.post("inc/ajax.php",{method: "rmv_worker",id:id}, function (data){
+        $("#table_body").html(JSON.parse(data));
+    });
+}
+var rmv_users = function (id,event){
+    event.preventDefault();
+    $.post("inc/ajax.php",{method: "rmv_users",id:id}, function (data){
+        $("#table_body").html(JSON.parse(data));
+    });
+}
+var rmv_groups = function (id,event){
+    event.preventDefault();
+    $.post("inc/ajax.php",{method: "rmv_groups",id:id}, function (data){
         $("#table_body").html(JSON.parse(data));
     });
 }
@@ -1006,6 +1164,24 @@ var sort_network_device_by = function (by,event){
 var sort_mobile_device_by = function (by,event){
     event.preventDefault();
     $.post("inc/ajax.php",{method:"sort_mobile_device_by",by:by}, function(data){
+        $("#table_body").html(JSON.parse(data));
+    });
+}
+var sort_worker_by = function (by,event){
+    event.preventDefault();
+    $.post("inc/ajax.php",{method:"sort_worker_by",by:by}, function(data){
+        $("#table_body").html(JSON.parse(data));
+    });
+}
+var sort_users_by = function (by,event){
+    event.preventDefault();
+    $.post("inc/ajax.php",{method:"sort_users_by",by:by}, function(data){
+        $("#table_body").html(JSON.parse(data));
+    });
+}
+var sort_groups_by = function (by,event){
+    event.preventDefault();
+    $.post("inc/ajax.php",{method:"sort_groups_by",by:by}, function(data){
         $("#table_body").html(JSON.parse(data));
     });
 }
@@ -1393,6 +1569,39 @@ $(document).ready(function(){
         });
         clear_active();
         $("#mobile_deviceLI").addClass("active");
+    });
+    $("#workers").click(function (event) {
+        event.preventDefault();
+        $.post("inc/ajax.php",{method:"get_table_worker"},function(data){
+            data = JSON.parse(data);
+            $("#search_bar").html(data['searchbar']);
+            $("#table_header").html(data['table_header']);
+            $("#table_body").html(data['table_content']);
+        });
+        clear_active();
+        $("#workersLI").addClass("active");
+    });
+    $("#users").click(function (event) {
+        event.preventDefault();
+        $.post("inc/ajax.php",{method:"get_table_users"},function(data){
+            data = JSON.parse(data);
+            $("#search_bar").html(data['searchbar']);
+            $("#table_header").html(data['table_header']);
+            $("#table_body").html(data['table_content']);
+        });
+        clear_active();
+        $("#usersLI").addClass("active");
+    });
+    $("#groups").click(function (event) {
+        event.preventDefault();
+        $.post("inc/ajax.php",{method:"get_table_groups"},function(data){
+            data = JSON.parse(data);
+            $("#search_bar").html(data['searchbar']);
+            $("#table_header").html(data['table_header']);
+            $("#table_body").html(data['table_content']);
+        });
+        clear_active();
+        $("#groupsLI").addClass("active");
     });
     /*processing tabs*/
 

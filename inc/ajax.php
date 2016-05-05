@@ -21,6 +21,8 @@ include_once('../inc/monitors.class.php');
 include_once('../inc/peripheral.class.php');
 include_once('../inc/network_device.class.php');
 include_once('../inc/mobile_device.class.php');
+include_once('../inc/workers.class.php');
+include_once('../inc/users.class.php');
 include_once('../inc/phpqrcode/qrlib.php');
 $authorization = new Authorization();
 $hardware = new hardware();
@@ -35,6 +37,9 @@ $monitor = new monitor();
 $peripheral = new peripheral();
 $network_device = new network_device();
 $mobile_device = new mobile_device();
+$worker = new worker();
+$users = new users();
+$groups = new groups();
 
 switch ($_POST['method']){
     /*auth*/
@@ -133,6 +138,27 @@ switch ($_POST['method']){
         $result = array("searchbar" => $get_mobile_device_search, "table_header" => $get_table_header_mobile_device, "table_content" => $get_table_content_mobile_device);
         echo json_encode($result);
         break;
+    case 'get_table_worker':
+        $get_table_header_worker = $worker->get_table_headers_worker();
+        $get_table_content_worker = $worker->get_all_worker();
+        $get_worker_search = $worker->get_searchbar_worker();
+        $result = array("searchbar" => $get_worker_search, "table_header" => $get_table_header_worker, "table_content" => $get_table_content_worker);
+        echo json_encode($result);
+        break;
+    case 'get_table_users':
+        $get_table_header_users = $users->get_table_headers_users();
+        $get_table_content_users = $users->get_all_users();
+        $get_users_search = $users->get_searchbar_users();
+        $result = array("searchbar" => $get_users_search, "table_header" => $get_table_header_users, "table_content" => $get_table_content_users);
+        echo json_encode($result);
+        break;
+    case 'get_table_groups':
+        $get_table_header_groups = $groups->get_table_headers_groups();
+        $get_table_content_groups = $groups->get_all_groups();
+        $get_groups_search = $groups->get_searchbar_groups();
+        $result = array("searchbar" => $get_groups_search, "table_header" => $get_table_header_groups, "table_content" => $get_table_content_groups);
+        echo json_encode($result);
+        break;
     /*get table values*/
 
     /*update*/
@@ -182,6 +208,18 @@ switch ($_POST['method']){
         break;
     case 'update_mobile_device':
         $result = $mobile_device->update_mobile_device($_POST['id'],$_POST['model'],$_POST['imei'],$_POST['serial_number'],$_POST['platform'],$_POST['status']);
+        echo json_encode($result);
+        break;
+    case 'update_worker':
+        $result = $worker->update_worker($_POST['id'],$_POST['fio'],$_POST['birthday']);
+        echo json_encode($result);
+        break;
+    case 'update_users':
+        $result = $users->update_users($_POST['id'],$_POST['login'],$_POST['password'],$_POST['email'],$_POST['admin']);
+        echo json_encode($result);
+        break;
+    case 'update_groups':
+        $result = $groups->update_groups($_POST['id'],$_POST['name']);
         echo json_encode($result);
         break;
     /*update*/
@@ -237,6 +275,18 @@ switch ($_POST['method']){
         $result = $mobile_device->show_edit_mobile_device_in_modal($_POST['id']);
         echo json_encode($result);
         break;
+    case 'edit_worker':
+        $result = $worker->show_edit_worker_in_modal($_POST['id']);
+        echo json_encode($result);
+        break;
+    case 'edit_users':
+        $result = $users->show_edit_users_in_modal($_POST['id']);
+        echo json_encode($result);
+        break;
+    case 'edit_groups':
+        $result = $groups->show_edit_groups_in_modal($_POST['id']);
+        echo json_encode($result);
+        break;
     /*edit*/
 
     /*add*/
@@ -286,6 +336,18 @@ switch ($_POST['method']){
         break;
     case 'show_add_mobile_device_modal':
         $result = $mobile_device->show_add_mobile_device_modal();
+        echo $result;
+        break;
+    case 'show_add_worker_modal':
+        $result = $worker->show_add_worker_modal();
+        echo $result;
+        break;
+    case 'show_add_users_modal':
+        $result = $users->show_add_users_modal();
+        echo $result;
+        break;
+    case 'show_add_groups_modal':
+        $result = $groups->show_add_groups_modal();
         echo $result;
         break;
     /*add*/
@@ -339,6 +401,18 @@ switch ($_POST['method']){
         break;
     case 'add_mobile_device':
         $result = $mobile_device->add_mobile_device($_POST['model'],$_POST['imei'],$_POST['serial_number'],$_POST['platform'],$_POST['status']);
+        echo json_encode($result);
+        break;
+    case 'add_worker':
+        $result = $worker->add_worker($_POST['fio'],$_POST['birthday']);
+        echo json_encode($result);
+        break;
+    case 'add_users':
+        $result = $users->add_users($_POST['login'],$_POST['password'],$_POST['email'],$_POST['admin']);
+        echo json_encode($result);
+        break;
+    case 'add_groups':
+        $result = $groups->add_groups($_POST['name']);
         echo json_encode($result);
         break;
     /*add*/
@@ -395,6 +469,18 @@ switch ($_POST['method']){
         $result = $mobile_device->rmv_mobile_device($_POST['id']);
         echo json_encode($result);
         break;
+    case 'rmv_worker':
+        $result = $worker->rmv_worker($_POST['id']);
+        echo json_encode($result);
+        break;
+    case 'rmv_users':
+        $result = $users->rmv_users($_POST['id']);
+        echo json_encode($result);
+        break;
+    case 'rmv_groups':
+        $result = $groups->rmv_groups($_POST['id']);
+        echo json_encode($result);
+        break;
     /*rmv*/
 
     /*sort*/
@@ -444,6 +530,18 @@ switch ($_POST['method']){
         break;
     case 'sort_mobile_device_by':
         $hardware = $mobile_device->sort_mobile_device_by($_POST['by']);
+        echo json_encode($hardware);
+        break;
+    case 'sort_worker_by':
+        $hardware = $worker->sort_worker_by($_POST['by']);
+        echo json_encode($hardware);
+        break;
+    case 'sort_users_by':
+        $hardware = $users->sort_users_by($_POST['by']);
+        echo json_encode($hardware);
+        break;
+    case 'sort_groups_by':
+        $hardware = $groups->sort_groups_by($_POST['by']);
         echo json_encode($hardware);
         break;
     /*sort*/
