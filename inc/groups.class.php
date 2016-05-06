@@ -111,12 +111,13 @@ class groups {
 
     public function return_select_with_groups($id = null){
         $result = '';
+        $groups = $this->db->get('groups');
         if(!is_null($id) && $id == 0){
             $result .= '<option selected value="0"></option>';
         } else {
             $result .= '<option value="0"></option>';
         }
-        foreach ($this->groups as $group){
+        foreach ($groups as $group){
             if(!is_null($id) && $group['ID'] == $id){
                 $result .= '<option selected value="'.$group['ID'].'">'.$group['name'].'</option>';
             }

@@ -1,11 +1,243 @@
-    var model = $("#mobile_device_edit_model").val();
-    var imei = $("#mobile_device_edit_imei").val();
-    var serial_number = $("#mobile_device_edit_serial_number").val();
-    var platform = $("#mobile_device_edit_platform").val();
-    var status = $("#mobile_device_edit_status").val();
-
-    var checked_model = check_input("mobile_device_edit_model");
-    var checked_port_number = check_input("mobile_device_edit_imei");
-    var checked_serial_number = check_input("mobile_device_edit_serial_number");
-    var checked_type = check_input("mobile_device_edit_platform");
-    var checked_status = check_input("mobile_device_edit_status");
+object(SimpleXMLElement)#8 (1) {
+  ["@attributes"]=>
+  array(2) {
+    ["title"]=>
+    string(4) "Name"
+    ["value"]=>
+    string(35) "ET2321I on Intel HD Graphics Family"
+  }
+}
+object(SimpleXMLElement)#9 (1) {
+  ["@attributes"]=>
+  array(2) {
+    ["title"]=>
+    string(18) "Current Resolution"
+    ["value"]=>
+    string(16) "1920x1080 pixels"
+  }
+}
+object(SimpleXMLElement)#10 (1) {
+  ["@attributes"]=>
+  array(2) {
+    ["title"]=>
+    string(15) "Work Resolution"
+    ["value"]=>
+    string(16) "1920x1040 pixels"
+  }
+}
+object(SimpleXMLElement)#4 (1) {
+  ["@attributes"]=>
+  array(2) {
+    ["title"]=>
+    string(5) "State"
+    ["value"]=>
+    string(31) "Enabled, Output devices support"
+  }
+}
+object(SimpleXMLElement)#8 (1) {
+  ["@attributes"]=>
+  array(2) {
+    ["title"]=>
+    string(17) "Multiple displays"
+    ["value"]=>
+    string(26) "Extended, Primary, Enabled"
+  }
+}
+object(SimpleXMLElement)#9 (1) {
+  ["@attributes"]=>
+  array(2) {
+    ["title"]=>
+    string(13) "Monitor Width"
+    ["value"]=>
+    string(4) "1920"
+  }
+}
+object(SimpleXMLElement)#10 (1) {
+  ["@attributes"]=>
+  array(2) {
+    ["title"]=>
+    string(14) "Monitor Height"
+    ["value"]=>
+    string(4) "1080"
+  }
+}
+object(SimpleXMLElement)#4 (1) {
+  ["@attributes"]=>
+  array(2) {
+    ["title"]=>
+    string(11) "Monitor BPP"
+    ["value"]=>
+    string(17) "32 bits per pixel"
+  }
+}
+object(SimpleXMLElement)#8 (1) {
+  ["@attributes"]=>
+  array(2) {
+    ["title"]=>
+    string(17) "Monitor Frequency"
+    ["value"]=>
+    string(5) "60 Hz"
+  }
+}
+object(SimpleXMLElement)#9 (1) {
+  ["@attributes"]=>
+  array(2) {
+    ["title"]=>
+    string(6) "Device"
+    ["value"]=>
+    string(21) "\\.\DISPLAY1\Monitor0"
+  }
+}
+object(SimpleXMLElement)#4 (1) {
+  ["@attributes"]=>
+  array(2) {
+    ["title"]=>
+    string(4) "Name"
+    ["value"]=>
+    string(41) "LG IPS FULLHD on Intel HD Graphics Family"
+  }
+}
+object(SimpleXMLElement)#8 (1) {
+  ["@attributes"]=>
+  array(2) {
+    ["title"]=>
+    string(18) "Current Resolution"
+    ["value"]=>
+    string(16) "1920x1080 pixels"
+  }
+}
+object(SimpleXMLElement)#12 (1) {
+  ["@attributes"]=>
+  array(2) {
+    ["title"]=>
+    string(15) "Work Resolution"
+    ["value"]=>
+    string(16) "1920x1040 pixels"
+  }
+}
+object(SimpleXMLElement)#9 (1) {
+  ["@attributes"]=>
+  array(2) {
+    ["title"]=>
+    string(5) "State"
+    ["value"]=>
+    string(31) "Enabled, Output devices support"
+  }
+}
+object(SimpleXMLElement)#4 (1) {
+  ["@attributes"]=>
+  array(2) {
+    ["title"]=>
+    string(17) "Multiple displays"
+    ["value"]=>
+    string(28) "Extended, Secondary, Enabled"
+  }
+}
+object(SimpleXMLElement)#8 (1) {
+  ["@attributes"]=>
+  array(2) {
+    ["title"]=>
+    string(13) "Monitor Width"
+    ["value"]=>
+    string(4) "1920"
+  }
+}
+object(SimpleXMLElement)#12 (1) {
+  ["@attributes"]=>
+  array(2) {
+    ["title"]=>
+    string(14) "Monitor Height"
+    ["value"]=>
+    string(4) "1080"
+  }
+}
+object(SimpleXMLElement)#9 (1) {
+  ["@attributes"]=>
+  array(2) {
+    ["title"]=>
+    string(11) "Monitor BPP"
+    ["value"]=>
+    string(17) "32 bits per pixel"
+  }
+}
+object(SimpleXMLElement)#4 (1) {
+  ["@attributes"]=>
+  array(2) {
+    ["title"]=>
+    string(17) "Monitor Frequency"
+    ["value"]=>
+    string(5) "59 Hz"
+  }
+}
+object(SimpleXMLElement)#8 (1) {
+  ["@attributes"]=>
+  array(2) {
+    ["title"]=>
+    string(6) "Device"
+    ["value"]=>
+    string(21) "\\.\DISPLAY2\Monitor0"
+  }
+}
+object(SimpleXMLElement)#9 (1) {
+  ["@attributes"]=>
+  array(2) {
+    ["title"]=>
+    string(12) "Manufacturer"
+    ["value"]=>
+    string(5) "Intel"
+  }
+}
+object(SimpleXMLElement)#4 (1) {
+  ["@attributes"]=>
+  array(2) {
+    ["title"]=>
+    string(5) "Model"
+    ["value"]=>
+    string(18) "HD Graphics Family"
+  }
+}
+object(SimpleXMLElement)#10 (1) {
+  ["@attributes"]=>
+  array(2) {
+    ["title"]=>
+    string(9) "Device ID"
+    ["value"]=>
+    string(9) "8086-0A16"
+  }
+}
+object(SimpleXMLElement)#8 (1) {
+  ["@attributes"]=>
+  array(2) {
+    ["title"]=>
+    string(8) "Revision"
+    ["value"]=>
+    string(1) "A"
+  }
+}
+object(SimpleXMLElement)#9 (1) {
+  ["@attributes"]=>
+  array(2) {
+    ["title"]=>
+    string(9) "Subvendor"
+    ["value"]=>
+    string(27) "ASUStek Computer Inc (1043)"
+  }
+}
+object(SimpleXMLElement)#4 (1) {
+  ["@attributes"]=>
+  array(2) {
+    ["title"]=>
+    string(25) "Current Performance Level"
+    ["value"]=>
+    string(7) "Level 0"
+  }
+}
+object(SimpleXMLElement)#10 (1) {
+  ["@attributes"]=>
+  array(2) {
+    ["title"]=>
+    string(14) "Driver version"
+    ["value"]=>
+    string(13) "20.19.15.4331"
+  }
+}

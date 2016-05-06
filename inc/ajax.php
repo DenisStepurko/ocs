@@ -24,6 +24,7 @@ include_once('../inc/mobile_device.class.php');
 include_once('../inc/workers.class.php');
 include_once('../inc/users.class.php');
 include_once('../inc/phpqrcode/qrlib.php');
+include_once('../inc/xml.class.php');
 $authorization = new Authorization();
 $hardware = new hardware();
 $mb = new motherboards();
@@ -40,6 +41,7 @@ $mobile_device = new mobile_device();
 $worker = new worker();
 $users = new users();
 $groups = new groups();
+$xml = new xml();
 
 switch ($_POST['method']){
     /*auth*/
@@ -596,6 +598,17 @@ switch ($_POST['method']){
     case 'generate_qr_hardware':
         $hardware = $hardware->generate_qr_hardware($_POST['id']);
         echo json_encode($hardware);
+        break;
+
+    case 'get_table_load_file':
+        $search = $xml->get_table_content_load_file();
+        $result = array("searchbar" => $search/*, "table_header" => $get_table_header_hardware, "table_content" => $content*/);
+        echo json_encode($result);
+        break;
+    case 'get_table_content_file':
+        $content = $xml->get_table_content();
+        $result = array("table_content" => $content);
+        echo json_encode($result);
         break;
 
 }

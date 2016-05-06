@@ -49,7 +49,7 @@ class worker {
     public function show_add_worker_modal() {
         return '
             <div class="col-md-12">
-            <h3>Добавить Работника</h3>
+            <h3>Добавить сотрудника</h3>
                 <label for="worker_add_fio">ФИО</label><input type="text" id="worker_add_fio">
                 <label for="worker_add_birthday">Дата рождения (ГГГГ-ММ-ДД)</label><input type="date" id="worker_add_birthday">
                 <input type="button" onclick="add_worker(event);" value="Добавить">
@@ -78,10 +78,10 @@ class worker {
                 if($worker['ID'] == $id) {
                     return '
                             <div class="col-md-12">
-                                <h3>Edit network_device</h3>
+                                <h3>Изменить сотрудника</h3>
                                 <input type="hidden" value="' . $worker['ID'] . '" id="worker_id">
-                                <label for="worker_edit_fio">Модель</label><input type="text" id="worker_edit_fio" value="'.$worker['fio'].'">
-                                <label for="worker_edit_birthday">Количество портов</label><input type="date" id="worker_edit_birthday" value="'.$worker['birthday'].'">                 
+                                <label for="worker_edit_fio">ФИО</label><input type="text" id="worker_edit_fio" value="'.$worker['fio'].'">
+                                <label for="worker_edit_birthday">Дата рождения (ГГГГ-ММ-ДД)</label><input type="date" id="worker_edit_birthday" value="'.$worker['birthday'].'">                 
                                 <input type="button" value="Сохранить" onclick="update_worker(event)" id="update_worker">
                             </div>
                     ';

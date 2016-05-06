@@ -1399,6 +1399,70 @@ function setcookie(name, value, expires, path, domain, secure) {
     }
     return secure && r.push("secure"), document.cookie = r.join(";"), true;
 }
+
+function load_xml_file(element,event) {
+    event.preventDefault();
+    var file = element.files[0];
+    var formData = new FormData();
+    formData.append("file", file);
+    $.ajax({
+        url: "inc/file_processing.php",
+        data: formData,
+        processData: false,
+        contentType: false,
+        type: 'POST',
+        success: function(data) {
+            $("#table_body").html('');
+            data = JSON.parse(data);
+            function fill_fields(data) {
+                $("#hardware_name").val(data.hardware['name']);
+                $("#hardware_os").val(data.hardware['os']);
+                $("#hardware_ip").val(data.hardware['ip']);
+
+                $("#motherboard_hardware_name").val(data.hardware['name']);
+                $("#motherboard_vendor").val(data.motherboard['vendor']);
+                $("#motherboard_model").val(data.motherboard['model']);
+                $("#motherboard_socket").val(data.motherboard['socket']);
+                $("#motherboard_memory_slots").val(data.motherboard['memory_slots']);
+                $("#motherboard_internal_video").html(data.motherboard['internal_video']);
+
+                $("#cpu_hardware").val(data.hardware['name']);
+                $("#cpu_vendor").val(data.cpu['name']);
+                $("#cpu_model").val(data.cpu['model']);
+                $("#cpu_type").val(data.cpu['socket']);
+                $("#cpu_count_cores").val(data.cpu['cores']);
+                
+                $("#ram_hardware").val(data.hardware['name']);
+                for(var ir = 0; ir < data.ram['count_ram'];ir++){
+                    
+                }
+
+                $("#gpu_hardware").val(data.hardware['name']);
+
+                $("#hdd_hardware").val(data.hardware['name']);
+
+                $("#lan_hardware").val(data.hardware['name']);
+
+                $("#monitor_hardware").val(data.hardware['name']);
+
+            }
+            if(data.status == "ok"){
+                $.post("inc/ajax.php",{method:"get_table_content_file"},function(answer){
+                    answer = JSON.parse(answer);
+                    $("#table_body").html(answer['table_content']);
+                    console.log(data);
+
+                    fill_fields(data);
+                });
+            } else {
+                $("#table_header").html('<td><h3>'+data.status+'</h3></td>');
+            }
+        },
+        error: function(data) {
+            $("#table_body").html('');
+        }
+    });
+}
 /*another functions*/
 
 $(document).ready(function(){
@@ -1602,6 +1666,17 @@ $(document).ready(function(){
         });
         clear_active();
         $("#groupsLI").addClass("active");
+    });
+    $("#load_file").click(function (event) {
+        event.preventDefault();
+        $.post("inc/ajax.php",{method:"get_table_load_file"},function(data){
+            data = JSON.parse(data);
+            $("#search_bar").html(data['searchbar']);
+            $("#table_header").html('');
+            $("#table_body").html('');
+        });
+        clear_active();
+        $("#load_fileLI").addClass("active");
     });
     /*processing tabs*/
 

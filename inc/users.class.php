@@ -17,7 +17,6 @@ class users {
         return '<tr>
                     <td id="table_center_text"><a href="#" onclick="sort_users_by(`ID`,event)">ID</a></td>
                     <td id="table_center_text"><a href="#" onclick="sort_users_by(`login`,event)">Логин</a></td>
-                    <td id="table_center_text"><a href="#" onclick="sort_users_by(`password`,event)">Пароль</a></td>
                     <td id="table_center_text"><a href="#" onclick="sort_users_by(`email`,event)">e-mail</a></td>
                     <td id="table_center_text"><a href="#" onclick="sort_users_by(`admin`,event)">Уровень доступа</a></td>
                     <td id="table_center_text"><a href="#" onclick="show_add_users_modal(event)">Добавить</a></td>
@@ -32,14 +31,13 @@ class users {
                 array_push($result, "<tr>
                     <td>".$users['ID']."</td>
                     <td>".$users['login']."</td>
-                    <td>".$users['password']."</td>
                     <td>".$users['email']."</td>
                     <td>".$this->return_users_admin($users['admin'])."</td>
                     <td><a href='#' onclick='edit_users(".$users['ID'].",event)' class='edit_index'><img src='images/edit.gif'></a>
                     <a href='#' onclick='rmv_users(".$users['ID'].",event)'  class='rmv_index'><img src='images/del.gif'></a></td>
                 </tr>");
             }
-            array_push($result,"<tr><td></td><td></td><td></td><td></td><td></td><td></td></tr>");
+            array_push($result,"<tr><td></td><td></td><td></td><td></td><td></td></tr>");
             return $result;
         }
     }
