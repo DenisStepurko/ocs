@@ -1,0 +1,2527 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<speccydata version="1.28.709" formatversion="2.0" languageID="0" time="20160505T122324" localtime="20160505T152324+0200">
+	<mainsection title="Summary">
+		<section title="Operating System" id="1">
+			<entry title="Майкрософт Windows 10 Pro 64-bit" value="" />
+		</section>
+		<section title="CPU" id="2">
+			<entry title="Intel Core i5 4200U @ 1.60GHz" value="41 °C" />
+			<entry title="Haswell ULT 22nm Technology" value="" />
+		</section>
+		<section title="RAM" id="3">
+			<entry title="8,00ГБ Dual-Channel DDR3 @ 798MHz (11-11-11-28)" value="" />
+		</section>
+		<section title="Motherboard" id="4">
+			<entry title="ASUSTeK COMPUTER INC. ET2321I (SOCKET 1150)" value="" />
+		</section>
+		<section title="Graphics" id="5">
+			<entry title="ET2321I (1920x1080@60Hz)" value="" />
+			<entry title="LG IPS FULLHD (1920x1080@59Hz)" value="" />
+			<entry title="Intel HD Graphics Family (ASUStek Computer Inc)" value="" />
+		</section>
+		<section title="Storage" id="6">
+			<entry title="931GB Western Digital WDC WD10EZEX-08M2NA0 (SATA)" value="35 °C" />
+		</section>
+		<section title="Optical Drives" id="7">
+			<entry title="MATSHITA DVD-RAM UJ8E1" value="" />
+		</section>
+		<section title="Audio" id="8">
+			<entry title="Realtek High Definition Audio" value="" />
+		</section>
+	</mainsection>
+	<mainsection title="Operating System" id="1">
+		<entry>
+			<entry title="Model" value="Windows 8" />
+			<entry title="Edition" value="Professional" />
+			<entry title="Architecture" value="64-bit" />
+			<entry title="Service Pack" value="" />
+		</entry>
+		<entry value="Computer type: Tablet" />
+		<entry value="Installation Date: 29.02.2016 17:20:27" />
+		<section title="Windows Security Center">
+			<entry title="User Account Control (UAC)" value="Disabled" />
+			<entry title="Firewall" value="Enabled" />
+		</section>
+		<section title="Windows Update">
+			<entry title="AutoUpdate" value="Download Automatically and Install at Set Scheduled time" />
+			<entry title="Schedule Frequency" value="Every Day" />
+			<entry title="Schedule Time" value="" />
+		</section>
+		<section title="Windows Defender">
+			<entry title="Windows Defender" value="Enabled" />
+		</section>
+		<section title="Antivirus">
+			<entry title="Antivirus" value="Enabled" />
+			<entry title="Display Name" value="Windows Defender" />
+			<entry title="Virus Signature Database" value="Up to date" />
+		</section>
+		<section title=".NET Frameworks installed">
+			<entry title="v4.6 Full" value="" />
+			<entry title="v4.6 Client" value="" />
+		</section>
+		<section title="Internet Explorer">
+			<entry title="Version" value="11.212.10586.0" />
+		</section>
+		<section title="PowerShell">
+			<entry title="Version" value="5.0.10586.0" />
+		</section>
+		<section title="Java">
+			<section title="Java Runtime Environment">
+				<entry title="Path" value="C:\Program Files (x86)\Java\jdk1.7.0_55\bin\java.exe" />
+				<entry title="Version" value="7.0" />
+				<entry title="Update" value="55" />
+				<entry title="Build" value="13" />
+			</section>
+			<section title="Java Runtime Environment">
+				<entry title="Path" value="C:\Program Files\Java\jdk1.7.0_79\bin\java.exe" />
+				<entry title="Version" value="7.0" />
+				<entry title="Update" value="79" />
+				<entry title="Build" value="15" />
+			</section>
+			<section title="Java Runtime Environment">
+				<entry title="Path" value="C:\Program Files\Java\jre7\bin\java.exe" />
+				<entry title="Version" value="7.0" />
+				<entry title="Update" value="79" />
+				<entry title="Build" value="15" />
+			</section>
+			<section title="Java Runtime Environment">
+				<entry title="Path" value="C:\Program Files\Java\jdk1.8.0_74\bin\java.exe" />
+				<entry title="Version" value="8.0" />
+				<entry title="Update" value="74" />
+				<entry title="Build" value="02" />
+			</section>
+		</section>
+		<section title="Environment Variables">
+			<entry title="USERPROFILE" value="C:\Users\Денис Степурко" />
+			<entry title="SystemRoot" value="C:\WINDOWS" />
+			<section title="User Variables">
+				<entry title="TEMP" value="C:\Users\Денис Степурко\AppData\Local\Temp" />
+				<entry title="TMP" value="C:\Users\Денис Степурко\AppData\Local\Temp" />
+			</section>
+			<section title="Machine Variables">
+				<entry title="ANDROID_HOME" value="C:\Program Files (x86)\Android\android-sdk" />
+				<entry title="ANDROID_NDK_PATH" value="C:\Users\Денис Степурко\Documents\Android\ndk\android-ndk-r10e" />
+				<entry title="ComSpec" value="C:\WINDOWS\system32\cmd.exe" />
+				<entry title="FP_NO_HOST_CHECK" value="NO" />
+				<entry title="GTK_BASEPATH" value="C:\Program Files (x86)\GtkSharp\2.12\" />
+				<entry title="JAVA_HOME" value="C:\Program Files\Java\jdk1.8.0_74" />
+				<entry title="NUMBER_OF_PROCESSORS" value="4" />
+				<entry title="OS" value="Windows_NT" />
+				<entry title="Path" value="C:\Program Files\Broadcom\Broadcom 802.11 Network Adapter\Driver" />
+				<entry value="C:\WINDOWS\system32" />
+				<entry value="C:\WINDOWS" />
+				<entry value="C:\WINDOWS\System32\Wbem" />
+				<entry value="C:\WINDOWS\System32\WindowsPowerShell\v1.0\" />
+				<entry value="C:\Program Files (x86)\CMake\bin" />
+				<entry value="%JAVA_HOME%\bin" />
+				<entry value="C:\Program Files (x86)\Skype\Phone\" />
+				<entry value="C:\Program Files\Git\cmd" />
+				<entry value="C:\Program Files\TortoiseSVN\bin" />
+				<entry value="C:\Program Files (x86)\GtkSharp\2.12\bin" />
+				<entry value="C:\Program Files\nodejs\" />
+				<entry value="C:\Program Files\Microsoft SQL Server\130\Tools\Binn\" />
+				<entry value="C:\Program Files (x86)\Windows Kits\10\Windows Performance Toolkit\" />
+				<entry value="C:\Program Files (x86)\Microsoft Emulator Manager\1.0\" />
+				<entry title="PATHEXT" value=".COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC" />
+				<entry title="PROCESSOR_ARCHITECTURE" value="AMD64" />
+				<entry title="PROCESSOR_IDENTIFIER" value="Intel64 Family 6 Model 69 Stepping 1, GenuineIntel" />
+				<entry title="PROCESSOR_LEVEL" value="6" />
+				<entry title="PROCESSOR_REVISION" value="4501" />
+				<entry title="PSModulePath" value="C:\WINDOWS\system32\WindowsPowerShell\v1.0\Modules\" />
+				<entry title="TEMP" value="C:\WINDOWS\TEMP" />
+				<entry title="TMP" value="C:\WINDOWS\TEMP" />
+				<entry title="USERNAME" value="SYSTEM" />
+				<entry title="VBOX_MSI_INSTALL_PATH" value="C:\Program Files\Oracle\VirtualBox\" />
+				<entry title="VS110COMNTOOLS" value="C:\Program Files (x86)\Microsoft Visual Studio 11.0\Common7\Tools\" />
+				<entry title="VS120COMNTOOLS" value="C:\Program Files (x86)\Microsoft Visual Studio 12.0\Common7\Tools\" />
+				<entry title="VS140COMNTOOLS" value="C:\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\Tools\" />
+				<entry title="windir" value="C:\WINDOWS" />
+			</section>
+		</section>
+		<section title="Power Profile">
+			<entry title="Active power scheme" value="Высокая производительность" />
+			<entry title="Hibernation" value="Enabled" />
+			<entry title="Turn Off Monitor after: (On AC Power)" value="15 min" />
+			<entry title="Turn Off Hard Disk after: (On AC Power)" value="20 min" />
+			<entry title="Suspend after: (On AC Power)" value="Never" />
+			<entry title="Screen saver" value="Disabled" />
+		</section>
+		<section title="Uptime">
+			<section title="Current Session">
+				<entry title="Current Time" value="05.05.2016 15:23:24" />
+				<entry title="Current Uptime" value="22 183 sec (0d, 06h, 09m, 43s)" />
+				<entry title="Last Boot Time" value="05.05.2016 9:13:41" />
+			</section>
+		</section>
+		<section title="Services">
+			<entry title="Running" value="Adobe Acrobat Update Service" />
+			<entry title="Running" value="Apache2.4" />
+			<entry title="Running" value="Bluetooth Driver Management Service" />
+			<entry title="Running" value="CoreMessaging" />
+			<entry title="Running" value="DHCP-клиент" />
+			<entry title="Running" value="DNS-клиент" />
+			<entry title="Running" value="ESIF Upper Framework Service" />
+			<entry title="Running" value="FileZilla Server FTP server" />
+			<entry title="Running" value="FileZillaServer" />
+			<entry title="Running" value="Intel HD Graphics Control Panel Service" />
+			<entry title="Running" value="mysql" />
+			<entry title="Running" value="Plug and Play" />
+			<entry title="Running" value="Security Platform Management Service" />
+			<entry title="Running" value="SQL Server VSS Writer" />
+			<entry title="Running" value="Superfetch" />
+			<entry title="Running" value="TeamViewer 11" />
+			<entry title="Running" value="Trusted Platform Core Service" />
+			<entry title="Running" value="Windows Audio" />
+			<entry title="Running" value="Windows Driver Foundation - среда выполнения платформы драйвера режима пользователя" />
+			<entry title="Running" value="Windows Search" />
+			<entry title="Running" value="Xamarin Bonjour Service" />
+			<entry title="Running" value="Автономные файлы" />
+			<entry title="Running" value="Брандмауэр Windows" />
+			<entry title="Running" value="Брокер времени" />
+			<entry title="Running" value="Брокер системных событий" />
+			<entry title="Running" value="Вспомогательная служба IP" />
+			<entry title="Running" value="Диспетчер локальных сеансов" />
+			<entry title="Running" value="Диспетчер печати" />
+			<entry title="Running" value="Диспетчер подключений Windows" />
+			<entry title="Running" value="Диспетчер пользователей" />
+			<entry title="Running" value="Диспетчер удостоверения сетевых участников" />
+			<entry title="Running" value="Диспетчер учетных данных" />
+			<entry title="Running" value="Диспетчер учетных записей безопасности" />
+			<entry title="Running" value="Доступ к HID-устройствам" />
+			<entry title="Running" value="Журнал событий Windows" />
+			<entry title="Running" value="Изоляция ключей CNG" />
+			<entry title="Running" value="Инструментарий управления Windows" />
+			<entry title="Running" value="Клиент групповой политики" />
+			<entry title="Running" value="Клиент отслеживания изменившихся связей" />
+			<entry title="Running" value="Модуль запуска процессов DCOM-сервера" />
+			<entry title="Running" value="Модуль поддержки NetBIOS через TCP/IP" />
+			<entry title="Running" value="Настройка сервера удаленных рабочих столов" />
+			<entry title="Running" value="Обнаружение SSDP" />
+			<entry title="Running" value="Определение оборудования оболочки" />
+			<entry title="Running" value="Оптимизация доставки" />
+			<entry title="Running" value="Перенаправитель портов пользовательского режима служб удаленных рабочих столов" />
+			<entry title="Running" value="Питание" />
+			<entry title="Running" value="Планировщик заданий" />
+			<entry title="Running" value="Посредник подключений к сети" />
+			<entry title="Running" value="Протокол PNRP" />
+			<entry title="Running" value="Рабочая станция" />
+			<entry title="Running" value="Распространение сертификата" />
+			<entry title="Running" value="Сервер" />
+			<entry title="Running" value="Сервер моделей данных плиток" />
+			<entry title="Running" value="Система событий COM+" />
+			<entry title="Running" value="Служба Windows License Manager" />
+			<entry title="Running" value="Служба Защитника Windows" />
+			<entry title="Running" value="Служба автоматического обнаружения веб-прокси WinHTTP" />
+			<entry title="Running" value="Служба автонастройки WLAN" />
+			<entry title="Running" value="Служба базовой фильтрации" />
+			<entry title="Running" value="Служба географического положения" />
+			<entry title="Running" value="Служба датчиков" />
+			<entry title="Running" value="Служба загрузки изображений Windows (WIA)" />
+			<entry title="Running" value="Служба интерфейса сохранения сети" />
+			<entry title="Running" value="Служба инфраструктуры фоновых задач" />
+			<entry title="Running" value="Служба кэша шрифтов Windows" />
+			<entry title="Running" value="Служба поддержки Bluetooth" />
+			<entry title="Running" value="Служба политики диагностики" />
+			<entry title="Running" value="Служба помощника по совместимости программ" />
+			<entry title="Running" value="Служба проверки сети Защитника Windows" />
+			<entry title="Running" value="Служба профилей пользователей" />
+			<entry title="Running" value="Служба репозитория состояний" />
+			<entry title="Running" value="Служба сведений о подключенных сетях" />
+			<entry title="Running" value="Служба сенсорной клавиатуры и панели рукописного ввода" />
+			<entry title="Running" value="Служба совместного доступа к данным" />
+			<entry title="Running" value="Служба сопоставления устройств" />
+			<entry title="Running" value="Служба списка сетей" />
+			<entry title="Running" value="Служба уведомления о системных событиях" />
+			<entry title="Running" value="Службы криптографии" />
+			<entry title="Running" value="Службы удаленных рабочих столов" />
+			<entry title="Running" value="Сопоставитель конечных точек RPC" />
+			<entry title="Running" value="Средство построения конечных точек Windows Audio" />
+			<entry title="Running" value="Темы" />
+			<entry title="Running" value="Удаленный вызов процедур (RPC)" />
+			<entry title="Running" value="Узел системы диагностики" />
+			<entry title="Running" value="Узел службы диагностики" />
+			<entry title="Running" value="Фоновая интеллектуальная служба передачи (BITS)" />
+			<entry title="Running" value="Функциональные возможности для подключенных пользователей и телеметрия" />
+			<entry title="Running" value="Центр обеспечения безопасности" />
+			<entry title="Running" value="Центр обновления Windows" />
+			<entry title="Stopped" value="ASP.NET State Service" />
+			<entry title="Stopped" value="BranchCache" />
+			<entry title="Stopped" value="DataCollectionPublishingService" />
+			<entry title="Stopped" value="dmwappushsvc" />
+			<entry title="Stopped" value="embeddedmode" />
+			<entry title="Stopped" value="Intel Content Protection HECI Service" />
+			<entry title="Stopped" value="KtmRm для координатора распределенных транзакций" />
+			<entry title="Stopped" value="Mozilla Maintenance Service" />
+			<entry title="Stopped" value="Personal Secure Drive Service" />
+			<entry title="Stopped" value="Quality Windows Audio Video Experience" />
+			<entry title="Stopped" value="Skype Updater" />
+			<entry title="Stopped" value="SMP дисковых пространств (Майкрософт)" />
+			<entry title="Stopped" value="Te.Service" />
+			<entry title="Stopped" value="Visual Studio Standard Collector Service" />
+			<entry title="Stopped" value="Автоматическая настройка сетевых устройств" />
+			<entry title="Stopped" value="Автоматическое обновление часового пояса" />
+			<entry title="Stopped" value="Автонастройка WWAN" />
+			<entry title="Stopped" value="Агент политики IPsec" />
+			<entry title="Stopped" value="Адаптер производительности WMI" />
+			<entry title="Stopped" value="Биометрическая служба Windows" />
+			<entry title="Stopped" value="Браузер компьютеров" />
+			<entry title="Stopped" value="Брокер фонового обнаружения DevQuery" />
+			<entry title="Stopped" value="Быстрая проверка" />
+			<entry title="Stopped" value="Веб-клиент" />
+			<entry title="Stopped" value="Виртуальный диск" />
+			<entry title="Stopped" value="Вторичный вход в систему" />
+			<entry title="Stopped" value="Готовность приложений" />
+			<entry title="Stopped" value="Группировка сетевых участников" />
+			<entry title="Stopped" value="Диспетчер автоматических подключений удаленного доступа" />
+			<entry title="Stopped" value="Диспетчер настройки устройств" />
+			<entry title="Stopped" value="Диспетчер подключений удаленного доступа" />
+			<entry title="Stopped" value="Диспетчер проверки подлинности Xbox Live" />
+			<entry title="Stopped" value="Диспетчер скачанных карт" />
+			<entry title="Stopped" value="Журналы и оповещения производительности" />
+			<entry title="Stopped" value="Защита программного обеспечения" />
+			<entry title="Stopped" value="Интерфейс гостевой службы Hyper-V" />
+			<entry title="Stopped" value="Контейнер службы Microsoft Passport" />
+			<entry title="Stopped" value="Координатор распределенных транзакций" />
+			<entry title="Stopped" value="Ловушка SNMP" />
+			<entry title="Stopped" value="Локатор удаленного вызова процедур (RPC)" />
+			<entry title="Stopped" value="Маршрутизация и удаленный доступ" />
+			<entry title="Stopped" value="Модули ключей IPsec для обмена ключами в Интернете и протокола IP с проверкой подлинности" />
+			<entry title="Stopped" value="Немедленные подключения Windows - регистратор настройки" />
+			<entry title="Stopped" value="Обнаружение интерактивных служб" />
+			<entry title="Stopped" value="Обновление службы оркестратора" />
+			<entry title="Stopped" value="Общий доступ к подключению к Интернету (ICS)" />
+			<entry title="Stopped" value="Оптимизация дисков" />
+			<entry title="Stopped" value='Поддержка элемента панели управления &quot;Отчеты о проблемах и их решениях&quot;' />
+			<entry title="Stopped" value="Политика удаления смарт-карт" />
+			<entry title="Stopped" value="Помощник по входу в учетную запись Майкрософт" />
+			<entry title="Stopped" value="Помощник по подключению к сети" />
+			<entry title="Stopped" value="Поставщик домашней группы" />
+			<entry title="Stopped" value="Проводная автонастройка" />
+			<entry title="Stopped" value="Программа архивации данных" />
+			<entry title="Stopped" value="Программный поставщик теневого копирования (Microsoft)" />
+			<entry title="Stopped" value="Прослушиватель домашней группы" />
+			<entry title="Stopped" value="Публикация ресурсов обнаружения функции" />
+			<entry title="Stopped" value="Рабочие папки" />
+			<entry title="Stopped" value="Расширения и уведомления для принтеров" />
+			<entry title="Stopped" value="Расширяемый протокол проверки подлинности (EAP)" />
+			<entry title="Stopped" value="Сборщик событий Windows" />
+			<entry title="Stopped" value="Сведения о приложении" />
+			<entry title="Stopped" value="Сетевая служба Xbox Live" />
+			<entry title="Stopped" value="Сетевой вход в систему" />
+			<entry title="Stopped" value="Сетевые подключения" />
+			<entry title="Stopped" value="Системное приложение COM+" />
+			<entry title="Stopped" value="Служба Microsoft Passport" />
+			<entry title="Stopped" value="Служба push-уведомлений Windows" />
+			<entry title="Stopped" value="Служба SSTP" />
+			<entry title="Stopped" value="Служба Windows Mobile Hotspot" />
+			<entry title="Stopped" value="Служба Магазина Windows (WSService)" />
+			<entry title="Stopped" value="Служба Оновлення Google (gupdate)" />
+			<entry title="Stopped" value="Служба Оновлення Google (gupdatem)" />
+			<entry title="Stopped" value="Служба беспроводной связи Bluetooth" />
+			<entry title="Stopped" value="Служба бумажника" />
+			<entry title="Stopped" value="Служба виртуализации удаленных рабочих столов Hyper-V" />
+			<entry title="Stopped" value="Служба времени Windows" />
+			<entry title="Stopped" value="Служба данных датчиков" />
+			<entry title="Stopped" value="Служба демонстрации магазина" />
+			<entry title="Stopped" value="Служба завершения работы в качестве гостя (Hyper-V)" />
+			<entry title="Stopped" value="Служба запросов на теневое копирование томов Hyper-V" />
+			<entry title="Stopped" value="Служба инициатора Майкрософт iSCSI" />
+			<entry title="Stopped" value="Служба истории файлов" />
+			<entry title="Stopped" value="Служба лицензий клиента (ClipSVC)" />
+			<entry title="Stopped" value="Служба маршрутизатора AllJoyn" />
+			<entry title="Stopped" value="Служба маршрутизатора SMS Microsoft Windows." />
+			<entry title="Stopped" value="Служба модуля архивации на уровне блоков" />
+			<entry title="Stopped" value="Служба наблюдения за датчиками" />
+			<entry title="Stopped" value="Служба настройки сети" />
+			<entry title="Stopped" value="Служба обмена данными (Hyper-V)" />
+			<entry title="Stopped" value="Служба общего доступа к портам Net.Tcp" />
+			<entry title="Stopped" value="Служба общих сетевых ресурсов проигрывателя Windows Media" />
+			<entry title="Stopped" value="Служба перечисления устройств чтения смарт-карт" />
+			<entry title="Stopped" value="Служба перечислителя переносных устройств" />
+			<entry title="Stopped" value="Служба платформы подключенных устройств" />
+			<entry title="Stopped" value="Служба публикации имен компьютеров PNRP" />
+			<entry title="Stopped" value="Служба пульса (Hyper-V)" />
+			<entry title="Stopped" value="Служба развертывания AppX (AppXSVC)" />
+			<entry title="Stopped" value="Служба регистрации ошибок Windows" />
+			<entry title="Stopped" value="Служба регистрации управления устройством" />
+			<entry title="Stopped" value="Служба сборщика ETW Internet Explorer" />
+			<entry title="Stopped" value="Служба сеансов виртуальных машин Hyper-V" />
+			<entry title="Stopped" value="Служба синхронизации времени Hyper-V" />
+			<entry title="Stopped" value="Служба удаленного управления Windows (WS-Management)" />
+			<entry title="Stopped" value="Служба узла поставщика шифрования Windows" />
+			<entry title="Stopped" value="Служба управления корпоративными приложениями" />
+			<entry title="Stopped" value="Служба установки устройств" />
+			<entry title="Stopped" value="Служба хранилища" />
+			<entry title="Stopped" value="Служба шифрования дисков BitLocker" />
+			<entry title="Stopped" value="Служба шлюза уровня приложения" />
+			<entry title="Stopped" value="Смарт-карта" />
+			<entry title="Stopped" value="События получения неподвижных изображений" />
+			<entry title="Stopped" value="Сохранение игр на Xbox Live" />
+			<entry title="Stopped" value="Стандартная служба сборщика центра диагностики Microsoft" />
+			<entry title="Stopped" value="Телефония" />
+			<entry title="Stopped" value="Телефонная связь" />
+			<entry title="Stopped" value="Теневое копирование тома" />
+			<entry title="Stopped" value="Тополог канального уровня" />
+			<entry title="Stopped" value="Удаленный реестр" />
+			<entry title="Stopped" value="Удостоверение приложения" />
+			<entry title="Stopped" value="Узел универсальных PNP-устройств" />
+			<entry title="Stopped" value="Управление приложениями" />
+			<entry title="Stopped" value="Управление уровнями хранилища" />
+			<entry title="Stopped" value="Установщик ActiveX (AxInstSV)" />
+			<entry title="Stopped" value="Установщик Windows" />
+			<entry title="Stopped" value="Установщик модулей Windows" />
+			<entry title="Stopped" value="Факс" />
+			<entry title="Stopped" value="Хост библиотеки счетчика производительности" />
+			<entry title="Stopped" value="Хост поставщика функции обнаружения" />
+			<entry title="Stopped" value="Цветовая система Windows (WCS)" />
+			<entry title="Stopped" value="Шифрованная файловая система (EFS)" />
+		</section>
+		<section title="TimeZone">
+			<entry title="TimeZone" value="GMT +2:00 Hours" />
+			<entry title="Language" value="Украинский (Украина)" />
+			<entry title="Location" value="Украина" />
+			<entry title="Format" value="Украинский (Украина)" />
+			<entry title="Currency" value="₴" />
+			<entry title="Date Format" value="dd.MM.yyyy" />
+			<entry title="Time Format" value="H:mm:ss" />
+		</section>
+		<section title="Scheduler">
+			<entry title="05.05.2016 15:43;" value="update-sys" />
+			<entry title="05.05.2016 16:16;" value="GoogleUpdateTaskMachineUA" />
+			<entry title="05.05.2016 18:43;" value="update-S-1-5-21-955330260-3350776275-2056699990-1004" />
+			<entry title="06.05.2016 15:16;" value="GoogleUpdateTaskMachineCore" />
+			<entry value="Adobe Acrobat Update Task" />
+			<entry value="Optimize Start Menu Cache Files-S-1-5-21-955330260-3350776275-2056699990-1001" />
+			<entry value="Optimize Start Menu Cache Files-S-1-5-21-955330260-3350776275-2056699990-1002" />
+		</section>
+		<section title="Hotfixes">
+			<section title="Installed" />
+			<section title="Not Installed" />
+		</section>
+		<section title="System Folders">
+			<entry title="Application Data" value="C:\ProgramData" />
+			<entry title="Cookies" value="C:\Users\Денис Степурко\AppData\Local\Microsoft\Windows\INetCookies" />
+			<entry title="Desktop" value="C:\Users\Денис Степурко\Desktop" />
+			<entry title="Documents" value="C:\Users\Public\Documents" />
+			<entry title="Fonts" value="C:\WINDOWS\Fonts" />
+			<entry title="Global Favorites" value="C:\Users\Денис Степурко\Favorites" />
+			<entry title="Internet History" value="C:\Users\Денис Степурко\AppData\Local\Microsoft\Windows\History" />
+			<entry title="Local Application Data" value="C:\Users\Денис Степурко\AppData\Local" />
+			<entry title="Music" value="C:\Users\Public\Music" />
+			<entry title="Path for burning CD" value="C:\Users\Денис Степурко\AppData\Local\Microsoft\Windows\Burn\Burn" />
+			<entry title="Physical Desktop" value="C:\Users\Денис Степурко\Desktop" />
+			<entry title="Pictures" value="C:\Users\Public\Pictures" />
+			<entry title="Program Files" value="C:\Program Files" />
+			<entry title="Public Desktop" value="C:\Users\Public\Desktop" />
+			<entry title="Start Menu" value="C:\ProgramData\Microsoft\Windows\Start Menu" />
+			<entry title="Start Menu Programs" value="C:\ProgramData\Microsoft\Windows\Start Menu\Programs" />
+			<entry title="Startup" value="C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Startup" />
+			<entry title="Templates" value="C:\ProgramData\Microsoft\Windows\Templates" />
+			<entry title="Temporary Internet Files" value="C:\Users\Денис Степурко\AppData\Local\Microsoft\Windows\INetCache" />
+			<entry title="User Favorites" value="C:\Users\Денис Степурко\Favorites" />
+			<entry title="Videos" value="C:\Users\Public\Videos" />
+			<entry title="Windows Directory" value="C:\WINDOWS" />
+			<entry title="Windows/System" value="C:\WINDOWS\system32" />
+		</section>
+		<section title="Process List">
+			<section title="ApplicationFrameHost.exe">
+				<entry title="Process ID" value="1152" />
+				<entry title="User" value="Денис Степурко" />
+				<entry title="Domain" value="ASUS-AIO-i5" />
+				<entry title="Path" value="C:\Windows\System32\ApplicationFrameHost.exe" />
+				<entry title="Memory Usage" value="20 Мб" />
+				<entry title="Peak Memory Usage" value="26 Мб" />
+			</section>
+			<section title="armsvc.exe">
+				<entry title="Process ID" value="2340" />
+				<entry title="User" value="СИСТЕМА" />
+				<entry title="Domain" value="NT AUTHORITY" />
+				<entry title="Path" value="C:\Program Files (x86)\Common Files\Adobe\ARM\1.0\armsvc.exe" />
+				<entry title="Memory Usage" value="5,00 Мб" />
+				<entry title="Peak Memory Usage" value="5,86 Мб" />
+			</section>
+			<section title="AsKeySuite.exe">
+				<entry title="Process ID" value="4120" />
+				<entry title="User" value="Денис Степурко" />
+				<entry title="Domain" value="ASUS-AIO-i5" />
+				<entry title="Path" value="C:\Program Files (x86)\ASUS\ASUS Key Suite\AsKeySuite.exe" />
+				<entry title="Memory Usage" value="764 кБ" />
+				<entry title="Peak Memory Usage" value="11 Мб" />
+			</section>
+			<section title="audiodg.exe">
+				<entry title="Process ID" value="8968" />
+				<entry title="User" value="LOCAL SERVICE" />
+				<entry title="Domain" value="NT AUTHORITY" />
+				<entry title="Path" value="C:\Windows\System32\audiodg.exe" />
+				<entry title="Memory Usage" value="15 Мб" />
+				<entry title="Peak Memory Usage" value="26 Мб" />
+			</section>
+			<section title="BtwRSupportService.exe">
+				<entry title="Process ID" value="2612" />
+				<entry title="User" value="СИСТЕМА" />
+				<entry title="Domain" value="NT AUTHORITY" />
+				<entry title="Path" value="C:\Windows\System32\BtwRSupportService.exe" />
+				<entry title="Memory Usage" value="6,21 Мб" />
+				<entry title="Peak Memory Usage" value="7,09 Мб" />
+			</section>
+			<section title="chrome.exe">
+				<entry title="Process ID" value="4828" />
+				<entry title="User" value="Денис Степурко" />
+				<entry title="Domain" value="ASUS-AIO-i5" />
+				<entry title="Path" value="C:\Program Files (x86)\Google\Chrome\Application\chrome.exe" />
+				<entry title="Memory Usage" value="40 Мб" />
+				<entry title="Peak Memory Usage" value="140 Мб" />
+			</section>
+			<section title="chrome.exe">
+				<entry title="Process ID" value="6004" />
+				<entry title="User" value="Денис Степурко" />
+				<entry title="Domain" value="ASUS-AIO-i5" />
+				<entry title="Path" value="C:\Program Files (x86)\Google\Chrome\Application\chrome.exe" />
+				<entry title="Memory Usage" value="45 Мб" />
+				<entry title="Peak Memory Usage" value="58 Мб" />
+			</section>
+			<section title="chrome.exe">
+				<entry title="Process ID" value="8860" />
+				<entry title="User" value="Денис Степурко" />
+				<entry title="Domain" value="ASUS-AIO-i5" />
+				<entry title="Path" value="C:\Program Files (x86)\Google\Chrome\Application\chrome.exe" />
+				<entry title="Memory Usage" value="95 Мб" />
+				<entry title="Peak Memory Usage" value="113 Мб" />
+			</section>
+			<section title="chrome.exe">
+				<entry title="Process ID" value="2448" />
+				<entry title="User" value="Денис Степурко" />
+				<entry title="Domain" value="ASUS-AIO-i5" />
+				<entry title="Path" value="C:\Program Files (x86)\Google\Chrome\Application\chrome.exe" />
+				<entry title="Memory Usage" value="51 Мб" />
+				<entry title="Peak Memory Usage" value="55 Мб" />
+			</section>
+			<section title="chrome.exe">
+				<entry title="Process ID" value="120" />
+				<entry title="User" value="Денис Степурко" />
+				<entry title="Domain" value="ASUS-AIO-i5" />
+				<entry title="Path" value="C:\Program Files (x86)\Google\Chrome\Application\chrome.exe" />
+				<entry title="Memory Usage" value="53 Мб" />
+				<entry title="Peak Memory Usage" value="60 Мб" />
+			</section>
+			<section title="chrome.exe">
+				<entry title="Process ID" value="7128" />
+				<entry title="User" value="Денис Степурко" />
+				<entry title="Domain" value="ASUS-AIO-i5" />
+				<entry title="Path" value="C:\Program Files (x86)\Google\Chrome\Application\chrome.exe" />
+				<entry title="Memory Usage" value="157 Мб" />
+				<entry title="Peak Memory Usage" value="227 Мб" />
+			</section>
+			<section title="chrome.exe">
+				<entry title="Process ID" value="7144" />
+				<entry title="User" value="Денис Степурко" />
+				<entry title="Domain" value="ASUS-AIO-i5" />
+				<entry title="Path" value="C:\Program Files (x86)\Google\Chrome\Application\chrome.exe" />
+				<entry title="Memory Usage" value="5,52 Мб" />
+				<entry title="Peak Memory Usage" value="5,94 Мб" />
+			</section>
+			<section title="chrome.exe">
+				<entry title="Process ID" value="2632" />
+				<entry title="User" value="Денис Степурко" />
+				<entry title="Domain" value="ASUS-AIO-i5" />
+				<entry title="Path" value="C:\Program Files (x86)\Google\Chrome\Application\chrome.exe" />
+				<entry title="Memory Usage" value="110 Мб" />
+				<entry title="Peak Memory Usage" value="228 Мб" />
+			</section>
+			<section title="chrome.exe">
+				<entry title="Process ID" value="6628" />
+				<entry title="User" value="Денис Степурко" />
+				<entry title="Domain" value="ASUS-AIO-i5" />
+				<entry title="Path" value="C:\Program Files (x86)\Google\Chrome\Application\chrome.exe" />
+				<entry title="Memory Usage" value="34 Мб" />
+				<entry title="Peak Memory Usage" value="100 Мб" />
+			</section>
+			<section title="chrome.exe">
+				<entry title="Process ID" value="5228" />
+				<entry title="User" value="Денис Степурко" />
+				<entry title="Domain" value="ASUS-AIO-i5" />
+				<entry title="Path" value="C:\Program Files (x86)\Google\Chrome\Application\chrome.exe" />
+				<entry title="Memory Usage" value="424 Мб" />
+				<entry title="Peak Memory Usage" value="597 Мб" />
+			</section>
+			<section title="chrome.exe">
+				<entry title="Process ID" value="6644" />
+				<entry title="User" value="Денис Степурко" />
+				<entry title="Domain" value="ASUS-AIO-i5" />
+				<entry title="Path" value="C:\Program Files (x86)\Google\Chrome\Application\chrome.exe" />
+				<entry title="Memory Usage" value="95 Мб" />
+				<entry title="Peak Memory Usage" value="156 Мб" />
+			</section>
+			<section title="chrome.exe">
+				<entry title="Process ID" value="6432" />
+				<entry title="User" value="Денис Степурко" />
+				<entry title="Domain" value="ASUS-AIO-i5" />
+				<entry title="Path" value="C:\Program Files (x86)\Google\Chrome\Application\chrome.exe" />
+				<entry title="Memory Usage" value="75 Мб" />
+				<entry title="Peak Memory Usage" value="156 Мб" />
+			</section>
+			<section title="chrome.exe">
+				<entry title="Process ID" value="4912" />
+				<entry title="User" value="Денис Степурко" />
+				<entry title="Domain" value="ASUS-AIO-i5" />
+				<entry title="Path" value="C:\Program Files (x86)\Google\Chrome\Application\chrome.exe" />
+				<entry title="Memory Usage" value="69 Мб" />
+				<entry title="Peak Memory Usage" value="115 Мб" />
+			</section>
+			<section title="chrome.exe">
+				<entry title="Process ID" value="6648" />
+				<entry title="User" value="Денис Степурко" />
+				<entry title="Domain" value="ASUS-AIO-i5" />
+				<entry title="Path" value="C:\Program Files (x86)\Google\Chrome\Application\chrome.exe" />
+				<entry title="Memory Usage" value="146 Мб" />
+				<entry title="Peak Memory Usage" value="270 Мб" />
+			</section>
+			<section title="chrome.exe">
+				<entry title="Process ID" value="1672" />
+				<entry title="User" value="Денис Степурко" />
+				<entry title="Domain" value="ASUS-AIO-i5" />
+				<entry title="Path" value="C:\Program Files (x86)\Google\Chrome\Application\chrome.exe" />
+				<entry title="Memory Usage" value="46 Мб" />
+				<entry title="Peak Memory Usage" value="320 Мб" />
+			</section>
+			<section title="chrome.exe">
+				<entry title="Process ID" value="740" />
+				<entry title="User" value="Денис Степурко" />
+				<entry title="Domain" value="ASUS-AIO-i5" />
+				<entry title="Path" value="C:\Program Files (x86)\Google\Chrome\Application\chrome.exe" />
+				<entry title="Memory Usage" value="97 Мб" />
+				<entry title="Peak Memory Usage" value="245 Мб" />
+			</section>
+			<section title="chrome.exe">
+				<entry title="Process ID" value="876" />
+				<entry title="User" value="Денис Степурко" />
+				<entry title="Domain" value="ASUS-AIO-i5" />
+				<entry title="Path" value="C:\Program Files (x86)\Google\Chrome\Application\chrome.exe" />
+				<entry title="Memory Usage" value="34 Мб" />
+				<entry title="Peak Memory Usage" value="121 Мб" />
+			</section>
+			<section title="chrome.exe">
+				<entry title="Process ID" value="7084" />
+				<entry title="User" value="Денис Степурко" />
+				<entry title="Domain" value="ASUS-AIO-i5" />
+				<entry title="Path" value="C:\Program Files (x86)\Google\Chrome\Application\chrome.exe" />
+				<entry title="Memory Usage" value="126 Мб" />
+				<entry title="Peak Memory Usage" value="269 Мб" />
+			</section>
+			<section title="chrome.exe">
+				<entry title="Process ID" value="7940" />
+				<entry title="User" value="Денис Степурко" />
+				<entry title="Domain" value="ASUS-AIO-i5" />
+				<entry title="Path" value="C:\Program Files (x86)\Google\Chrome\Application\chrome.exe" />
+				<entry title="Memory Usage" value="63 Мб" />
+				<entry title="Peak Memory Usage" value="82 Мб" />
+			</section>
+			<section title="chrome.exe">
+				<entry title="Process ID" value="7444" />
+				<entry title="User" value="Денис Степурко" />
+				<entry title="Domain" value="ASUS-AIO-i5" />
+				<entry title="Path" value="C:\Program Files (x86)\Google\Chrome\Application\chrome.exe" />
+				<entry title="Memory Usage" value="67 Мб" />
+				<entry title="Peak Memory Usage" value="80 Мб" />
+			</section>
+			<section title="chrome.exe">
+				<entry title="Process ID" value="10152" />
+				<entry title="User" value="Денис Степурко" />
+				<entry title="Domain" value="ASUS-AIO-i5" />
+				<entry title="Path" value="C:\Program Files (x86)\Google\Chrome\Application\chrome.exe" />
+				<entry title="Memory Usage" value="47 Мб" />
+				<entry title="Peak Memory Usage" value="50 Мб" />
+			</section>
+			<section title="conhost.exe">
+				<entry title="Process ID" value="7496" />
+				<entry title="User" value="Денис Степурко" />
+				<entry title="Domain" value="ASUS-AIO-i5" />
+				<entry title="Path" value="C:\Windows\System32\conhost.exe" />
+				<entry title="Memory Usage" value="6,79 Мб" />
+				<entry title="Peak Memory Usage" value="8,73 Мб" />
+			</section>
+			<section title="conhost.exe">
+				<entry title="Process ID" value="8448" />
+				<entry title="User" value="Денис Степурко" />
+				<entry title="Domain" value="ASUS-AIO-i5" />
+				<entry title="Path" value="C:\Windows\System32\conhost.exe" />
+				<entry title="Memory Usage" value="9,05 Мб" />
+				<entry title="Peak Memory Usage" value="9,05 Мб" />
+			</section>
+			<section title="csrss.exe">
+				<entry title="Process ID" value="624" />
+				<entry title="User" value="СИСТЕМА" />
+				<entry title="Domain" value="NT AUTHORITY" />
+				<entry title="Path" value="C:\Windows\System32\csrss.exe" />
+				<entry title="Memory Usage" value="8,53 Мб" />
+				<entry title="Peak Memory Usage" value="36 Мб" />
+			</section>
+			<section title="csrss.exe">
+				<entry title="Process ID" value="516" />
+				<entry title="User" value="СИСТЕМА" />
+				<entry title="Domain" value="NT AUTHORITY" />
+				<entry title="Path" value="C:\Windows\System32\csrss.exe" />
+				<entry title="Memory Usage" value="3,75 Мб" />
+				<entry title="Peak Memory Usage" value="4,57 Мб" />
+			</section>
+			<section title="dasHost.exe">
+				<entry title="Process ID" value="1492" />
+				<entry title="User" value="LOCAL SERVICE" />
+				<entry title="Domain" value="NT AUTHORITY" />
+				<entry title="Path" value="C:\Windows\System32\dasHost.exe" />
+				<entry title="Memory Usage" value="12 Мб" />
+				<entry title="Peak Memory Usage" value="16 Мб" />
+			</section>
+			<section title="dllhost.exe">
+				<entry title="Process ID" value="8856" />
+				<entry title="User" value="LOCAL SERVICE" />
+				<entry title="Domain" value="NT AUTHORITY" />
+				<entry title="Path" value="C:\Windows\System32\dllhost.exe" />
+				<entry title="Memory Usage" value="8,92 Мб" />
+				<entry title="Peak Memory Usage" value="9,43 Мб" />
+			</section>
+			<section title="dwm.exe">
+				<entry title="Process ID" value="332" />
+				<entry title="User" value="DWM-1" />
+				<entry title="Domain" value="Window Manager" />
+				<entry title="Path" value="C:\Windows\System32\dwm.exe" />
+				<entry title="Memory Usage" value="59 Мб" />
+				<entry title="Peak Memory Usage" value="81 Мб" />
+			</section>
+			<section title="esif_assist_64.exe">
+				<entry title="Process ID" value="2088" />
+				<entry title="User" value="Денис Степурко" />
+				<entry title="Domain" value="ASUS-AIO-i5" />
+				<entry title="Path" value="C:\Windows\Temp\DPTF\esif_assist_64.exe" />
+				<entry title="Memory Usage" value="3,77 Мб" />
+				<entry title="Peak Memory Usage" value="4,22 Мб" />
+			</section>
+			<section title="esif_uf.exe">
+				<entry title="Process ID" value="2352" />
+				<entry title="User" value="СИСТЕМА" />
+				<entry title="Domain" value="NT AUTHORITY" />
+				<entry title="Path" value="C:\Windows\SysWOW64\esif_uf.exe" />
+				<entry title="Memory Usage" value="5,54 Мб" />
+				<entry title="Peak Memory Usage" value="6,42 Мб" />
+			</section>
+			<section title="explorer.exe">
+				<entry title="Process ID" value="4768" />
+				<entry title="User" value="Денис Степурко" />
+				<entry title="Domain" value="ASUS-AIO-i5" />
+				<entry title="Path" value="C:\Windows\explorer.exe" />
+				<entry title="Memory Usage" value="125 Мб" />
+				<entry title="Peak Memory Usage" value="150 Мб" />
+			</section>
+			<section title="explorer.exe">
+				<entry title="Process ID" value="8300" />
+				<entry title="User" value="Денис Степурко" />
+				<entry title="Domain" value="ASUS-AIO-i5" />
+				<entry title="Path" value="C:\Windows\explorer.exe" />
+				<entry title="Memory Usage" value="52 Мб" />
+				<entry title="Peak Memory Usage" value="55 Мб" />
+			</section>
+			<section title="explorer.exe">
+				<entry title="Process ID" value="4104" />
+				<entry title="User" value="Денис Степурко" />
+				<entry title="Domain" value="ASUS-AIO-i5" />
+				<entry title="Path" value="C:\Windows\explorer.exe" />
+				<entry title="Memory Usage" value="49 Мб" />
+				<entry title="Peak Memory Usage" value="50 Мб" />
+			</section>
+			<section title="FileZillaServer.exe">
+				<entry title="Process ID" value="2492" />
+				<entry title="User" value="СИСТЕМА" />
+				<entry title="Domain" value="NT AUTHORITY" />
+				<entry title="Path" value="D:\xampp\FileZillaFTP\FileZillaServer.exe" />
+				<entry title="Memory Usage" value="4,62 Мб" />
+				<entry title="Peak Memory Usage" value="5,11 Мб" />
+			</section>
+			<section title="FileZillaServer.exe">
+				<entry title="Process ID" value="2516" />
+				<entry title="User" value="СИСТЕМА" />
+				<entry title="Domain" value="NT AUTHORITY" />
+				<entry title="Path" value="D:\xampp\FileZillaFTP\FileZillaServer.exe" />
+				<entry title="Memory Usage" value="4,88 Мб" />
+				<entry title="Peak Memory Usage" value="5,46 Мб" />
+			</section>
+			<section title="fontdrvhost.exe">
+				<entry title="Process ID" value="1536" />
+				<entry title="Path" value="C:\Windows\System32\fontdrvhost.exe" />
+				<entry title="Memory Usage" value="2,77 Мб" />
+				<entry title="Peak Memory Usage" value="3,77 Мб" />
+			</section>
+			<section title="fsnotifier.exe">
+				<entry title="Process ID" value="3404" />
+				<entry title="User" value="Денис Степурко" />
+				<entry title="Domain" value="ASUS-AIO-i5" />
+				<entry title="Path" value="C:\Program Files (x86)\JetBrains\PhpStorm 2016.1\bin\fsnotifier.exe" />
+				<entry title="Memory Usage" value="2,38 Мб" />
+				<entry title="Peak Memory Usage" value="2,61 Мб" />
+			</section>
+			<section title="git-remote-https.exe">
+				<entry title="Process ID" value="9248" />
+				<entry title="User" value="Денис Степурко" />
+				<entry title="Domain" value="ASUS-AIO-i5" />
+				<entry title="Path" value="C:\Program Files\Git\mingw64\libexec\git-core\git-remote-https.exe" />
+				<entry title="Memory Usage" value="14 Мб" />
+				<entry title="Peak Memory Usage" value="14 Мб" />
+			</section>
+			<section title="git.exe">
+				<entry title="Process ID" value="9372" />
+				<entry title="User" value="Денис Степурко" />
+				<entry title="Domain" value="ASUS-AIO-i5" />
+				<entry title="Path" value="C:\Program Files\Git\cmd\git.exe" />
+				<entry title="Memory Usage" value="4,20 Мб" />
+				<entry title="Peak Memory Usage" value="4,20 Мб" />
+			</section>
+			<section title="git.exe">
+				<entry title="Process ID" value="4524" />
+				<entry title="User" value="Денис Степурко" />
+				<entry title="Domain" value="ASUS-AIO-i5" />
+				<entry title="Path" value="C:\Program Files\Git\mingw64\bin\git.exe" />
+				<entry title="Memory Usage" value="6,48 Мб" />
+				<entry title="Peak Memory Usage" value="6,71 Мб" />
+			</section>
+			<section title="httpd.exe">
+				<entry title="Process ID" value="2748" />
+				<entry title="User" value="СИСТЕМА" />
+				<entry title="Domain" value="NT AUTHORITY" />
+				<entry title="Path" value="D:\xampp\apache\bin\httpd.exe" />
+				<entry title="Memory Usage" value="11 Мб" />
+				<entry title="Peak Memory Usage" value="18 Мб" />
+			</section>
+			<section title="httpd.exe">
+				<entry title="Process ID" value="5072" />
+				<entry title="User" value="СИСТЕМА" />
+				<entry title="Domain" value="NT AUTHORITY" />
+				<entry title="Path" value="D:\xampp\apache\bin\httpd.exe" />
+				<entry title="Memory Usage" value="22 Мб" />
+				<entry title="Peak Memory Usage" value="41 Мб" />
+			</section>
+			<section title="IFXSPMGT.exe">
+				<entry title="Process ID" value="2636" />
+				<entry title="User" value="СИСТЕМА" />
+				<entry title="Domain" value="NT AUTHORITY" />
+				<entry title="Path" value="C:\Program Files (x86)\Infineon\Security Platform Software\IFXSPMGT.exe" />
+				<entry title="Memory Usage" value="12 Мб" />
+				<entry title="Peak Memory Usage" value="14 Мб" />
+			</section>
+			<section title="IFXTCS.exe">
+				<entry title="Process ID" value="2656" />
+				<entry title="User" value="СИСТЕМА" />
+				<entry title="Domain" value="NT AUTHORITY" />
+				<entry title="Path" value="C:\Program Files (x86)\Infineon\Security Platform Software\IFXTCS.exe" />
+				<entry title="Memory Usage" value="9,66 Мб" />
+				<entry title="Peak Memory Usage" value="11 Мб" />
+			</section>
+			<section title="igfxCUIService.exe">
+				<entry title="Process ID" value="1304" />
+				<entry title="User" value="СИСТЕМА" />
+				<entry title="Domain" value="NT AUTHORITY" />
+				<entry title="Path" value="C:\Windows\System32\igfxCUIService.exe" />
+				<entry title="Memory Usage" value="7,56 Мб" />
+				<entry title="Peak Memory Usage" value="8,27 Мб" />
+			</section>
+			<section title="igfxEM.exe">
+				<entry title="Process ID" value="4244" />
+				<entry title="User" value="Денис Степурко" />
+				<entry title="Domain" value="ASUS-AIO-i5" />
+				<entry title="Path" value="C:\Windows\System32\igfxEM.exe" />
+				<entry title="Memory Usage" value="10 Мб" />
+				<entry title="Peak Memory Usage" value="12 Мб" />
+			</section>
+			<section title="igfxHK.exe">
+				<entry title="Process ID" value="4284" />
+				<entry title="User" value="Денис Степурко" />
+				<entry title="Domain" value="ASUS-AIO-i5" />
+				<entry title="Path" value="C:\Windows\System32\igfxHK.exe" />
+				<entry title="Memory Usage" value="7,34 Мб" />
+				<entry title="Peak Memory Usage" value="8,59 Мб" />
+			</section>
+			<section title="igfxTray.exe">
+				<entry title="Process ID" value="4312" />
+				<entry title="User" value="Денис Степурко" />
+				<entry title="Domain" value="ASUS-AIO-i5" />
+				<entry title="Path" value="C:\Windows\System32\igfxTray.exe" />
+				<entry title="Memory Usage" value="8,92 Мб" />
+				<entry title="Peak Memory Usage" value="11 Мб" />
+			</section>
+			<section title="Lightshot.exe">
+				<entry title="Process ID" value="6672" />
+				<entry title="User" value="Денис Степурко" />
+				<entry title="Domain" value="ASUS-AIO-i5" />
+				<entry title="Path" value="C:\Program Files (x86)\Skillbrains\lightshot\5.3.0.0\Lightshot.exe" />
+				<entry title="Memory Usage" value="11 Мб" />
+				<entry title="Peak Memory Usage" value="14 Мб" />
+			</section>
+			<section title="lsass.exe">
+				<entry title="Process ID" value="764" />
+				<entry title="User" value="СИСТЕМА" />
+				<entry title="Domain" value="NT AUTHORITY" />
+				<entry title="Path" value="C:\Windows\System32\lsass.exe" />
+				<entry title="Memory Usage" value="14 Мб" />
+				<entry title="Peak Memory Usage" value="15 Мб" />
+			</section>
+			<section title="mDNSResponder.exe">
+				<entry title="Process ID" value="2392" />
+				<entry title="User" value="СИСТЕМА" />
+				<entry title="Domain" value="NT AUTHORITY" />
+				<entry title="Path" value="C:\Program Files (x86)\Xamarin\Bonjour\mDNSResponder.exe" />
+				<entry title="Memory Usage" value="5,16 Мб" />
+				<entry title="Peak Memory Usage" value="6,29 Мб" />
+			</section>
+			<section title="MsMpEng.exe">
+				<entry title="Process ID" value="2464" />
+				<entry title="User" value="СИСТЕМА" />
+				<entry title="Domain" value="NT AUTHORITY" />
+				<entry title="Path" value="C:\Program Files\Windows Defender\MsMpEng.exe" />
+				<entry title="Memory Usage" value="234 Мб" />
+				<entry title="Peak Memory Usage" value="535 Мб" />
+			</section>
+			<section title="mysqld.exe">
+				<entry title="Process ID" value="2888" />
+				<entry title="User" value="СИСТЕМА" />
+				<entry title="Domain" value="NT AUTHORITY" />
+				<entry title="Path" value="D:\xampp\mysql\bin\mysqld.exe" />
+				<entry title="Memory Usage" value="20 Мб" />
+				<entry title="Peak Memory Usage" value="47 Мб" />
+			</section>
+			<section title="NisSrv.exe">
+				<entry title="Process ID" value="4224" />
+				<entry title="User" value="LOCAL SERVICE" />
+				<entry title="Domain" value="NT AUTHORITY" />
+				<entry title="Path" value="C:\Program Files\Windows Defender\NisSrv.exe" />
+				<entry title="Memory Usage" value="8,98 Мб" />
+				<entry title="Peak Memory Usage" value="44 Мб" />
+			</section>
+			<section title="notepad++.exe">
+				<entry title="Process ID" value="8720" />
+				<entry title="User" value="Денис Степурко" />
+				<entry title="Domain" value="ASUS-AIO-i5" />
+				<entry title="Path" value="C:\Program Files (x86)\Notepad++\notepad++.exe" />
+				<entry title="Memory Usage" value="16 Мб" />
+				<entry title="Peak Memory Usage" value="24 Мб" />
+			</section>
+			<section title="pageant.exe">
+				<entry title="Process ID" value="2248" />
+				<entry title="User" value="Денис Степурко" />
+				<entry title="Domain" value="ASUS-AIO-i5" />
+				<entry title="Path" value="C:\Program Files (x86)\Atlassian\SourceTree\tools\putty\pageant.exe" />
+				<entry title="Memory Usage" value="5,89 Мб" />
+				<entry title="Peak Memory Usage" value="6,56 Мб" />
+			</section>
+			<section title="PhpStorm.exe">
+				<entry title="Process ID" value="3432" />
+				<entry title="User" value="Денис Степурко" />
+				<entry title="Domain" value="ASUS-AIO-i5" />
+				<entry title="Path" value="C:\Program Files (x86)\JetBrains\PhpStorm 2016.1\bin\PhpStorm.exe" />
+				<entry title="Memory Usage" value="582 Мб" />
+				<entry title="Peak Memory Usage" value="642 Мб" />
+			</section>
+			<section title="RAVBg64.exe">
+				<entry title="Process ID" value="6560" />
+				<entry title="User" value="Денис Степурко" />
+				<entry title="Domain" value="ASUS-AIO-i5" />
+				<entry title="Path" value="C:\Program Files\Realtek\Audio\HDA\RAVBg64.exe" />
+				<entry title="Memory Usage" value="12 Мб" />
+				<entry title="Peak Memory Usage" value="14 Мб" />
+			</section>
+			<section title="RtkNGUI64.exe">
+				<entry title="Process ID" value="6460" />
+				<entry title="User" value="Денис Степурко" />
+				<entry title="Domain" value="ASUS-AIO-i5" />
+				<entry title="Path" value="C:\Program Files\Realtek\Audio\HDA\RtkNGUI64.exe" />
+				<entry title="Memory Usage" value="19 Мб" />
+				<entry title="Peak Memory Usage" value="33 Мб" />
+			</section>
+			<section title="RuntimeBroker.exe">
+				<entry title="Process ID" value="4948" />
+				<entry title="User" value="Денис Степурко" />
+				<entry title="Domain" value="ASUS-AIO-i5" />
+				<entry title="Path" value="C:\Windows\System32\RuntimeBroker.exe" />
+				<entry title="Memory Usage" value="27 Мб" />
+				<entry title="Peak Memory Usage" value="29 Мб" />
+			</section>
+			<section title="SearchFilterHost.exe">
+				<entry title="Process ID" value="8832" />
+				<entry title="User" value="СИСТЕМА" />
+				<entry title="Domain" value="NT AUTHORITY" />
+				<entry title="Path" value="C:\Windows\System32\SearchFilterHost.exe" />
+				<entry title="Memory Usage" value="7,82 Мб" />
+				<entry title="Peak Memory Usage" value="7,84 Мб" />
+			</section>
+			<section title="SearchIndexer.exe">
+				<entry title="Process ID" value="5296" />
+				<entry title="User" value="СИСТЕМА" />
+				<entry title="Domain" value="NT AUTHORITY" />
+				<entry title="Path" value="C:\Windows\System32\SearchIndexer.exe" />
+				<entry title="Memory Usage" value="43 Мб" />
+				<entry title="Peak Memory Usage" value="52 Мб" />
+			</section>
+			<section title="SearchProtocolHost.exe">
+				<entry title="Process ID" value="7560" />
+				<entry title="User" value="СИСТЕМА" />
+				<entry title="Domain" value="NT AUTHORITY" />
+				<entry title="Path" value="C:\Windows\System32\SearchProtocolHost.exe" />
+				<entry title="Memory Usage" value="9,54 Мб" />
+				<entry title="Peak Memory Usage" value="11 Мб" />
+			</section>
+			<section title="SearchUI.exe">
+				<entry title="Process ID" value="5280" />
+				<entry title="User" value="Денис Степурко" />
+				<entry title="Domain" value="ASUS-AIO-i5" />
+				<entry title="Path" value="C:\Windows\SystemApps\Microsoft.Windows.Cortana_cw5n1h2txyewy\SearchUI.exe" />
+				<entry title="Memory Usage" value="62 Мб" />
+				<entry title="Peak Memory Usage" value="114 Мб" />
+			</section>
+			<section title="services.exe">
+				<entry title="Process ID" value="720" />
+				<entry title="User" value="СИСТЕМА" />
+				<entry title="Domain" value="NT AUTHORITY" />
+				<entry title="Path" value="C:\Windows\System32\services.exe" />
+				<entry title="Memory Usage" value="7,09 Мб" />
+				<entry title="Peak Memory Usage" value="7,66 Мб" />
+			</section>
+			<section title="ShellExperienceHost.exe">
+				<entry title="Process ID" value="5128" />
+				<entry title="User" value="Денис Степурко" />
+				<entry title="Domain" value="ASUS-AIO-i5" />
+				<entry title="Path" value="C:\Windows\SystemApps\ShellExperienceHost_cw5n1h2txyewy\ShellExperienceHost.exe" />
+				<entry title="Memory Usage" value="53 Мб" />
+				<entry title="Peak Memory Usage" value="73 Мб" />
+			</section>
+			<section title="sihost.exe">
+				<entry title="Process ID" value="3328" />
+				<entry title="User" value="Денис Степурко" />
+				<entry title="Domain" value="ASUS-AIO-i5" />
+				<entry title="Path" value="C:\Windows\System32\sihost.exe" />
+				<entry title="Memory Usage" value="20 Мб" />
+				<entry title="Peak Memory Usage" value="23 Мб" />
+			</section>
+			<section title="Skype.exe">
+				<entry title="Process ID" value="7772" />
+				<entry title="User" value="Денис Степурко" />
+				<entry title="Domain" value="ASUS-AIO-i5" />
+				<entry title="Path" value="C:\Program Files (x86)\Skype\Phone\Skype.exe" />
+				<entry title="Memory Usage" value="137 Мб" />
+				<entry title="Peak Memory Usage" value="209 Мб" />
+			</section>
+			<section title="smss.exe">
+				<entry title="Process ID" value="368" />
+				<entry title="User" value="СИСТЕМА" />
+				<entry title="Domain" value="NT AUTHORITY" />
+				<entry title="Path" value="C:\Windows\System32\smss.exe" />
+				<entry title="Memory Usage" value="888 кБ" />
+				<entry title="Peak Memory Usage" value="1,20 Мб" />
+			</section>
+			<section title="SourceTree.exe">
+				<entry title="Process ID" value="2648" />
+				<entry title="User" value="Денис Степурко" />
+				<entry title="Domain" value="ASUS-AIO-i5" />
+				<entry title="Path" value="C:\Program Files (x86)\Atlassian\SourceTree\SourceTree.exe" />
+				<entry title="Memory Usage" value="125 Мб" />
+				<entry title="Peak Memory Usage" value="153 Мб" />
+			</section>
+			<section title="Speccy64.exe">
+				<entry title="Process ID" value="10092" />
+				<entry title="User" value="Денис Степурко" />
+				<entry title="Domain" value="ASUS-AIO-i5" />
+				<entry title="Path" value="C:\Users\Денис Степурко\Downloads\CCleaner ProPlus 5.06.5219\CCleaner ProPlus 5.06.5219\App\Speccy\Speccy64.exe" />
+				<entry title="Memory Usage" value="31 Мб" />
+				<entry title="Peak Memory Usage" value="31 Мб" />
+			</section>
+			<section title="SpeccyPortable.exe">
+				<entry title="Process ID" value="9236" />
+				<entry title="User" value="Денис Степурко" />
+				<entry title="Domain" value="ASUS-AIO-i5" />
+				<entry title="Path" value="C:\Users\Денис Степурко\Downloads\CCleaner ProPlus 5.06.5219\CCleaner ProPlus 5.06.5219\SpeccyPortable.exe" />
+				<entry title="Memory Usage" value="13 Мб" />
+				<entry title="Peak Memory Usage" value="13 Мб" />
+			</section>
+			<section title="spoolsv.exe">
+				<entry title="Process ID" value="1992" />
+				<entry title="User" value="СИСТЕМА" />
+				<entry title="Domain" value="NT AUTHORITY" />
+				<entry title="Path" value="C:\Windows\System32\spoolsv.exe" />
+				<entry title="Memory Usage" value="19 Мб" />
+				<entry title="Peak Memory Usage" value="20 Мб" />
+			</section>
+			<section title="SpTNA.exe">
+				<entry title="Process ID" value="4804" />
+				<entry title="User" value="Денис Степурко" />
+				<entry title="Domain" value="ASUS-AIO-i5" />
+				<entry title="Path" value="C:\Program Files (x86)\Infineon\Security Platform Software\SpTNA.exe" />
+				<entry title="Memory Usage" value="13 Мб" />
+				<entry title="Peak Memory Usage" value="15 Мб" />
+			</section>
+			<section title="sqlwriter.exe">
+				<entry title="Process ID" value="2924" />
+				<entry title="User" value="СИСТЕМА" />
+				<entry title="Domain" value="NT AUTHORITY" />
+				<entry title="Path" value="C:\Program Files\Microsoft SQL Server\90\Shared\sqlwriter.exe" />
+				<entry title="Memory Usage" value="6,25 Мб" />
+				<entry title="Peak Memory Usage" value="7,22 Мб" />
+			</section>
+			<section title="svchost.exe">
+				<entry title="Process ID" value="2484" />
+				<entry title="User" value="СИСТЕМА" />
+				<entry title="Domain" value="NT AUTHORITY" />
+				<entry title="Path" value="C:\Windows\System32\svchost.exe" />
+				<entry title="Memory Usage" value="17 Мб" />
+				<entry title="Peak Memory Usage" value="20 Мб" />
+			</section>
+			<section title="svchost.exe">
+				<entry title="Process ID" value="2472" />
+				<entry title="User" value="LOCAL SERVICE" />
+				<entry title="Domain" value="NT AUTHORITY" />
+				<entry title="Path" value="C:\Windows\System32\svchost.exe" />
+				<entry title="Memory Usage" value="11 Мб" />
+				<entry title="Peak Memory Usage" value="12 Мб" />
+			</section>
+			<section title="svchost.exe">
+				<entry title="Process ID" value="924" />
+				<entry title="User" value="NETWORK SERVICE" />
+				<entry title="Domain" value="NT AUTHORITY" />
+				<entry title="Path" value="C:\Windows\System32\svchost.exe" />
+				<entry title="Memory Usage" value="9,28 Мб" />
+				<entry title="Peak Memory Usage" value="9,56 Мб" />
+			</section>
+			<section title="svchost.exe">
+				<entry title="Process ID" value="2412" />
+				<entry title="User" value="СИСТЕМА" />
+				<entry title="Domain" value="NT AUTHORITY" />
+				<entry title="Path" value="C:\Windows\System32\svchost.exe" />
+				<entry title="Memory Usage" value="26 Мб" />
+				<entry title="Peak Memory Usage" value="41 Мб" />
+			</section>
+			<section title="svchost.exe">
+				<entry title="Process ID" value="8216" />
+				<entry title="User" value="LOCAL SERVICE" />
+				<entry title="Domain" value="NT AUTHORITY" />
+				<entry title="Path" value="C:\Windows\System32\svchost.exe" />
+				<entry title="Memory Usage" value="7,81 Мб" />
+				<entry title="Peak Memory Usage" value="8,27 Мб" />
+			</section>
+			<section title="svchost.exe">
+				<entry title="Process ID" value="552" />
+				<entry title="User" value="Денис Степурко" />
+				<entry title="Domain" value="ASUS-AIO-i5" />
+				<entry title="Path" value="C:\Windows\System32\svchost.exe" />
+				<entry title="Memory Usage" value="12 Мб" />
+				<entry title="Peak Memory Usage" value="13 Мб" />
+			</section>
+			<section title="svchost.exe">
+				<entry title="Process ID" value="540" />
+				<entry title="User" value="NETWORK SERVICE" />
+				<entry title="Domain" value="NT AUTHORITY" />
+				<entry title="Path" value="C:\Windows\System32\svchost.exe" />
+				<entry title="Memory Usage" value="20 Мб" />
+				<entry title="Peak Memory Usage" value="22 Мб" />
+			</section>
+			<section title="svchost.exe">
+				<entry title="Process ID" value="1060" />
+				<entry title="User" value="LOCAL SERVICE" />
+				<entry title="Domain" value="NT AUTHORITY" />
+				<entry title="Path" value="C:\Windows\System32\svchost.exe" />
+				<entry title="Memory Usage" value="22 Мб" />
+				<entry title="Peak Memory Usage" value="28 Мб" />
+			</section>
+			<section title="svchost.exe">
+				<entry title="Process ID" value="864" />
+				<entry title="User" value="СИСТЕМА" />
+				<entry title="Domain" value="NT AUTHORITY" />
+				<entry title="Path" value="C:\Windows\System32\svchost.exe" />
+				<entry title="Memory Usage" value="18 Мб" />
+				<entry title="Peak Memory Usage" value="20 Мб" />
+			</section>
+			<section title="svchost.exe">
+				<entry title="Process ID" value="1120" />
+				<entry title="User" value="LOCAL SERVICE" />
+				<entry title="Domain" value="NT AUTHORITY" />
+				<entry title="Path" value="C:\Windows\System32\svchost.exe" />
+				<entry title="Memory Usage" value="25 Мб" />
+				<entry title="Peak Memory Usage" value="31 Мб" />
+			</section>
+			<section title="svchost.exe">
+				<entry title="Process ID" value="608" />
+				<entry title="User" value="СИСТЕМА" />
+				<entry title="Domain" value="NT AUTHORITY" />
+				<entry title="Path" value="C:\Windows\System32\svchost.exe" />
+				<entry title="Memory Usage" value="100 Мб" />
+				<entry title="Peak Memory Usage" value="121 Мб" />
+			</section>
+			<section title="svchost.exe">
+				<entry title="Process ID" value="1128" />
+				<entry title="User" value="LOCAL SERVICE" />
+				<entry title="Domain" value="NT AUTHORITY" />
+				<entry title="Path" value="C:\Windows\System32\svchost.exe" />
+				<entry title="Memory Usage" value="7,13 Мб" />
+				<entry title="Peak Memory Usage" value="8,78 Мб" />
+			</section>
+			<section title="svchost.exe">
+				<entry title="Process ID" value="1428" />
+				<entry title="User" value="LOCAL SERVICE" />
+				<entry title="Domain" value="NT AUTHORITY" />
+				<entry title="Path" value="C:\Windows\System32\svchost.exe" />
+				<entry title="Memory Usage" value="28 Мб" />
+				<entry title="Peak Memory Usage" value="92 Мб" />
+			</section>
+			<section title="svchost.exe">
+				<entry title="Process ID" value="428" />
+				<entry title="User" value="СИСТЕМА" />
+				<entry title="Domain" value="NT AUTHORITY" />
+				<entry title="Path" value="C:\Windows\System32\svchost.exe" />
+				<entry title="Memory Usage" value="51 Мб" />
+				<entry title="Peak Memory Usage" value="128 Мб" />
+			</section>
+			<section title="System">
+				<entry title="Process ID" value="4" />
+				<entry title="Memory Usage" value="464 Мб" />
+				<entry title="Peak Memory Usage" value="936 Мб" />
+			</section>
+			<section title="System Idle Process">
+				<entry title="Process ID" value="0" />
+			</section>
+			<section title="SystemSettings.exe">
+				<entry title="Process ID" value="3084" />
+				<entry title="User" value="Денис Степурко" />
+				<entry title="Domain" value="ASUS-AIO-i5" />
+				<entry title="Path" value="C:\Windows\ImmersiveControlPanel\SystemSettings.exe" />
+				<entry title="Memory Usage" value="37 Мб" />
+				<entry title="Peak Memory Usage" value="46 Мб" />
+			</section>
+			<section title="SystemSettingsBroker.exe">
+				<entry title="Process ID" value="8212" />
+				<entry title="User" value="Денис Степурко" />
+				<entry title="Domain" value="ASUS-AIO-i5" />
+				<entry title="Path" value="C:\Windows\System32\SystemSettingsBroker.exe" />
+				<entry title="Memory Usage" value="12 Мб" />
+				<entry title="Peak Memory Usage" value="14 Мб" />
+			</section>
+			<section title="TabTip.exe">
+				<entry title="Process ID" value="5736" />
+				<entry title="User" value="Денис Степурко" />
+				<entry title="Domain" value="ASUS-AIO-i5" />
+				<entry title="Path" value="C:\Program Files\Common Files\microsoft shared\ink\TabTip.exe" />
+				<entry title="Memory Usage" value="13 Мб" />
+				<entry title="Peak Memory Usage" value="13 Мб" />
+			</section>
+			<section title="TabTip32.exe">
+				<entry title="Process ID" value="5776" />
+				<entry title="User" value="Денис Степурко" />
+				<entry title="Domain" value="ASUS-AIO-i5" />
+				<entry title="Path" value="C:\Program Files (x86)\Common Files\Microsoft Shared\Ink\TabTip32.exe" />
+				<entry title="Memory Usage" value="3,47 Мб" />
+				<entry title="Peak Memory Usage" value="4,13 Мб" />
+			</section>
+			<section title="taskhostw.exe">
+				<entry title="Process ID" value="3512" />
+				<entry title="User" value="Денис Степурко" />
+				<entry title="Domain" value="ASUS-AIO-i5" />
+				<entry title="Path" value="C:\Windows\System32\taskhostw.exe" />
+				<entry title="Memory Usage" value="16 Мб" />
+				<entry title="Peak Memory Usage" value="17 Мб" />
+			</section>
+			<section title="TeamViewer.exe">
+				<entry title="Process ID" value="4872" />
+				<entry title="User" value="Денис Степурко" />
+				<entry title="Domain" value="ASUS-AIO-i5" />
+				<entry title="Path" value="C:\Program Files (x86)\TeamViewer\TeamViewer.exe" />
+				<entry title="Memory Usage" value="27 Мб" />
+				<entry title="Peak Memory Usage" value="29 Мб" />
+			</section>
+			<section title="TeamViewer_Service.exe">
+				<entry title="Process ID" value="2916" />
+				<entry title="User" value="СИСТЕМА" />
+				<entry title="Domain" value="NT AUTHORITY" />
+				<entry title="Path" value="C:\Program Files (x86)\TeamViewer\TeamViewer_Service.exe" />
+				<entry title="Memory Usage" value="16 Мб" />
+				<entry title="Peak Memory Usage" value="29 Мб" />
+			</section>
+			<section title="TSVNCache.exe">
+				<entry title="Process ID" value="6072" />
+				<entry title="User" value="Денис Степурко" />
+				<entry title="Domain" value="ASUS-AIO-i5" />
+				<entry title="Path" value="C:\Program Files\TortoiseSVN\bin\TSVNCache.exe" />
+				<entry title="Memory Usage" value="9,08 Мб" />
+				<entry title="Peak Memory Usage" value="9,39 Мб" />
+			</section>
+			<section title="tv_w32.exe">
+				<entry title="Process ID" value="5140" />
+				<entry title="User" value="СИСТЕМА" />
+				<entry title="Domain" value="NT AUTHORITY" />
+				<entry title="Path" value="C:\Program Files (x86)\TeamViewer\tv_w32.exe" />
+				<entry title="Memory Usage" value="5,91 Мб" />
+				<entry title="Peak Memory Usage" value="6,62 Мб" />
+			</section>
+			<section title="tv_x64.exe">
+				<entry title="Process ID" value="5208" />
+				<entry title="User" value="СИСТЕМА" />
+				<entry title="Domain" value="NT AUTHORITY" />
+				<entry title="Path" value="C:\Program Files (x86)\TeamViewer\tv_x64.exe" />
+				<entry title="Memory Usage" value="5,70 Мб" />
+				<entry title="Peak Memory Usage" value="6,37 Мб" />
+			</section>
+			<section title="unsecapp.exe">
+				<entry title="Process ID" value="6820" />
+				<entry title="User" value="Денис Степурко" />
+				<entry title="Domain" value="ASUS-AIO-i5" />
+				<entry title="Path" value="C:\Windows\System32\wbem\unsecapp.exe" />
+				<entry title="Memory Usage" value="6,43 Мб" />
+				<entry title="Peak Memory Usage" value="6,51 Мб" />
+			</section>
+			<section title="wininit.exe">
+				<entry title="Process ID" value="612" />
+				<entry title="User" value="СИСТЕМА" />
+				<entry title="Domain" value="NT AUTHORITY" />
+				<entry title="Path" value="C:\Windows\System32\wininit.exe" />
+				<entry title="Memory Usage" value="4,07 Мб" />
+				<entry title="Peak Memory Usage" value="4,89 Мб" />
+			</section>
+			<section title="winlogon.exe">
+				<entry title="Process ID" value="728" />
+				<entry title="User" value="СИСТЕМА" />
+				<entry title="Domain" value="NT AUTHORITY" />
+				<entry title="Path" value="C:\Windows\System32\winlogon.exe" />
+				<entry title="Memory Usage" value="8,56 Мб" />
+				<entry title="Peak Memory Usage" value="25 Мб" />
+			</section>
+			<section title="WmiPrvSE.exe">
+				<entry title="Process ID" value="4512" />
+				<entry title="User" value="NETWORK SERVICE" />
+				<entry title="Domain" value="NT AUTHORITY" />
+				<entry title="Path" value="C:\Windows\System32\wbem\WmiPrvSE.exe" />
+				<entry title="Memory Usage" value="15 Мб" />
+				<entry title="Peak Memory Usage" value="16 Мб" />
+			</section>
+			<section title="WmiPrvSE.exe">
+				<entry title="Process ID" value="6780" />
+				<entry title="User" value="СИСТЕМА" />
+				<entry title="Domain" value="NT AUTHORITY" />
+				<entry title="Path" value="C:\Windows\System32\wbem\WmiPrvSE.exe" />
+				<entry title="Memory Usage" value="29 Мб" />
+				<entry title="Peak Memory Usage" value="37 Мб" />
+			</section>
+			<section title="WUDFHost.exe">
+				<entry title="Process ID" value="1520" />
+				<entry title="User" value="LOCAL SERVICE" />
+				<entry title="Domain" value="NT AUTHORITY" />
+				<entry title="Path" value="C:\Windows\System32\WUDFHost.exe" />
+				<entry title="Memory Usage" value="15 Мб" />
+				<entry title="Peak Memory Usage" value="37 Мб" />
+			</section>
+			<section title="WUDFHost.exe">
+				<entry title="Process ID" value="1744" />
+				<entry title="User" value="LOCAL SERVICE" />
+				<entry title="Domain" value="NT AUTHORITY" />
+				<entry title="Path" value="C:\Windows\System32\WUDFHost.exe" />
+				<entry title="Memory Usage" value="6,70 Мб" />
+				<entry title="Peak Memory Usage" value="7,82 Мб" />
+			</section>
+		</section>
+		<section title="Device Tree">
+			<section title="Компьютер с ACPI на базе x64">
+				<section title="Microsoft ACPI-совместимая система">
+					<entry value="Intel Core i5-4200U CPU @ 1.60GHz" />
+					<entry value="Intel Core i5-4200U CPU @ 1.60GHz" />
+					<entry value="Intel Core i5-4200U CPU @ 1.60GHz" />
+					<entry value="Intel Core i5-4200U CPU @ 1.60GHz" />
+					<entry value="Intel Dynamic Platform and Thermal Framework Manager" />
+					<entry value="Вентилятор ACPI" />
+					<entry value="Вентилятор ACPI" />
+					<entry value="Вентилятор ACPI" />
+					<entry value="Вентилятор ACPI" />
+					<entry value="Вентилятор ACPI" />
+					<entry value="Интерфейс управления для ACPI Microsoft Windows" />
+					<entry value="Кнопка питания ACPI" />
+					<entry value="Термальная зона ACPI" />
+					<entry value="Термальная зона ACPI" />
+					<entry value="Фиксированная функциональная кнопка ACPI" />
+					<section title="PCI Express Root Complex">
+						<entry value="Intel 8 Series SMBus Controller - 9C22" />
+						<entry value="Intel 8 Series Thermal - 9C24" />
+						<entry value="Intel Dynamic Platform and Thermal Framework Memory Participant" />
+						<entry value="Intel Dynamic Platform and Thermal Framework Processor Participant" />
+						<entry value="Intel Management Engine Interface" />
+						<entry value="Мост PCI–PCI" />
+						<entry value="Ресурсы системной платы" />
+						<entry value="Ресурсы системной платы" />
+						<entry value="Системная плата" />
+						<entry value="Стандартный главный мост PCI — ЦП" />
+						<section title="Intel(R) HD Graphics Family">
+							<entry value="Универсальный монитор PnP" />
+							<entry value="Универсальный монитор PnP" />
+						</section>
+						<section title="Контроллер High Definition Audio (Microsoft)">
+							<entry value="Устройство с поддержкой High Definition Audio" />
+						</section>
+						<section title="Расширяемый хост-контроллер Intel(R) USB 3.0 — 1.0 (Майкрософт)">
+							<section title="Корневой USB-концентратор (xHCI)">
+								<section title="USB-устройство ввода">
+									<entry value="HID-совместимая мышь" />
+								</section>
+								<section title="Составное USB устройство">
+									<section title="USB-устройство ввода">
+										<entry value="Клавиатура HID" />
+									</section>
+									<section title="USB-устройство ввода">
+										<entry value="HID-совместимое устройство управления" />
+										<entry value="HID-совместимый системный контроллер" />
+									</section>
+								</section>
+							</section>
+						</section>
+						<section title="Контроллер High Definition Audio (Microsoft)">
+							<section title="Realtek High Definition Audio">
+								<entry value="Динамики (Realtek High Definition Audio)" />
+								<entry value="Микрофон (Realtek High Definition Audio)" />
+							</section>
+						</section>
+						<section title="Мост PCI–PCI">
+							<entry value="Контроллер семейства Realtek PCIe GBE" />
+						</section>
+						<section title="Мост PCI–PCI">
+							<section title="Broadcom 802.11ac Network Adapter">
+								<entry value="Виртуальный адаптер Wi-Fi Direct (Майкрософт)" />
+							</section>
+						</section>
+						<section title="Intel(R) 8 Series USB Enhanced Host Controller 1 — 9C26">
+							<section title="Корневой USB-концентратор">
+								<section title="Generic USB Hub">
+									<section title="Generic USB Hub">
+										<section title="USB-устройство ввода">
+											<entry value="HID-совместимое устройство, определенное поставщиком" />
+											<entry value="HID-совместимый сенсорный экран" />
+										</section>
+										<section title="Составное USB устройство">
+											<entry value="USB2.0 FHD UVC WebCam" />
+										</section>
+									</section>
+									<section title="Bluetooth Module">
+										<entry value="Bluetooth Device (Personal Area Network)" />
+										<entry value="Bluetooth Device (RFCOMM Protocol TDI)" />
+										<entry value="Microsoft Bluetooth Enumerator" />
+										<entry value="Перечислитель Bluetooth LE (Майкрософт)" />
+									</section>
+								</section>
+							</section>
+						</section>
+						<section title="Стандартный мост PCI — ISA">
+							<entry value="CMOS системы и часы реального времени" />
+							<entry value="ENE CIR Receiver" />
+							<entry value="Арифметический сопроцессор" />
+							<entry value="Встроенный контроллер Microsoft, соответствующий стандарту ACPI" />
+							<entry value="Высокоточный таймер событий" />
+							<entry value="Контроллер прямого доступа к памяти" />
+							<entry value="Программируемый контроллер прерываний" />
+							<entry value="Ресурсы системной платы" />
+							<entry value="Ресурсы системной платы" />
+							<entry value="Ресурсы системной платы" />
+							<entry value="Системный таймер" />
+							<entry value="Устаревшее устройство" />
+						</section>
+						<section title="Стандартный контроллер SATA AHCI">
+							<entry value="MATSHITA DVD-RAM UJ8E1" />
+							<entry value="WDC WD10EZEX-08M2NA0" />
+						</section>
+					</section>
+				</section>
+			</section>
+		</section>
+	</mainsection>
+	<mainsection title="CPU" id="2">
+		<section title="Intel Core i5 4200U">
+			<entry title="Cores" value="2" />
+			<entry title="Threads" value="4" />
+			<entry title="Name" value="Intel Core i5 4200U" />
+			<entry title="Code Name" value="Haswell ULT" />
+			<entry title="Package" value="Socket 1168 BGA" />
+			<entry title="Technology" value="22nm" />
+			<entry title="Specification" value="Intel Core i5-4200U CPU @ 1.60GHz" />
+			<entry title="Family" value="6" />
+			<entry title="Extended Family" value="6" />
+			<entry title="Model" value="5" />
+			<entry title="Extended Model" value="45" />
+			<entry title="Stepping" value="1" />
+			<entry title="Revision" value="C0" />
+			<entry title="Instructions" value="MMX, SSE, SSE2, SSE3, SSSE3, SSE4.1, SSE4.2, Intel 64, NX, VMX, AES, AVX, AVX2, FMA3" />
+			<entry title="Virtualization" value="Supported, Enabled" />
+			<entry title="Hyperthreading" value="Supported, Enabled" />
+			<entry title="Bus Speed" value="99,8 MHz" />
+			<entry title="Stock Core Speed" value="1600 MHz" />
+			<entry title="Stock Bus Speed" value="100 MHz" />
+			<entry title="Average Temperature" value="41 °C" />
+			<section title="Caches">
+				<entry title="L1 Data Cache Size" value="2 x 32 KBytes" />
+				<entry title="L1 Instructions Cache Size" value="2 x 32 KBytes" />
+				<entry title="L2 Unified Cache Size" value="2 x 256 KBytes" />
+				<entry title="L3 Unified Cache Size" value="3072 KBytes" />
+			</section>
+			<section title="Cores">
+				<section title="Core 0">
+					<entry title="Core Speed" value="2294,5 MHz" />
+					<entry title="Multiplier" value="x 23,0" />
+					<entry title="Bus Speed" value="99,8 MHz" />
+					<entry title="Temperature" value="41 °C" />
+					<entry title="Threads" value="APIC ID: 0, 1" />
+				</section>
+				<section title="Core 1">
+					<entry title="Core Speed" value="2294,5 MHz" />
+					<entry title="Multiplier" value="x 23,0" />
+					<entry title="Bus Speed" value="99,8 MHz" />
+					<entry title="Temperature" value="41 °C" />
+					<entry title="Threads" value="APIC ID: 2, 3" />
+				</section>
+			</section>
+		</section>
+	</mainsection>
+	<mainsection title="RAM" id="3">
+		<section title="Memory slots">
+			<entry title="Total memory slots" value="4" />
+			<entry title="Used memory slots" value="2" />
+			<entry title="Free memory slots" value="2" />
+		</section>
+		<section title="Memory">
+			<entry title="Type" value="DDR3" />
+			<entry title="Size" value="8192 MBytes" />
+			<entry title="Channels #" value="Dual" />
+			<entry title="DRAM Frequency" value="798,1 MHz" />
+			<entry title="CAS# Latency (CL)" value="11 clocks" />
+			<entry title="RAS# to CAS# Delay (tRCD)" value="11 clocks" />
+			<entry title="RAS# Precharge (tRP)" value="11 clocks" />
+			<entry title="Cycle Time (tRAS)" value="28 clocks" />
+			<entry title="Command Rate (CR)" value="1T" />
+		</section>
+		<section title="Physical Memory">
+			<entry title="Memory Usage" value="60 %" />
+			<entry title="Total Physical" value="7,92 Гб" />
+			<entry title="Available Physical" value="3,16 GB" />
+			<entry title="Total Virtual" value="11 Гб" />
+			<entry title="Available Virtual" value="4,28 GB" />
+		</section>
+		<section title="SPD">
+			<entry title="Number Of SPD Modules" value="2" />
+			<section title="Slot #1">
+				<entry title="Type" value="DDR3" />
+				<entry title="Size" value="4096 MBytes" />
+				<entry title="Manufacturer" value="Hyundai Electronics" />
+				<entry title="Max Bandwidth" value="PC3-12800 (800 MHz)" />
+				<entry title="Part Number" value="HMT451S6AFR8A-PB" />
+				<entry title="Serial Number" value="01431077" />
+				<entry title="Week/year" value="47 / 13" />
+				<section title="Timing table">
+					<section title="JEDEC #1">
+						<entry title="Frequency" value="381,0 MHz" />
+						<entry title="CAS# Latency" value="5,0" />
+						<entry title="RAS# To CAS#" value="5" />
+						<entry title="RAS# Precharge" value="5" />
+						<entry title="tRAS" value="14" />
+						<entry title="tRC" value="19" />
+						<entry title="Voltage" value="1,350 V" />
+					</section>
+					<section title="JEDEC #2">
+						<entry title="Frequency" value="457,1 MHz" />
+						<entry title="CAS# Latency" value="6,0" />
+						<entry title="RAS# To CAS#" value="6" />
+						<entry title="RAS# Precharge" value="6" />
+						<entry title="tRAS" value="16" />
+						<entry title="tRC" value="22" />
+						<entry title="Voltage" value="1,350 V" />
+					</section>
+					<section title="JEDEC #3">
+						<entry title="Frequency" value="533,3 MHz" />
+						<entry title="CAS# Latency" value="7,0" />
+						<entry title="RAS# To CAS#" value="7" />
+						<entry title="RAS# Precharge" value="7" />
+						<entry title="tRAS" value="19" />
+						<entry title="tRC" value="26" />
+						<entry title="Voltage" value="1,350 V" />
+					</section>
+					<section title="JEDEC #4">
+						<entry title="Frequency" value="609,5 MHz" />
+						<entry title="CAS# Latency" value="8,0" />
+						<entry title="RAS# To CAS#" value="8" />
+						<entry title="RAS# Precharge" value="8" />
+						<entry title="tRAS" value="22" />
+						<entry title="tRC" value="30" />
+						<entry title="Voltage" value="1,350 V" />
+					</section>
+					<section title="JEDEC #5">
+						<entry title="Frequency" value="685,7 MHz" />
+						<entry title="CAS# Latency" value="9,0" />
+						<entry title="RAS# To CAS#" value="9" />
+						<entry title="RAS# Precharge" value="9" />
+						<entry title="tRAS" value="24" />
+						<entry title="tRC" value="33" />
+						<entry title="Voltage" value="1,350 V" />
+					</section>
+					<section title="JEDEC #6">
+						<entry title="Frequency" value="761,9 MHz" />
+						<entry title="CAS# Latency" value="10,0" />
+						<entry title="RAS# To CAS#" value="10" />
+						<entry title="RAS# Precharge" value="10" />
+						<entry title="tRAS" value="27" />
+						<entry title="tRC" value="37" />
+						<entry title="Voltage" value="1,350 V" />
+					</section>
+					<section title="JEDEC #7">
+						<entry title="Frequency" value="800,0 MHz" />
+						<entry title="CAS# Latency" value="11,0" />
+						<entry title="RAS# To CAS#" value="11" />
+						<entry title="RAS# Precharge" value="11" />
+						<entry title="tRAS" value="28" />
+						<entry title="tRC" value="39" />
+						<entry title="Voltage" value="1,350 V" />
+					</section>
+				</section>
+			</section>
+			<section title="Slot #2">
+				<entry title="Type" value="DDR3" />
+				<entry title="Size" value="4096 MBytes" />
+				<entry title="Manufacturer" value="Hyundai Electronics" />
+				<entry title="Max Bandwidth" value="PC3-12800 (800 MHz)" />
+				<entry title="Part Number" value="HMT451S6AFR8A-PB" />
+				<entry title="Serial Number" value="012310BD" />
+				<entry title="Week/year" value="47 / 13" />
+				<section title="Timing table">
+					<section title="JEDEC #1">
+						<entry title="Frequency" value="381,0 MHz" />
+						<entry title="CAS# Latency" value="5,0" />
+						<entry title="RAS# To CAS#" value="5" />
+						<entry title="RAS# Precharge" value="5" />
+						<entry title="tRAS" value="14" />
+						<entry title="tRC" value="19" />
+						<entry title="Voltage" value="1,350 V" />
+					</section>
+					<section title="JEDEC #2">
+						<entry title="Frequency" value="457,1 MHz" />
+						<entry title="CAS# Latency" value="6,0" />
+						<entry title="RAS# To CAS#" value="6" />
+						<entry title="RAS# Precharge" value="6" />
+						<entry title="tRAS" value="16" />
+						<entry title="tRC" value="22" />
+						<entry title="Voltage" value="1,350 V" />
+					</section>
+					<section title="JEDEC #3">
+						<entry title="Frequency" value="533,3 MHz" />
+						<entry title="CAS# Latency" value="7,0" />
+						<entry title="RAS# To CAS#" value="7" />
+						<entry title="RAS# Precharge" value="7" />
+						<entry title="tRAS" value="19" />
+						<entry title="tRC" value="26" />
+						<entry title="Voltage" value="1,350 V" />
+					</section>
+					<section title="JEDEC #4">
+						<entry title="Frequency" value="609,5 MHz" />
+						<entry title="CAS# Latency" value="8,0" />
+						<entry title="RAS# To CAS#" value="8" />
+						<entry title="RAS# Precharge" value="8" />
+						<entry title="tRAS" value="22" />
+						<entry title="tRC" value="30" />
+						<entry title="Voltage" value="1,350 V" />
+					</section>
+					<section title="JEDEC #5">
+						<entry title="Frequency" value="685,7 MHz" />
+						<entry title="CAS# Latency" value="9,0" />
+						<entry title="RAS# To CAS#" value="9" />
+						<entry title="RAS# Precharge" value="9" />
+						<entry title="tRAS" value="24" />
+						<entry title="tRC" value="33" />
+						<entry title="Voltage" value="1,350 V" />
+					</section>
+					<section title="JEDEC #6">
+						<entry title="Frequency" value="761,9 MHz" />
+						<entry title="CAS# Latency" value="10,0" />
+						<entry title="RAS# To CAS#" value="10" />
+						<entry title="RAS# Precharge" value="10" />
+						<entry title="tRAS" value="27" />
+						<entry title="tRC" value="37" />
+						<entry title="Voltage" value="1,350 V" />
+					</section>
+					<section title="JEDEC #7">
+						<entry title="Frequency" value="800,0 MHz" />
+						<entry title="CAS# Latency" value="11,0" />
+						<entry title="RAS# To CAS#" value="11" />
+						<entry title="RAS# Precharge" value="11" />
+						<entry title="tRAS" value="28" />
+						<entry title="tRC" value="39" />
+						<entry title="Voltage" value="1,350 V" />
+					</section>
+				</section>
+			</section>
+		</section>
+	</mainsection>
+	<mainsection title="Motherboard" id="4">
+		<entry title="Manufacturer" value="ASUSTeK COMPUTER INC." />
+		<entry title="Model" value="ET2321I (SOCKET 1150)" />
+		<entry title="Version" value="0405" />
+		<entry title="Chipset Vendor" value="Intel" />
+		<entry title="Chipset Model" value="Haswell-ULT" />
+		<entry title="Chipset Revision" value="09" />
+		<entry title="Southbridge Vendor" value="Intel" />
+		<entry title="Southbridge Model" value="ID9C43" />
+		<entry title="Southbridge Revision" value="04" />
+		<section title="BIOS">
+			<entry title="Brand" value="American Megatrends Inc." />
+			<entry title="Version" value="0405" />
+			<entry title="Date" value="11.10.2013" />
+		</section>
+		<section title="PCI Data">
+			<section title="Slot PCI-E">
+				<entry title="Slot Type" value="PCI-E" />
+				<entry title="Slot Usage" value="In Use" />
+				<entry title="Data lanes" value="x16" />
+				<entry title="Slot Designation" value="PCIEX16_1" />
+				<entry title="Characteristics" value="3.3V, Shared, PME" />
+				<entry title="Slot Number" value="0" />
+			</section>
+			<section title="Slot PCI-E">
+				<entry title="Slot Type" value="PCI-E" />
+				<entry title="Slot Usage" value="Available" />
+				<entry title="Data lanes" value="x1" />
+				<entry title="Slot Designation" value="PCIEX1_1" />
+				<entry title="Characteristics" value="3.3V, Shared, PME" />
+				<entry title="Slot Number" value="1" />
+			</section>
+			<section title="Slot PCI-E">
+				<entry title="Slot Type" value="PCI-E" />
+				<entry title="Slot Usage" value="Available" />
+				<entry title="Data lanes" value="x4" />
+				<entry title="Slot Designation" value="PCIEX4" />
+				<entry title="Characteristics" value="3.3V, Shared, PME" />
+				<entry title="Slot Number" value="2" />
+			</section>
+			<section title="Slot PCI-E">
+				<entry title="Slot Type" value="PCI-E" />
+				<entry title="Slot Usage" value="Available" />
+				<entry title="Data lanes" value="x16" />
+				<entry title="Slot Designation" value="PCIEX16_2" />
+				<entry title="Characteristics" value="3.3V, Shared, PME" />
+				<entry title="Slot Number" value="3" />
+			</section>
+			<section title="Slot PCI-E">
+				<entry title="Slot Type" value="PCI-E" />
+				<entry title="Slot Usage" value="Available" />
+				<entry title="Data lanes" value="x1" />
+				<entry title="Slot Designation" value="PCIEX1_2" />
+				<entry title="Characteristics" value="3.3V, Shared, PME" />
+				<entry title="Slot Number" value="4" />
+			</section>
+		</section>
+	</mainsection>
+	<mainsection title="Graphics" id="5">
+		<section title="Monitor 1">
+			<entry title="Name" value="ET2321I on Intel HD Graphics Family" />
+			<entry title="Current Resolution" value="1920x1080 pixels" />
+			<entry title="Work Resolution" value="1920x1040 pixels" />
+			<entry title="State" value="Enabled, Output devices support" />
+			<entry title="Multiple displays" value="Extended, Primary, Enabled" />
+			<entry title="Monitor Width" value="1920" />
+			<entry title="Monitor Height" value="1080" />
+			<entry title="Monitor BPP" value="32 bits per pixel" />
+			<entry title="Monitor Frequency" value="60 Hz" />
+			<entry title="Device" value="\\.\DISPLAY1\Monitor0" />
+		</section>
+		<section title="Monitor 2">
+			<entry title="Name" value="LG IPS FULLHD on Intel HD Graphics Family" />
+			<entry title="Current Resolution" value="1920x1080 pixels" />
+			<entry title="Work Resolution" value="1920x1040 pixels" />
+			<entry title="State" value="Enabled, Output devices support" />
+			<entry title="Multiple displays" value="Extended, Secondary, Enabled" />
+			<entry title="Monitor Width" value="1920" />
+			<entry title="Monitor Height" value="1080" />
+			<entry title="Monitor BPP" value="32 bits per pixel" />
+			<entry title="Monitor Frequency" value="59 Hz" />
+			<entry title="Device" value="\\.\DISPLAY2\Monitor0" />
+		</section>
+		<section title="Intel HD Graphics Family">
+			<entry title="Manufacturer" value="Intel" />
+			<entry title="Model" value="HD Graphics Family" />
+			<entry title="Device ID" value="8086-0A16" />
+			<entry title="Revision" value="A" />
+			<entry title="Subvendor" value="ASUStek Computer Inc (1043)" />
+			<entry title="Current Performance Level" value="Level 0" />
+			<entry title="Driver version" value="20.19.15.4331" />
+			<section title="Count of performance levels : 1">
+				<section title='Level 1 - &quot;Perf Level 0&quot;'>
+					<entry title="GPU Clock" value="997 MHz" />
+				</section>
+			</section>
+		</section>
+	</mainsection>
+	<mainsection title="Storage" id="6">
+		<section title="Hard drives">
+			<section title="WDC WD10EZEX-08M2NA0">
+				<entry title="Manufacturer" value="Western Digital" />
+				<entry title="Heads" value="16" />
+				<entry title="Cylinders" value="121 601" />
+				<entry title="Tracks" value="31 008 255" />
+				<entry title="Sectors" value="1 953 520 065" />
+				<entry title="SATA type" value="SATA-III 6.0Gb/s" />
+				<entry title="Device type" value="Fixed" />
+				<entry title="ATA Standard" value="ACS2" />
+				<entry title="Serial Number" value="WD-WCC3F0XNJC90" />
+				<entry title="Firmware Version Number" value="01.01A01" />
+				<entry title="LBA Size" value="48-bit LBA" />
+				<entry title="Power On Count" value="832 times" />
+				<entry title="Power On Time" value="153,7 days" />
+				<entry title="Speed" value="7200 RPM" />
+				<entry title="Features" value="S.M.A.R.T., NCQ" />
+				<entry title="Max. Transfer Mode" value="SATA III 6.0Gb/s" />
+				<entry title="Used Transfer Mode" value="SATA III 6.0Gb/s" />
+				<entry title="Interface" value="SATA" />
+				<entry title="Capacity" value="931 GB" />
+				<entry title="Real size" value="1 000 204 886 016 bytes" />
+				<entry title="RAID Type" value="None" />
+				<section title="S.M.A.R.T">
+					<entry title="Status" value="Good" />
+					<entry title="Temperature" value="35 °C" />
+					<entry title="Temperature Range" value="OK (less than 50 °C)" />
+					<section title="S.M.A.R.T attributes">
+						<section title="01">
+							<entry title="Attribute name" value="Read Error Rate" />
+							<entry title="Real value" value="0" />
+							<entry title="Current" value="200" />
+							<entry title="Worst" value="200" />
+							<entry title="Threshold" value="51" />
+							<entry title="Raw Value" value="0000000000" />
+							<entry title="Status" value="Good" />
+						</section>
+						<section title="03">
+							<entry title="Attribute name" value="Spin-Up Time" />
+							<entry title="Real value" value="2366 ms" />
+							<entry title="Current" value="172" />
+							<entry title="Worst" value="167" />
+							<entry title="Threshold" value="21" />
+							<entry title="Raw Value" value="000000093E" />
+							<entry title="Status" value="Good" />
+						</section>
+						<section title="04">
+							<entry title="Attribute name" value="Start/Stop Count" />
+							<entry title="Real value" value="841" />
+							<entry title="Current" value="100" />
+							<entry title="Worst" value="100" />
+							<entry title="Threshold" value="0" />
+							<entry title="Raw Value" value="0000000349" />
+							<entry title="Status" value="Good" />
+						</section>
+						<section title="05">
+							<entry title="Attribute name" value="Reallocated Sectors Count" />
+							<entry title="Real value" value="0" />
+							<entry title="Current" value="200" />
+							<entry title="Worst" value="200" />
+							<entry title="Threshold" value="140" />
+							<entry title="Raw Value" value="0000000000" />
+							<entry title="Status" value="Good" />
+						</section>
+						<section title="07">
+							<entry title="Attribute name" value="Seek Error Rate" />
+							<entry title="Real value" value="0" />
+							<entry title="Current" value="200" />
+							<entry title="Worst" value="200" />
+							<entry title="Threshold" value="0" />
+							<entry title="Raw Value" value="0000000000" />
+							<entry title="Status" value="Good" />
+						</section>
+						<section title="09">
+							<entry title="Attribute name" value="Power-On Hours (POH)" />
+							<entry title="Real value" value="153d 17h" />
+							<entry title="Current" value="95" />
+							<entry title="Worst" value="95" />
+							<entry title="Threshold" value="0" />
+							<entry title="Raw Value" value="0000000E69" />
+							<entry title="Status" value="Good" />
+						</section>
+						<section title="0A">
+							<entry title="Attribute name" value="Spin Retry Count" />
+							<entry title="Real value" value="0" />
+							<entry title="Current" value="100" />
+							<entry title="Worst" value="100" />
+							<entry title="Threshold" value="0" />
+							<entry title="Raw Value" value="0000000000" />
+							<entry title="Status" value="Good" />
+						</section>
+						<section title="0B">
+							<entry title="Attribute name" value="Recalibration Retries" />
+							<entry title="Real value" value="0" />
+							<entry title="Current" value="100" />
+							<entry title="Worst" value="100" />
+							<entry title="Threshold" value="0" />
+							<entry title="Raw Value" value="0000000000" />
+							<entry title="Status" value="Good" />
+						</section>
+						<section title="0C">
+							<entry title="Attribute name" value="Device Power Cycle Count" />
+							<entry title="Real value" value="832" />
+							<entry title="Current" value="100" />
+							<entry title="Worst" value="100" />
+							<entry title="Threshold" value="0" />
+							<entry title="Raw Value" value="0000000340" />
+							<entry title="Status" value="Good" />
+						</section>
+						<section title="C0">
+							<entry title="Attribute name" value="Power-off Retract Count" />
+							<entry title="Real value" value="53" />
+							<entry title="Current" value="200" />
+							<entry title="Worst" value="200" />
+							<entry title="Threshold" value="0" />
+							<entry title="Raw Value" value="0000000035" />
+							<entry title="Status" value="Good" />
+						</section>
+						<section title="C1">
+							<entry title="Attribute name" value="Load/Unload Cycle Count" />
+							<entry title="Real value" value="806" />
+							<entry title="Current" value="200" />
+							<entry title="Worst" value="200" />
+							<entry title="Threshold" value="0" />
+							<entry title="Raw Value" value="0000000326" />
+							<entry title="Status" value="Good" />
+						</section>
+						<section title="C2">
+							<entry title="Attribute name" value="Temperature" />
+							<entry title="Real value" value="35 °C" />
+							<entry title="Current" value="108" />
+							<entry title="Worst" value="104" />
+							<entry title="Threshold" value="0" />
+							<entry title="Raw Value" value="0000000023" />
+							<entry title="Status" value="Good" />
+						</section>
+						<section title="C4">
+							<entry title="Attribute name" value="Reallocation Event Count" />
+							<entry title="Real value" value="0" />
+							<entry title="Current" value="200" />
+							<entry title="Worst" value="200" />
+							<entry title="Threshold" value="0" />
+							<entry title="Raw Value" value="0000000000" />
+							<entry title="Status" value="Good" />
+						</section>
+						<section title="C5">
+							<entry title="Attribute name" value="Current Pending Sector Count" />
+							<entry title="Real value" value="0" />
+							<entry title="Current" value="200" />
+							<entry title="Worst" value="200" />
+							<entry title="Threshold" value="0" />
+							<entry title="Raw Value" value="0000000000" />
+							<entry title="Status" value="Good" />
+						</section>
+						<section title="C6">
+							<entry title="Attribute name" value="Uncorrectable Sector Count" />
+							<entry title="Real value" value="0" />
+							<entry title="Current" value="200" />
+							<entry title="Worst" value="200" />
+							<entry title="Threshold" value="0" />
+							<entry title="Raw Value" value="0000000000" />
+							<entry title="Status" value="Good" />
+						</section>
+						<section title="C7">
+							<entry title="Attribute name" value="UltraDMA CRC Error Count" />
+							<entry title="Real value" value="0" />
+							<entry title="Current" value="200" />
+							<entry title="Worst" value="200" />
+							<entry title="Threshold" value="0" />
+							<entry title="Raw Value" value="0000000000" />
+							<entry title="Status" value="Good" />
+						</section>
+						<section title="C8">
+							<entry title="Attribute name" value="Write Error Rate / Multi-Zone Error Rate" />
+							<entry title="Real value" value="0" />
+							<entry title="Current" value="200" />
+							<entry title="Worst" value="200" />
+							<entry title="Threshold" value="0" />
+							<entry title="Raw Value" value="0000000000" />
+							<entry title="Status" value="Good" />
+						</section>
+					</section>
+				</section>
+				<section title="Partition 0">
+					<entry title="Partition ID" value="Disk #0, Partition #0" />
+					<entry title="File System" value="NTFS" />
+					<entry title="Volume Serial Number" value="3E525721" />
+					<entry title="Size" value="349 MB" />
+					<entry title="Used Space" value="281 MB (80%)" />
+					<entry title="Free Space" value="68 MB (20%)" />
+				</section>
+				<section title="Partition 1">
+					<entry title="Partition ID" value="Disk #0, Partition #1" />
+					<entry title="Disk Letter" value="C:" />
+					<entry title="File System" value="NTFS" />
+					<entry title="Volume Serial Number" value="C45B7767" />
+					<entry title="Size" value="155 GB" />
+					<entry title="Used Space" value="143 GB (92%)" />
+					<entry title="Free Space" value="11,7 GB (8%)" />
+				</section>
+				<section title="Partition 2">
+					<entry title="Partition ID" value="Disk #0, Partition #2" />
+					<entry title="File System" value="NTFS" />
+					<entry title="Volume Serial Number" value="A0824F96" />
+					<entry title="Size" value="449 MB" />
+					<entry title="Used Space" value="330 MB (73%)" />
+					<entry title="Free Space" value="119 MB (27%)" />
+				</section>
+				<section title="Partition 3">
+					<entry title="Partition ID" value="Disk #0, Partition #3" />
+					<entry title="Disk Letter" value="D:" />
+					<entry title="File System" value="NTFS" />
+					<entry title="Volume Serial Number" value="34B9F833" />
+					<entry title="Size" value="499 GB" />
+					<entry title="Used Space" value="19,8 GB (3%)" />
+					<entry title="Free Space" value="480 GB (97%)" />
+				</section>
+			</section>
+		</section>
+	</mainsection>
+	<mainsection title="Optical Drives" id="7">
+		<section title="MATSHITA DVD-RAM UJ8E1">
+			<entry title="Media Type" value="DVD Writer" />
+			<entry title="Name" value="MATSHITA DVD-RAM UJ8E1" />
+			<entry title="Availability" value="Running/Full Power" />
+			<entry title="Capabilities" value="Random Access, Supports Writing, Supports Removable Media" />
+			<entry title="Read capabilities" value="CD-R, CD-RW, CD-ROM, DVD-RAM, DVD-ROM, DVD-R, DVD-RW, DVD+R, DVD+RW, DVD-R DL, DVD+R DL" />
+			<entry title="Write capabilities" value="CD-R, CD-RW, DVD-RAM, DVD-R, DVD-RW, DVD+R, DVD+RW, DVD-R DL, DVD+R DL" />
+			<entry title="Config Manager Error Code" value="Device is working properly" />
+			<entry title="Config Manager User Config" value="FALSE" />
+			<entry title="Drive" value="F:" />
+			<entry title="Media Loaded" value="FALSE" />
+			<entry title="SCSI Bus" value="3" />
+			<entry title="SCSI Logical Unit" value="0" />
+			<entry title="SCSI Port" value="0" />
+			<entry title="SCSI Target Id" value="0" />
+			<entry title="Status" value="OK" />
+		</section>
+	</mainsection>
+	<mainsection title="Audio" id="8">
+		<section title="Sound Cards">
+			<entry title="Устройство с поддержкой High Definition Audio" value="" />
+			<entry title="Realtek High Definition Audio" value="" />
+		</section>
+		<section title="Playback Device">
+			<entry title="Динамики (Realtek High Definition Audio)" value="" />
+		</section>
+		<section title="Recording Device">
+			<entry title="Микрофон (Realtek High Definition Audio)" value="" />
+		</section>
+	</mainsection>
+	<mainsection title="Peripherals" id="9">
+		<section title="Microsoft eHome - клавиатура MCIR">
+			<entry title="Device Kind" value="Keyboard" />
+			<entry title="Device Name" value="Microsoft eHome - клавиатура MCIR" />
+			<entry title="Vendor" value="Microsoft" />
+			<entry title="Location" value="Microsoft eHome - инфракрасный передатчик" />
+			<section title="Driver">
+				<entry title="Date" value="6-21-2006" />
+				<entry title="Version" value="10.0.10586.0" />
+				<entry title="File" value="C:\WINDOWS\system32\DRIVERS\kbdhid.sys" />
+				<entry title="File" value="C:\WINDOWS\system32\DRIVERS\kbdclass.sys" />
+			</section>
+		</section>
+		<section title="Клавиатура HID">
+			<entry title="Device Kind" value="Keyboard" />
+			<entry title="Device Name" value="Клавиатура HID" />
+			<entry title="Vendor" value="Hewlett-Packard" />
+			<entry title="Location" value="USB-устройство ввода" />
+			<section title="Driver">
+				<entry title="Date" value="6-21-2006" />
+				<entry title="Version" value="10.0.10586.0" />
+				<entry title="File" value="C:\WINDOWS\system32\DRIVERS\kbdhid.sys" />
+				<entry title="File" value="C:\WINDOWS\system32\DRIVERS\kbdclass.sys" />
+			</section>
+		</section>
+		<section title="Microsoft eHome - клавиатура MCIR 109">
+			<entry title="Device Kind" value="Keyboard" />
+			<entry title="Device Name" value="Microsoft eHome - клавиатура MCIR 109" />
+			<entry title="Vendor" value="Microsoft" />
+			<entry title="Location" value="Microsoft eHome - инфракрасный передатчик" />
+			<section title="Driver">
+				<entry title="Date" value="6-21-2006" />
+				<entry title="Version" value="10.0.10586.0" />
+				<entry title="File" value="C:\WINDOWS\system32\DRIVERS\kbdhid.sys" />
+				<entry title="File" value="C:\WINDOWS\system32\DRIVERS\kbdclass.sys" />
+			</section>
+		</section>
+		<section title="Microsoft eHome - клавиатура пульта дистанционного управления">
+			<entry title="Device Kind" value="Keyboard" />
+			<entry title="Device Name" value="Microsoft eHome - клавиатура пульта дистанционного управления" />
+			<entry title="Vendor" value="Microsoft" />
+			<entry title="Location" value="Microsoft eHome - инфракрасный передатчик" />
+			<section title="Driver">
+				<entry title="Date" value="6-21-2006" />
+				<entry title="Version" value="10.0.10586.0" />
+				<entry title="File" value="C:\WINDOWS\system32\DRIVERS\kbdhid.sys" />
+				<entry title="File" value="C:\WINDOWS\system32\DRIVERS\kbdclass.sys" />
+			</section>
+		</section>
+		<section title="HID-совместимая мышь">
+			<entry title="Device Kind" value="Mouse" />
+			<entry title="Device Name" value="HID-совместимая мышь" />
+			<entry title="Vendor" value="Logitech" />
+			<entry title="Location" value="USB-устройство ввода" />
+			<section title="Driver">
+				<entry title="Date" value="6-21-2006" />
+				<entry title="Version" value="10.0.10586.0" />
+				<entry title="File" value="C:\WINDOWS\system32\DRIVERS\mouhid.sys" />
+				<entry title="File" value="C:\WINDOWS\system32\DRIVERS\mouclass.sys" />
+			</section>
+		</section>
+		<section title="HID-совместимая мышь">
+			<entry title="Device Kind" value="Mouse" />
+			<entry title="Device Name" value="HID-совместимая мышь" />
+			<entry title="Vendor" value="Microsoft" />
+			<entry title="Location" value="Microsoft eHome - инфракрасный передатчик" />
+			<section title="Driver">
+				<entry title="Date" value="6-21-2006" />
+				<entry title="Version" value="10.0.10586.0" />
+				<entry title="File" value="C:\WINDOWS\system32\DRIVERS\mouhid.sys" />
+				<entry title="File" value="C:\WINDOWS\system32\DRIVERS\mouclass.sys" />
+			</section>
+		</section>
+		<section title="Brother Laser Type1 Class Driver">
+			<entry title="Device Kind" value="Printer" />
+			<entry title="Device Name" value="Brother Laser Type1 Class Driver" />
+			<entry title="Vendor" value="Brother" />
+			<entry title="Location" value="Brother MFC-7860DW [008092c56f01]" />
+			<section title="Driver">
+				<entry title="Date" value="4-21-2009" />
+				<entry title="Version" value="10.0.10586.0" />
+			</section>
+		</section>
+		<section title="USB-видеоустройство">
+			<entry title="Device Kind" value="Camera/scanner" />
+			<entry title="Device Name" value="USB-видеоустройство" />
+			<entry title="Vendor" value="Chicony Electronics Co Ltd" />
+			<entry title="Comment" value="USB2.0 FHD UVC WebCam" />
+			<entry title="Location" value="0000.001d.0000.001.007.002.000.000.000" />
+			<section title="Driver">
+				<entry title="Date" value="6-21-2006" />
+				<entry title="Version" value="10.0.10586.0" />
+				<entry title="File" value="C:\WINDOWS\system32\drivers\usbvideo.sys" />
+			</section>
+		</section>
+		<section title="WSD устройство сканирования">
+			<entry title="Device Kind" value="Camera/scanner" />
+			<entry title="Device Name" value="WSD устройство сканирования" />
+			<entry title="Vendor" value="Невідомо" />
+			<entry title="Comment" value="Brother MFC-7860DW [008092c56f01]" />
+			<entry title="Location" value="http://192.168.5.57:80/WebServices/Device" />
+			<section title="Driver">
+				<entry title="Date" value="6-21-2006" />
+				<entry title="Version" value="10.0.10586.0" />
+				<entry title="File" value="C:\WINDOWS\system32\DRIVERS\WSDScan.sys" />
+			</section>
+		</section>
+		<section title="Printers">
+			<section title="Brother MFC-7860DW Printer (Default Printer)">
+				<entry title="Printer Port" value="WSD-e385a752-4c52-44e3-9e12-73560e60859a.003f" />
+				<entry title="Print Processor" value="winprint" />
+				<entry title="Availability" value="Always" />
+				<entry title="Priority" value="1" />
+				<entry title="Duplex" value="None" />
+				<entry title="Print Quality" value="600 * 600 dpi Monochrome" />
+				<entry title="Status" value="The printer is low on toner" />
+				<section title="Driver">
+					<entry title="Driver Name" value="Brother Laser Type1 Class Driver (v6.03)" />
+					<entry title="Driver Path" value="C:\WINDOWS\System32\DriverStore\FileRepository\ntprint.inf_amd64_f9853ae82ff0dda6\Amd64\mxdwdrv.dll" />
+				</section>
+			</section>
+			<section title="Fax">
+				<entry title="Printer Port" value="SHRFAX:" />
+				<entry title="Print Processor" value="winprint" />
+				<entry title="Availability" value="Always" />
+				<entry title="Priority" value="1" />
+				<entry title="Duplex" value="None" />
+				<entry title="Print Quality" value="200 * 200 dpi Monochrome" />
+				<entry title="Status" value="Unknown" />
+				<section title="Driver">
+					<entry title="Driver Name" value="Microsoft Shared Fax Driver (v4.00)" />
+					<entry title="Driver Path" value="C:\WINDOWS\system32\spool\DRIVERS\x64\3\FXSDRV.DLL" />
+				</section>
+			</section>
+			<section title="Microsoft Print to PDF">
+				<entry title="Printer Port" value="PORTPROMPT:" />
+				<entry title="Print Processor" value="winprint" />
+				<entry title="Availability" value="Always" />
+				<entry title="Priority" value="1" />
+				<entry title="Duplex" value="None" />
+				<entry title="Print Quality" value="600 * 600 dpi Color" />
+				<entry title="Status" value="Unknown" />
+				<section title="Driver">
+					<entry title="Driver Name" value="Microsoft Print To PDF (v6.03)" />
+					<entry title="Driver Path" value="C:\WINDOWS\System32\DriverStore\FileRepository\ntprint.inf_amd64_f9853ae82ff0dda6\Amd64\mxdwdrv.dll" />
+				</section>
+			</section>
+			<section title="Microsoft XPS Document Writer">
+				<entry title="Printer Port" value="PORTPROMPT:" />
+				<entry title="Print Processor" value="winprint" />
+				<entry title="Availability" value="Always" />
+				<entry title="Priority" value="1" />
+				<entry title="Duplex" value="None" />
+				<entry title="Print Quality" value="600 * 600 dpi Color" />
+				<entry title="Status" value="Unknown" />
+				<section title="Driver">
+					<entry title="Driver Name" value="Microsoft XPS Document Writer v4 (v6.03)" />
+					<entry title="Driver Path" value="C:\WINDOWS\System32\DriverStore\FileRepository\ntprint.inf_amd64_f9853ae82ff0dda6\Amd64\mxdwdrv.dll" />
+				</section>
+			</section>
+		</section>
+	</mainsection>
+	<mainsection title="Network" id="10">
+		<entry title="You are connected to the internet" value="" />
+		<entry title="Connected through" value="Realtek PCIe GBE Family Controller" />
+		<entry title="IP Address" value="192.168.5.144" />
+		<entry title="Subnet mask" value="255.255.255.0" />
+		<entry title="Gateway server" value="192.168.5.1" />
+		<entry title="Preferred DNS server" value="192.168.1.1" />
+		<entry title="Alternate DNS server" value="8.8.8.8" />
+		<entry title="Alternate DNS server" value="8.8.4.4" />
+		<entry title="DHCP" value="Enabled" />
+		<entry title="DHCP server" value="192.168.1.1" />
+		<entry title="External IP Address" value="80.84.176.209" />
+		<entry title="Adapter Type" value="Ethernet" />
+		<entry title="NetBIOS over TCP/IP" value="Enabled via DHCP" />
+		<entry title="NETBIOS Node Type" value="Hybrid node" />
+		<entry title="Link Speed" value="1,5 KBps" />
+		<section title="Computer Name">
+			<entry title="NetBIOS Name" value="ASUS-AIO-I5" />
+			<entry title="DNS Name" value="ASUS-AIO-i5" />
+			<entry title="Membership" value="Part of workgroup" />
+			<entry title="Workgroup" value="IT-DIMENSION" />
+		</section>
+		<section title="Remote Desktop">
+			<entry title="Disabled" value="" />
+			<section title="Console">
+				<entry title="State" value="Active" />
+				<entry title="Domain" value="ASUS-AIO-i5" />
+			</section>
+			<section title="7A78855482A04FA781DC">
+				<entry title="State" value="Listen" />
+			</section>
+		</section>
+		<section title="WinInet Info">
+			<entry value="Подключение LAN" />
+			<entry value="Local system uses a local area network to connect to the Internet" />
+			<entry value="Local system has RAS to connect to the Internet" />
+		</section>
+		<section title="Wi-Fi Info">
+			<entry title="Using native Wi-Fi API version" value="2" />
+			<entry title="Available access points count" value="10" />
+			<section title="Wi-Fi ()">
+				<entry title="SSID" value="" />
+				<entry title="Frequency" value="2417000 kHz" />
+				<entry title="Channel Number" value="2" />
+				<entry title="Name" value="No name" />
+				<entry title="Signal Strength/Quality" value="32" />
+				<entry title="Security" value="Disabled" />
+				<entry title="State" value="The interface is not connected to any network" />
+				<entry title="Dot11 Type" value="Infrastructure BSS network" />
+				<entry title="Network" value="Connectible" />
+				<entry title="Network Flags" value="There is a profile for this network" />
+				<entry title="Cipher Algorithm to be used when joining this network" value="No Cipher algorithm is enabled/supported" />
+				<entry title="Default Auth used to join this network for the first time" value="IEEE 802.11 Open System authentication algorithm" />
+			</section>
+			<section title="Wi-Fi (Huawei_HG532e_CA8F4)">
+				<entry title="SSID" value="Huawei_HG532e_CA8F4" />
+				<entry title="Frequency" value="2422000 kHz" />
+				<entry title="Channel Number" value="3" />
+				<entry title="Name" value="Huawei_HG532e_CA8F4" />
+				<entry title="Signal Strength/Quality" value="26" />
+				<entry title="Security" value="Enabled" />
+				<entry title="State" value="The interface is not connected to any network" />
+				<entry title="Dot11 Type" value="Infrastructure BSS network" />
+				<entry title="Network" value="Connectible" />
+				<entry title="Network Flags" value="There is a profile for this network" />
+				<entry title="Cipher Algorithm to be used when joining this network" value="Temporal Key Integrity Protocol (TKIP) algorithm" />
+				<entry title="Default Auth used to join this network for the first time" value="802.11i RSNA algorithm that uses PSK" />
+			</section>
+			<section title="Wi-Fi (ITD-5)">
+				<entry title="SSID" value="ITD-5" />
+				<entry title="Frequency" value="2462000 kHz" />
+				<entry title="Channel Number" value="11" />
+				<entry title="Name" value="ITD-5" />
+				<entry title="Signal Strength/Quality" value="82" />
+				<entry title="Security" value="Enabled" />
+				<entry title="State" value="The interface is not connected to any network" />
+				<entry title="Dot11 Type" value="Infrastructure BSS network" />
+				<entry title="Network" value="Connectible" />
+				<entry title="Network Flags" value="There is a profile for this network" />
+				<entry title="Cipher Algorithm to be used when joining this network" value="AES-CCMP algorithm" />
+				<entry title="Default Auth used to join this network for the first time" value="802.11i RSNA algorithm that uses PSK" />
+			</section>
+			<section title="Wi-Fi (PST)">
+				<entry title="SSID" value="PST" />
+				<entry title="Frequency" value="2462000 kHz" />
+				<entry title="Channel Number" value="11" />
+				<entry title="Name" value="PST" />
+				<entry title="Signal Strength/Quality" value="34" />
+				<entry title="Security" value="Enabled" />
+				<entry title="State" value="The interface is not connected to any network" />
+				<entry title="Dot11 Type" value="Infrastructure BSS network" />
+				<entry title="Network" value="Connectible" />
+				<entry title="Network Flags" value="There is a profile for this network" />
+				<entry title="Cipher Algorithm to be used when joining this network" value="AES-CCMP algorithm" />
+				<entry title="Default Auth used to join this network for the first time" value="802.11i RSNA algorithm that uses PSK" />
+			</section>
+			<section title="Wi-Fi (PST-K)">
+				<entry title="SSID" value="PST-K" />
+				<entry title="Frequency" value="2462000 kHz" />
+				<entry title="Channel Number" value="11" />
+				<entry title="Name" value="PST-K" />
+				<entry title="Signal Strength/Quality" value="36" />
+				<entry title="Security" value="Enabled" />
+				<entry title="State" value="The interface is not connected to any network" />
+				<entry title="Dot11 Type" value="Infrastructure BSS network" />
+				<entry title="Network" value="Connectible" />
+				<entry title="Network Flags" value="There is a profile for this network" />
+				<entry title="Cipher Algorithm to be used when joining this network" value="AES-CCMP algorithm" />
+				<entry title="Default Auth used to join this network for the first time" value="802.11i RSNA algorithm that uses PSK" />
+			</section>
+			<section title="Wi-Fi (SG5ecf7f035cfd)">
+				<entry title="SSID" value="SG5ecf7f035cfd" />
+				<entry title="Frequency" value="2442000 kHz" />
+				<entry title="Channel Number" value="7" />
+				<entry title="Name" value="SG5ecf7f035cfd" />
+				<entry title="Signal Strength/Quality" value="40" />
+				<entry title="Security" value="Disabled" />
+				<entry title="State" value="The interface is not connected to any network" />
+				<entry title="Dot11 Type" value="Infrastructure BSS network" />
+				<entry title="Network" value="Connectible" />
+				<entry title="Network Flags" value="There is a profile for this network" />
+				<entry title="Cipher Algorithm to be used when joining this network" value="No Cipher algorithm is enabled/supported" />
+				<entry title="Default Auth used to join this network for the first time" value="IEEE 802.11 Open System authentication algorithm" />
+			</section>
+			<section title="Wi-Fi (TP-LINK_2A3DD2)">
+				<entry title="SSID" value="TP-LINK_2A3DD2" />
+				<entry title="Frequency" value="2432000 kHz" />
+				<entry title="Channel Number" value="5" />
+				<entry title="Name" value="TP-LINK_2A3DD2" />
+				<entry title="Signal Strength/Quality" value="24" />
+				<entry title="Security" value="Enabled" />
+				<entry title="State" value="The interface is not connected to any network" />
+				<entry title="Dot11 Type" value="Infrastructure BSS network" />
+				<entry title="Network" value="Connectible" />
+				<entry title="Network Flags" value="There is a profile for this network" />
+				<entry title="Cipher Algorithm to be used when joining this network" value="AES-CCMP algorithm" />
+				<entry title="Default Auth used to join this network for the first time" value="802.11i RSNA algorithm that uses PSK" />
+			</section>
+			<section title="Wi-Fi (ZpLift)">
+				<entry title="SSID" value="ZpLift" />
+				<entry title="Frequency" value="2462000 kHz" />
+				<entry title="Channel Number" value="11" />
+				<entry title="Name" value="ZpLift" />
+				<entry title="Signal Strength/Quality" value="80" />
+				<entry title="Security" value="Enabled" />
+				<entry title="State" value="The interface is not connected to any network" />
+				<entry title="Dot11 Type" value="Infrastructure BSS network" />
+				<entry title="Network" value="Connectible" />
+				<entry title="Network Flags" value="There is a profile for this network" />
+				<entry title="Cipher Algorithm to be used when joining this network" value="AES-CCMP algorithm" />
+				<entry title="Default Auth used to join this network for the first time" value="802.11i RSNA algorithm that uses PSK" />
+			</section>
+			<section title="Wi-Fi (it-Dimension-3AF990)">
+				<entry title="SSID" value="it-Dimension-3AF990" />
+				<entry title="Frequency" value="2462000 kHz" />
+				<entry title="Channel Number" value="11" />
+				<entry title="Name" value="it-Dimension-3AF990" />
+				<entry title="Signal Strength/Quality" value="97" />
+				<entry title="Security" value="Enabled" />
+				<entry title="State" value="The interface is not connected to any network" />
+				<entry title="Dot11 Type" value="Infrastructure BSS network" />
+				<entry title="Network" value="Connectible" />
+				<entry title="Network Flags" value="There is a profile for this network" />
+				<entry title="Cipher Algorithm to be used when joining this network" value="AES-CCMP algorithm" />
+				<entry title="Default Auth used to join this network for the first time" value="802.11i RSNA algorithm that uses PSK" />
+			</section>
+			<section title="Wi-Fi (sdm)">
+				<entry title="SSID" value="sdm" />
+				<entry title="Frequency" value="2412000 kHz" />
+				<entry title="Channel Number" value="1" />
+				<entry title="Name" value="sdm" />
+				<entry title="Signal Strength/Quality" value="80" />
+				<entry title="Security" value="Enabled" />
+				<entry title="State" value="The interface is not connected to any network" />
+				<entry title="Dot11 Type" value="Infrastructure BSS network" />
+				<entry title="Network" value="Connectible" />
+				<entry title="Network Flags" value="There is a profile for this network" />
+				<entry title="Cipher Algorithm to be used when joining this network" value="AES-CCMP algorithm" />
+				<entry title="Default Auth used to join this network for the first time" value="802.11i RSNA algorithm that uses PSK" />
+			</section>
+		</section>
+		<section title="WinHTTPInfo">
+			<entry title="WinHTTPSessionProxyType" value="No proxy" />
+			<entry title="Session Proxy" value="" />
+			<entry title="Session Proxy Bypass" value="" />
+			<entry title="Connect Retries" value="5" />
+			<entry title="Connect Timeout (ms)" value="60 000" />
+			<entry title="HTTP Version" value="HTTP 1.1" />
+			<entry title="Max Connects Per 1.0 Servers" value="INFINITE" />
+			<entry title="Max Connects Per Servers" value="INFINITE" />
+			<entry title="Max HTTP automatic redirects" value="10" />
+			<entry title="Max HTTP status continue" value="10" />
+			<entry title="Send Timeout (ms)" value="30 000" />
+			<entry title="IEProxy Auto Detect" value="Yes" />
+			<entry title="IEProxy Auto Config" value="" />
+			<entry title="IEProxy" value="" />
+			<entry title="IEProxy Bypass" value="" />
+			<entry title="Default Proxy Config Access Type" value="No proxy" />
+			<entry title="Default Config Proxy" value="" />
+			<entry title="Default Config Proxy Bypass" value="" />
+		</section>
+		<section title="Sharing and Discovery">
+			<entry title="Network Discovery" value="Disabled" />
+			<entry title="File and Printer Sharing" value="Disabled" />
+			<entry title="File and printer sharing service" value="Enabled" />
+			<entry title="Simple File Sharing" value="Enabled" />
+			<entry title="Administrative Shares" value="Enabled" />
+			<entry title="Сетевой доступ: модель общего доступа и безопасности для локальных учетных записей" value="Обычная - локальные пользователи удостоверяются как они сами" />
+		</section>
+		<section title="Adapters List">
+			<section title="Enabled">
+				<section title="Bluetooth Device (Personal Area Network)">
+					<entry title="Connection Name" value="Сетевое подключение Bluetooth" />
+					<entry title="DHCP enabled" value="Yes" />
+					<entry title="MAC Address" value="24-0A-64-EC-C3-1E" />
+				</section>
+				<section title="Broadcom 802.11ac Network Adapter">
+					<entry title="Connection Name" value="Беспроводная сеть" />
+					<entry title="DHCP enabled" value="Yes" />
+					<entry title="MAC Address" value="6C-71-D9-CC-0B-87" />
+				</section>
+				<section title="Realtek PCIe GBE Family Controller">
+					<entry title="Connection Name" value="Ethernet" />
+					<entry title="NetBIOS over TCPIP" value="Yes" />
+					<entry title="DHCP enabled" value="Yes" />
+					<entry title="MAC Address" value="BC-EE-7B-2F-5C-94" />
+					<entry title="IP Address" value="192.168.5.144" />
+					<entry title="Subnet mask" value="255.255.255.0" />
+					<entry title="Gateway server" value="192.168.5.1" />
+					<entry title="DHCP" value="192.168.1.1" />
+					<entry title="DNS Server" value="192.168.1.1" />
+					<entry value="8.8.8.8" />
+					<entry value="8.8.4.4" />
+				</section>
+				<section title="VirtualBox Host-Only Ethernet Adapter">
+					<entry title="Connection Name" value="VirtualBox Host-Only Network" />
+					<entry title="NetBIOS over TCPIP" value="Yes" />
+					<entry title="DHCP enabled" value="No" />
+					<entry title="MAC Address" value="0A-00-27-00-00-00" />
+					<entry title="IP Address" value="192.168.56.1" />
+					<entry title="Subnet mask" value="255.255.255.0" />
+				</section>
+			</section>
+		</section>
+		<section title="Network Shares">
+			<entry title="No network shares" value="" />
+		</section>
+		<section title="Current TCP Connections">
+			<section title="C:\Program Files (x86)\Google\Chrome\Application\chrome.exe (7128)">
+				<entry title="Місцевій 192.168.5.144:50544" value="ESTABLISHED Віддалений 216.58.214.206:443 (Запитується... ) (HTTPS)" />
+				<entry title="Місцевій 192.168.5.144:49754" value="ESTABLISHED Віддалений 54.174.146.23:443 (Запитується... ) (HTTPS)" />
+				<entry title="Місцевій 192.168.5.144:54493" value="ESTABLISHED Віддалений 173.194.222.189:443 (Запитується... ) (HTTPS)" />
+				<entry title="Місцевій 192.168.5.144:49819" value="ESTABLISHED Віддалений 95.213.4.194:443 (Запитується... ) (HTTPS)" />
+				<entry title="Місцевій 192.168.5.144:50536" value="ESTABLISHED Віддалений 216.58.214.238:443 (Запитується... ) (HTTPS)" />
+				<entry title="Місцевій 192.168.5.144:50491" value="ESTABLISHED Віддалений 104.16.32.27:443 (Запитується... ) (HTTPS)" />
+				<entry title="Місцевій 192.168.5.144:50492" value="ESTABLISHED Віддалений 216.58.214.238:443 (Запитується... ) (HTTPS)" />
+				<entry title="Місцевій 192.168.5.144:50528" value="ESTABLISHED Віддалений 173.194.222.189:443 (Запитується... ) (HTTPS)" />
+				<entry title="Місцевій 192.168.5.144:50546" value="ESTABLISHED Віддалений 216.58.209.174:443 (Запитується... ) (HTTPS)" />
+				<entry title="Місцевій 192.168.5.144:50543" value="ESTABLISHED Віддалений 216.58.214.206:443 (Запитується... ) (HTTPS)" />
+				<entry title="Місцевій 192.168.5.144:50545" value="ESTABLISHED Віддалений 173.194.220.93:443 (Запитується... ) (HTTPS)" />
+				<entry title="Місцевій 192.168.5.144:50547" value="ESTABLISHED Віддалений 216.58.209.206:443 (Запитується... ) (HTTPS)" />
+				<entry title="Місцевій 192.168.5.144:50548" value="ESTABLISHED Віддалений 216.58.209.163:80 (Запитується... ) (HTTP)" />
+				<entry title="Місцевій 192.168.5.144:49717" value="ESTABLISHED Віддалений 64.233.165.188:5228 (Запитується... )" />
+				<entry title="Місцевій 192.168.5.144:50573" value="ESTABLISHED Віддалений 87.240.143.241:443 (Запитується... ) (HTTPS)" />
+			</section>
+			<section title="C:\Program Files (x86)\JetBrains\PhpStorm 2016.1\bin\PhpStorm.exe (3432)">
+				<entry title="Місцевій 127.0.0.1:52186" value="ESTABLISHED Віддалений 127.0.0.1:52187 (Запитується... )" />
+				<entry title="Місцевій 127.0.0.1:6942" value="LISTEN" />
+				<entry title="Місцевій 127.0.0.1:52187" value="ESTABLISHED Віддалений 127.0.0.1:52186 (Запитується... )" />
+				<entry title="Місцевій 127.0.0.1:63342" value="LISTEN" />
+				<entry title="Місцевій 127.0.0.1:52184" value="ESTABLISHED Віддалений 127.0.0.1:52185 (Запитується... )" />
+				<entry title="Місцевій 127.0.0.1:52185" value="ESTABLISHED Віддалений 127.0.0.1:52184 (Запитується... )" />
+			</section>
+			<section title="C:\Program Files (x86)\Skype\Phone\Skype.exe (7772)">
+				<entry title="Місцевій 0.0.0.0:43707" value="LISTEN" />
+				<entry title="Місцевій 192.168.5.144:49803" value="ESTABLISHED Віддалений 157.55.235.158:33033 (Запитується... )" />
+				<entry title="Місцевій 192.168.5.144:49829" value="CLOSE-WAIT Віддалений 31.13.90.6:443 (Запитується... ) (HTTPS)" />
+				<entry title="Місцевій 192.168.5.144:49817" value="ESTABLISHED Віддалений 134.170.0.200:443 (Запитується... ) (HTTPS)" />
+				<entry title="Місцевій 192.168.5.144:49808" value="ESTABLISHED Віддалений 91.190.218.52:12350 (Запитується... )" />
+				<entry title="Місцевій 192.168.5.144:50436" value="ESTABLISHED Віддалений 23.101.56.220:50004 (Запитується... )" />
+				<entry title="Місцевій 192.168.5.144:50434" value="ESTABLISHED Віддалений 23.101.56.220:50002 (Запитується... )" />
+				<entry title="Місцевій 192.168.5.144:49807" value="ESTABLISHED Віддалений 191.232.139.13:443 (Запитується... ) (HTTPS)" />
+				<entry title="Місцевій 192.168.5.144:50589" value="SYN-SENT Віддалений 192.168.5.121:10108 (Запитується... )" />
+				<entry title="Місцевій 192.168.5.144:43707" value="ESTABLISHED Віддалений 192.168.5.77:32965 (Запитується... )" />
+				<entry title="Місцевій 192.168.5.144:53029" value="CLOSE-WAIT Віддалений 93.184.221.200:443 (Запитується... ) (HTTPS)" />
+				<entry title="Місцевій 192.168.5.144:50433" value="CLOSE-WAIT Віддалений 104.81.127.42:443 (Запитується... ) (HTTPS)" />
+				<entry title="Місцевій 192.168.5.144:55816" value="ESTABLISHED Віддалений 104.47.160.199:443 (Запитується... ) (HTTPS)" />
+			</section>
+			<section title="C:\Program Files (x86)\TeamViewer\TeamViewer.exe (4872)">
+				<entry title="Місцевій 127.0.0.1:49701" value="ESTABLISHED Віддалений 127.0.0.1:5939 (Запитується... )" />
+			</section>
+			<section title="C:\Program Files\Git\mingw64\libexec\git-core\git-remote-https.exe (9248)">
+				<entry title="Місцевій 192.168.5.144:50591" value="ESTABLISHED Віддалений 192.30.252.128:443 (Запитується... ) (HTTPS)" />
+				<entry title="Місцевій 192.168.5.144:50590" value="ESTABLISHED Віддалений 192.30.252.128:443 (Запитується... ) (HTTPS)" />
+			</section>
+			<section title="FileZillaServer.exe (2492)">
+				<entry title="Місцевій 0.0.0.0:21 (FTP-data)" value="LISTEN" />
+				<entry title="Місцевій 127.0.0.1:14147" value="LISTEN" />
+			</section>
+			<section title="httpd.exe (2748)">
+				<entry title="Місцевій 0.0.0.0:80 (HTTP)" value="LISTEN" />
+				<entry title="Місцевій 0.0.0.0:443 (HTTPS)" value="LISTEN" />
+			</section>
+			<section title="lsass.exe (764)">
+				<entry title="Місцевій 0.0.0.0:49668" value="LISTEN" />
+			</section>
+			<section title="mDNSResponder.exe (2392)">
+				<entry title="Місцевій 127.0.0.1:5354" value="LISTEN" />
+			</section>
+			<section title="mysqld.exe (2888)">
+				<entry title="Місцевій 0.0.0.0:3306" value="LISTEN" />
+			</section>
+			<section title="services.exe (720)">
+				<entry title="Місцевій 0.0.0.0:49669" value="LISTEN" />
+			</section>
+			<section title="spoolsv.exe (1992)">
+				<entry title="Місцевій 0.0.0.0:49667" value="LISTEN" />
+			</section>
+			<section title="svchost.exe (1120)">
+				<entry title="Місцевій 0.0.0.0:49665" value="LISTEN" />
+			</section>
+			<section title="svchost.exe (428)">
+				<entry title="Місцевій 0.0.0.0:7680" value="LISTEN" />
+				<entry title="Місцевій 0.0.0.0:49666" value="LISTEN" />
+			</section>
+			<section title="svchost.exe (924)">
+				<entry title="Місцевій 0.0.0.0:135 (DCE)" value="LISTEN" />
+			</section>
+			<section title="System Process">
+				<entry title="Місцевій 192.168.5.144:80 (HTTP)" value="TIME-WAIT Віддалений 192.168.5.1:39470 (Запитується... )" />
+				<entry title="Місцевій 192.168.5.144:80 (HTTP)" value="TIME-WAIT Віддалений 192.168.5.1:39471 (Запитується... )" />
+				<entry title="Місцевій 192.168.5.144:80 (HTTP)" value="TIME-WAIT Віддалений 192.168.5.1:39472 (Запитується... )" />
+				<entry title="Місцевій 192.168.5.144:80 (HTTP)" value="TIME-WAIT Віддалений 192.168.5.1:39473 (Запитується... )" />
+				<entry title="Місцевій 192.168.5.144:43707" value="TIME-WAIT Віддалений 192.168.5.77:32954 (Запитується... )" />
+				<entry title="Місцевій 192.168.5.144:50542" value="TIME-WAIT Віддалений 191.232.139.254:443 (Запитується... ) (HTTPS)" />
+				<entry title="Місцевій 192.168.5.144:50494" value="TIME-WAIT Віддалений 216.58.209.206:443 (Запитується... ) (HTTPS)" />
+				<entry title="Місцевій 192.168.5.144:50576" value="TIME-WAIT Віддалений 87.240.143.241:443 (Запитується... ) (HTTPS)" />
+				<entry title="Місцевій 192.168.5.144:50562" value="TIME-WAIT Віддалений 192.168.5.144:80 (Запитується... ) (HTTP)" />
+				<entry title="Місцевій 192.168.5.144:50552" value="TIME-WAIT Віддалений 40.127.172.15:50002 (Запитується... )" />
+				<entry title="Місцевій 192.168.5.144:50551" value="TIME-WAIT Віддалений 40.113.86.244:50000 (Запитується... )" />
+				<entry title="Місцевій 192.168.5.144:50550" value="TIME-WAIT Віддалений 40.127.172.15:50003 (Запитується... )" />
+				<entry title="Місцевій 192.168.5.144:50563" value="TIME-WAIT Віддалений 192.168.5.144:80 (Запитується... ) (HTTP)" />
+				<entry title="Місцевій 192.168.5.144:80 (HTTP)" value="TIME-WAIT Віддалений 192.168.5.1:21190 (Запитується... )" />
+				<entry title="Місцевій 192.168.5.144:80 (HTTP)" value="TIME-WAIT Віддалений 192.168.5.1:39467 (Запитується... )" />
+				<entry title="Місцевій 192.168.5.144:80 (HTTP)" value="TIME-WAIT Віддалений 192.168.5.1:39469 (Запитується... )" />
+			</section>
+			<section title="System Process">
+				<entry title="Місцевій 0.0.0.0:445 (Windows shares)" value="LISTEN" />
+				<entry title="Місцевій 192.168.56.1:139 (NetBIOS session service)" value="LISTEN" />
+				<entry title="Місцевій 192.168.5.144:139 (NetBIOS session service)" value="LISTEN" />
+			</section>
+			<section title="TeamViewer_Service.exe (2916)">
+				<entry title="Місцевій 127.0.0.1:5939" value="LISTEN" />
+				<entry title="Місцевій 127.0.0.1:5939" value="ESTABLISHED Віддалений 127.0.0.1:49701 (Запитується... )" />
+				<entry title="Місцевій 192.168.5.144:49689" value="ESTABLISHED Віддалений 178.255.154.11:5938 (Запитується... )" />
+			</section>
+			<section title="wininit.exe (612)">
+				<entry title="Місцевій 0.0.0.0:49664" value="LISTEN" />
+			</section>
+		</section>
+	</mainsection>
+</speccydata>
